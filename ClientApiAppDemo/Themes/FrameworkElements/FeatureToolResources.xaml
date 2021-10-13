@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ClientApiAppDemo;component/Themes/FrameworkElements/ButtonBase.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+    
+
+    <!--Derinlik Sayfası Tur Seçim Arayüzü-->
+    <DataTemplate x:Key="DepthTourSelector">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Margin="0,3" Content="Derinlik Genel Özellikleri"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitDepthGeneralFeatureTourCommand}" />
+
+            <Button Grid.Row="1" Margin="0,3" Content="Derinlik Trade Modu"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitDepthTradeFeatureTourCommand}" />
+
+            <Button Grid.Row="2" Margin="0,3" Content="Derinlik Ayarlar" 
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitDepthSettingsFeatureTourCommand}" />
+        </Grid>
+    </DataTemplate>
+
+
+    <!--Derinlik Sayfası Tur Seçim Arayüzü-->
+    <DataTemplate x:Key="OrderViewTourSelector">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Margin="0,3" Content="Emir Penceresi Genel Özellikleri"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitOrderGeneralTourCommand}" />
+
+            <Button Grid.Row="1" Margin="0,3" Content="Emir Penceresi Ayarları"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitOrderSettingsTourCommand}" />
+
+        </Grid>
+    </DataTemplate>
+
+
+    <!--Strateji listesi seçici-->
+    <DataTemplate x:Key="StrategyListViewSelector">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Margin="0,3" Content="Hazır Stratejiler"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitReadyStrategyFeatureTourCommand}" />
+
+            <Button Grid.Row="1" Margin="0,3" Content="Kullanıcı Stratejileri"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitUserStrategyFeatureTourCommand}" />
+
+            <Button Grid.Row="2" Margin="0,3" Content="Backtest Sonuçları"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitBacktestResultFeatureTourCommand}" />
+
+            <Button Grid.Row="3" Margin="0,3" Content="Hazır Explorer Listesi"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitReadyExplorerListFeatureTourCommand}" />
+
+            <Button Grid.Row="3" Margin="0,3" Content="Explorer Listesi"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitExplorerListFeatureTourCommand}" />
+                    
+            <Button Grid.Row="4" Margin="0,3" Content="Çalıştırılmış Stratejiler"
+                    Style="{DynamicResource SimpleButton}" Command="{Binding InitRunStrategiesFeatureTourCommand}" />
+
+        </Grid>
+    </DataTemplate>
+    
+</ResourceDictionary>

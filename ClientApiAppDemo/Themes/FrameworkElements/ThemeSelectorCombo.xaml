@@ -1,0 +1,110 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+
+    <ControlTemplate x:Key="ThemeComboBoxToggleButton" TargetType="{x:Type ToggleButton}">
+        <Border Background="{TemplateBinding Background}" Cursor="Hand">
+            <Canvas Width="25" Height="25">
+                <!--<Rectangle Width="1" Height="25" Fill="{DynamicResource Theme.ComboBox.Separator.Dark}"/>
+                <Rectangle Width="1" Height="25" Canvas.Left="1" Fill="{DynamicResource Theme.ComboBox.Separator.Light}"/>-->
+                <Path Fill="#33FFFFFF" Canvas.Top="0.25" Data="M 18.605,5.653 C 18.606,5.08 18.233,4.751 17.629,4.704 17.336,4.681 17.051,4.585 16.778,4.526 16.664,5.341 16.584,5.914 16.504,6.486 16.461,6.48 16.418,6.473 16.375,6.467 16.335,5.884 16.295,5.301 16.264,4.827 14.414,4.812 12.616,4.797 10.785,4.782 10.716,6.099 10.644,7.483 10.572,8.867 10.53,8.866 10.489,8.865 10.448,8.864 10.411,7.467 10.373,6.071 10.336,4.664 10.148,4.654 10.023,4.643 9.898,4.642 9.098,4.633 8.298,4.612 7.499,4.622 6.909,4.631 6.526,4.97 6.516,5.551 6.469,8.221 6.447,10.891 6.417,13.497 10.488,13.532 14.498,13.566 18.522,13.601 18.554,10.99 18.601,8.321 18.605,5.653 Z" RenderTransformOrigin="0.5,0.5" Height="6.458" Stretch="Fill" Canvas.Left="6">
+                    <Path.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Path.RenderTransform>
+                </Path>
+                <Path Fill="{TemplateBinding Foreground}" Data="M 18.605,5.653 C 18.606,5.08 18.233,4.751 17.629,4.704 17.336,4.681 17.051,4.585 16.778,4.526 16.664,5.341 16.584,5.914 16.504,6.486 16.461,6.48 16.418,6.473 16.375,6.467 16.335,5.884 16.295,5.301 16.264,4.827 14.414,4.812 12.616,4.797 10.785,4.782 10.716,6.099 10.644,7.483 10.572,8.867 10.53,8.866 10.489,8.865 10.448,8.864 10.411,7.467 10.373,6.071 10.336,4.664 10.148,4.654 10.023,4.643 9.898,4.642 9.098,4.633 8.298,4.612 7.499,4.622 6.909,4.631 6.526,4.97 6.516,5.551 6.469,8.221 6.447,10.891 6.417,13.497 10.488,13.532 14.498,13.566 18.522,13.601 18.554,10.99 18.601,8.321 18.605,5.653 Z"/>
+                <Path Fill="{TemplateBinding Foreground}" Data="M 18.475,14.656 C 14.437,14.619 10.436,14.583 6.452,14.547 6.439,14.986 6.424,15.51 6.408,16.051 10.462,16.086 14.451,16.121 18.39,16.155 18.419,15.625 18.45,15.072 18.475,14.656 Z"/>
+                <Path Fill="{TemplateBinding Foreground}" Data="M 7.436,18.859 C 8.133,19.01 8.846,19.088 9.551,19.203 11.139,19.464 11.315,19.829 10.533,21.221 10.058,22.066 9.569,22.912 9.669,23.935 9.704,24.289 9.739,24.645 9.773,25 L 15.012,25 C 15.055,24.617 15.112,24.235 15.144,23.852 15.201,23.206 14.917,22.507 14.687,21.87 14.519,21.405 14.17,21.011 13.929,20.569 13.578,19.926 13.673,19.673 14.378,19.462 14.879,19.312 15.401,19.235 15.914,19.121 16.609,18.966 17.313,18.839 17.993,18.63 18.202,18.566 18.429,18.301 18.493,18.083 18.608,17.687 18.608,17.259 18.651,16.888 14.467,16.853 10.475,16.819 6.348,16.784 6.365,17.014 6.4,17.266 6.4,17.518 6.399,18.449 6.535,18.663 7.436,18.859 Z" />
+                <!--<Rectangle Width="1" Height="25" Canvas.Right="1" Fill="{DynamicResource Theme.ComboBox.Separator.Light}"/>
+                <Rectangle Width="1" Height="25" Canvas.Right="0" Fill="{DynamicResource Theme.ComboBox.Separator.Dark}"/>-->
+            </Canvas>
+        </Border>
+    </ControlTemplate>
+    <Style x:Key="ThemeComboBoxItem" TargetType="{x:Type ComboBoxItem}">
+        <Setter Property="Foreground" Value="{DynamicResource Theme.ComboBox.Item.Static.Foreground}"/>
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                    <Border x:Name="Border" Padding="6" Margin="5" SnapsToDevicePixels="true" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="0">
+                        <ContentPresenter/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Border" Property="BorderThickness" Value="1"/>
+                            <Setter TargetName="Border" Property="Padding" Value="5"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="Border" Property="BorderThickness" Value="1"/>
+                            <Setter TargetName="Border" Property="Padding" Value="5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ThemeComboBox" TargetType="{x:Type ComboBox}">
+        <Setter Property="Background" Value="{DynamicResource Theme.ComboBox.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Theme.ComboBox.Item.Static.Foreground}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource ThemeComboBoxItem}"/>
+        <Setter Property="OverridesDefaultStyle" Value="true" />
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+
+                    <Grid>
+                        <ToggleButton x:Name="ToggleButton" Background="{TemplateBinding Background}" Foreground="{TemplateBinding Foreground}" MinHeight="{TemplateBinding MinHeight}" 
+                                      Height="{TemplateBinding Height}" Template="{StaticResource ThemeComboBoxToggleButton}" Margin="0" Focusable="false" ClickMode="Press" 
+                                      IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"/>
+                        <ContentPresenter x:Name="ContentSite" IsHitTestVisible="False" Content="{TemplateBinding SelectionBoxItem}" ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}" ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}" Margin="3,0,23,0" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+
+                        <Popup x:Name="Popup" Placement="Bottom" IsOpen="{TemplateBinding IsDropDownOpen}" AllowsTransparency="True" Focusable="False" PopupAnimation="Slide" MaxHeight="300">
+                            <themes:SystemDropShadowChrome x:Name="shadow" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=templateRoot}">
+                                <Grid x:Name="DropDown" SnapsToDevicePixels="True" MinWidth="{TemplateBinding ActualWidth}" MaxHeight="{TemplateBinding MaxDropDownHeight}">
+                                    <Border x:Name="DropDownBorder" Background="{TemplateBinding Background}" />
+                                    <ScrollViewer SnapsToDevicePixels="True">
+                                        <StackPanel IsItemsHost="True" KeyboardNavigation.DirectionalNavigation="Contained" Orientation="Horizontal"/>
+                                    </ScrollViewer>
+                                </Grid>
+                            </themes:SystemDropShadowChrome>
+                        </Popup>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger SourceName="ToggleButton" Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource Theme.ComboBox.Static.Editable.Button.Background}"/>
+                        </Trigger>
+                        <Trigger SourceName="ToggleButton" Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource Theme.ComboBox.Checked.Editable.Button.Background}"/>
+                        </Trigger>
+                        <Trigger Property="HasItems" Value="false">
+                            <Setter TargetName="DropDownBorder" Property="MinHeight" Value="95" />
+                        </Trigger>
+                        <Trigger Property="IsGrouping" Value="true">
+                            <Setter Property="ScrollViewer.CanContentScroll" Value="false" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value="0.5"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

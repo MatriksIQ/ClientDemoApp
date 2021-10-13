@@ -1,0 +1,98 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero">
+
+
+    <Style x:Key="AutoHide.ToolBar.Horizontal.OverflowButton.Style" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Foreground" Value="{DynamicResource TTray.Static.Glyph}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="MinHeight" Value="26"/>
+        <Setter Property="MinWidth" Value="26"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="Bd" SnapsToDevicePixels="true" CornerRadius="0" Background="{TemplateBinding Background}">
+                        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Width="10" Height="16">
+                            <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 2.019,5.253 C 1.241,4.475 0.875,3.569 1.204,3.239 1.534,2.91 2.44,3.276 3.218,4.054 L 4.586,5.422 C 5.363,6.201 6.636,6.201 7.414,5.422 L 8.782,4.054 C 9.559,3.276 10.466,2.91 10.796,3.239 11.125,3.569 10.759,4.475 9.982,5.253 L 8.613,6.621 C 7.835,7.399 6.929,8.305 6.599,8.634 6.27,8.964 5.73,8.964 5.4,8.634 5.071,8.305 4.165,7.399 3.387,6.621 L 2.019,5.253 Z"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource TTray.MouseOver.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource TTray.Pressed.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource TTray.Disabled.Glyph}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Source={x:Static SystemParameters.HighContrast}}" Value="true">
+                <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.ControlBrushKey}}"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="AutoHide.ToolBar.Style" TargetType="{x:Type ToolBar}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToolBar}">
+                    <Grid x:Name="Grid" Margin="0" SnapsToDevicePixels="true">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid x:Name="OverflowGrid" Grid.Column="1">
+                            <ToggleButton x:Name="OverflowButton" ClickMode="Press" FocusVisualStyle="{x:Null}" IsChecked="{Binding IsOverflowOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" IsEnabled="{TemplateBinding HasOverflowItems}" Style="{DynamicResource AutoHide.ToolBar.Horizontal.OverflowButton.Style}"/>
+                            <Popup x:Name="OverflowPopup" AllowsTransparency="true" Focusable="false" IsOpen="{Binding IsOverflowOpen, RelativeSource={RelativeSource TemplatedParent}}" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom" StaysOpen="false">
+                                <themes:SystemDropShadowChrome x:Name="Shdw" Color="Transparent">
+                                    <Border x:Name="ToolBarSubMenuBorder" BorderBrush="{DynamicResource ToolBarMenuBorder}" BorderThickness="1" Background="{DynamicResource ToolBarSubMenuBackground}" RenderOptions.ClearTypeHint="Enabled">
+                                        <ToolBarOverflowPanel WrapWidth="10" x:Name="PART_ToolBarOverflowPanel" KeyboardNavigation.DirectionalNavigation="Cycle" FocusVisualStyle="{x:Null}" Focusable="true" Margin="2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.TabNavigation="Cycle" />
+                                    </Border>
+                                </themes:SystemDropShadowChrome>
+                            </Popup>
+                        </Grid>
+                        <Border x:Name="MainPanelBorder" BorderBrush="Transparent" BorderThickness="0" Background="Transparent" Padding="0">
+                            <DockPanel KeyboardNavigation.TabIndex="1" KeyboardNavigation.TabNavigation="Local">
+                                <Thumb x:Name="ToolBarThumb" Margin="0" Padding="0" Width="0"/>
+                                <ContentPresenter x:Name="ToolBarHeader" ContentSource="Header" HorizontalAlignment="Center" Margin="4,0,4,0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Center"/>
+                                <ToolBarPanel x:Name="PART_ToolBarPanel" IsItemsHost="true" Margin="0,1,2,2" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                            </DockPanel>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasOverflowItems" Value="false">
+                            <Setter Property="Visibility" TargetName="OverflowButton" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsOverflowOpen" Value="true">
+                            <Setter Property="IsEnabled" TargetName="ToolBarThumb" Value="false"/>
+                        </Trigger>
+                        <Trigger Property="Header" Value="{x:Null}">
+                            <Setter Property="Visibility" TargetName="ToolBarHeader" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="ToolBarTray.IsLocked" Value="true">
+                            <Setter Property="Visibility" TargetName="ToolBarThumb" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="HasDropShadow" SourceName="OverflowPopup" Value="true">
+                            <Setter Property="Margin" TargetName="Shdw" Value="0,0,5,5"/>
+                            <Setter Property="SnapsToDevicePixels" TargetName="Shdw" Value="true"/>
+                            <Setter Property="Color" TargetName="Shdw" Value="#71000000"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="AutoHide.ToolBarTray.Style" TargetType="{x:Type ToolBarTray}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+</ResourceDictionary>

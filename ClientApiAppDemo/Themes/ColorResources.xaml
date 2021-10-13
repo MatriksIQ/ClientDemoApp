@@ -1,0 +1,2714 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+    
+    <!--//////////BASE THEME COLORS//////////-->
+    <!--/////////////////////////////////////-->
+    <!--Dark Base Colors-->
+    <Color x:Key="Dark.Gray.2">#FF181919</Color>
+    <Color x:Key="Dark.Gray.3">#FF333333</Color>
+    <Color x:Key="Dark.Gray.4">#FF3c3c3b</Color>
+    <Color x:Key="Dark.Gray.5">#FF515151</Color>
+    <Color x:Key="Dark.Gray.6">#FF666666</Color>
+    <Color x:Key="Dark.Gray.7">#FF262624</Color>
+    <Color x:Key="Dark.Gray.8">#FF9F9F9F</Color>
+    <Color x:Key="Dark.Gray.9">#FF858585</Color>
+    <Color x:Key="Dark.Gray.10">#FF434343</Color>
+    <Color x:Key="Dark.Gray.11">#FFB5AC9A</Color>
+    <Color x:Key="Dark.Gray.12">#FF9E917F</Color>
+
+    <!--Light Base Colors-->
+    <Color x:Key="Light.Gray.1">#FFDADADA</Color>
+    <Color x:Key="Light.Gray.2">#FFCCCCCC</Color>
+    <Color x:Key="Light.Gray.3">#BFFFFFFF</Color>
+    <Color x:Key="Light.Gray.4">#FFFFFFFF</Color>
+    <Color x:Key="Light.Gray.5">#FFF5F2EA</Color>
+    <Color x:Key="Light.Gray.6">#FFCEC8BC</Color>
+    <Color x:Key="Light.Gray.7">#FFb2b2b2</Color>
+
+    <!--Orange Base Colors-->
+    <Color x:Key="Orange.0">#FFed6626</Color>
+    <Color x:Key="Orange.1">#FFF56C06</Color>
+    <Color x:Key="Orange.2">#FFF78A09</Color>
+    <Color x:Key="Orange.3">#FFFDD3A8</Color>
+    <Color x:Key="Orange.4">#FFAD5B0C</Color>
+    <Color x:Key="Orange.5">#FFC8690D</Color>
+    <Color x:Key="Orange.6">#FFD8A070</Color>
+    <Color x:Key="Orange.7">#FFEFAE77</Color>
+    <Color x:Key="Orange.8">#FFB53F17</Color>
+    <Color x:Key="Orange.9">#FF471C0E</Color>
+
+    <!--Green-->
+    <Color x:Key="Green.1">#FF20A00D</Color>
+    <Color x:Key="Green.2">#FF127503</Color>
+    <Color x:Key="Green.3">#0D4813</Color>
+    <Color x:Key="Green.4">#FF37D07D</Color>
+    <!--Red-->
+    <Color x:Key="Red.1">#FFCC1B1D</Color>
+    <Color x:Key="Red.2">#FF9B0D0F</Color>
+    <Color x:Key="Red.3">#FF591107</Color>
+    <Color x:Key="Red.Light">#FFF24446</Color>
+    <!--Yellow-->
+    <Color x:Key="Yellow.1">#FFF4FF01</Color>
+    <Color x:Key="Static.Orange.1">#FFb98411</Color>
+    <!--Blue-->
+    <Color x:Key="Blue.0">#FF9B846F</Color>
+    <Color x:Key="Blue.1">#FF204C70</Color>
+    <Color x:Key="Blue.2">#FF397CB8</Color>
+    <Color x:Key="Blue.3">#FF1da1f3</Color>
+    <Color x:Key="Blue.4">#FF1471ab</Color>
+
+    <!--/////////////////////////////////////-->
+    <!--//////////BRONZE THEME COLORS//////////-->
+    <Color x:Key="Page.Background.Color">#FFEDEAE5</Color>
+    <Color x:Key="Page.Background.Color.2">#FFCCC6BB</Color>
+    <Color x:Key="Base.Text.Color.0">#FF303030</Color>
+    <Color x:Key="Base.Text.Color.1">#FFEDEAE5</Color>
+    <Color x:Key="Base.Bronze.Color.1">#C48041</Color>
+    <Color x:Key="Base.Bronze.Caret">#80C48041</Color>
+    <!--<Color x:Key="Base.Border.Color">#9B9997</Color>-->
+    <Color x:Key="Soft.Button.Color">#FF998D7C</Color>
+
+    <Color x:Key="Bronze.Colo.1">#FFBBB19E</Color>
+    <Color x:Key="Bronze.Colo.2">#FFA49984</Color>
+    <Color x:Key="Bronze.Colo.3">#FFb0a697</Color>
+    <Color x:Key="Bronze.Colo.4">#FFcfc8bd</Color>
+    <Color x:Key="Bronze.Colo.5">#FFDAD5CD</Color>
+    <Color x:Key="Bronze.Colo.6">#FFe8d0b9</Color>
+    <Color x:Key="Bronze.Colo.7">#FFd8b08a</Color>
+
+    <!--/////////////////////////////////////-->
+    <!--//////////BLUE STACK THEME COLORS//////////-->
+    <Color x:Key="Color.Transparent">#00000000</Color>
+    <Color x:Key="Black">#FF000000</Color>
+    <Color x:Key="MainMenu.Gradient.Stop.1">#FF22232E</Color>
+    <Color x:Key="MainMenu.Gradient.Stop.2">#FF3A3C4B</Color>
+    <Color x:Key="MainMenu.Gradient.Stop.3">#FF2F303F</Color>
+    <Color x:Key="Base.Border.Color">#FF595B6A</Color>
+    <Color x:Key="Base.Background.Color">#FF272835</Color>
+    <Color x:Key="Widget.Background.Color">#FF333443</Color>
+    <Color x:Key="Static.Blue.1" >#FF2F7EFD</Color>
+    <Color x:Key="Static.Blue.2" >#FF2163CC</Color>
+    <Color x:Key="Static.Yellow.0" >#FFF6CE55</Color>
+    <Color x:Key="Static.Yellow.1" >#FFE0B73B</Color>
+    <Color x:Key="Static.Yellow.2" >#FFE3B324</Color>
+    <Color x:Key="Static.Yellow.3" >#FFD2A520</Color>
+    <Color x:Key="Static.Foreground.1" >#FFE5EDF0</Color>
+    <Color x:Key="Static.Foreground.2" >#FFDCEDF4</Color>
+    <Color x:Key="Static.Green.1">#FF17B150</Color>
+    <Color x:Key="Static.Red.1">#FFF03F41</Color>
+    <Color x:Key="Input.Background.Color">#FF2D2E3C</Color>
+    <Color x:Key="Item.MouseOver.Color">#FF43465E</Color>
+
+    <SolidColorBrush x:Key="Accent" Color="{StaticResource Static.Yellow.1}" />
+
+    <!--General-->
+    <SolidColorBrush x:Key="App.Background" Color="{StaticResource Base.Background.Color}" />
+
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Bid.Background" Color="#FF7EC173" />
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Bid.Background.Selected" Color="#FF409332" />
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Bid.Foreground" Color="#FF13390C" />
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Ask.Background" Color="#FFE97272" />
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Ask.Background.Selected" Color="#FFDA5555" />
+    <SolidColorBrush x:Key="Portfolio.NetTotal.Ask.Foreground" Color="#FF490D0D" />
+
+    <!--Shades-->
+    <SolidColorBrush x:Key="DarkShade" Color="{StaticResource Black}" Opacity=".2" />
+    <SolidColorBrush x:Key="LightShade" Color="{StaticResource Black}" Opacity=".1" />
+    <LinearGradientBrush x:Key="LightShadeGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#1AFFFFFF" Offset="0.0"/>
+        <GradientStop Color="#00000000" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <SolidColorBrush x:Key="Input.Static.Caret" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Input.Static.Selection" Color="{StaticResource Static.Blue.1}"/>
+
+    <!--DEFAULT BORDER COLORS-->
+    <SolidColorBrush x:Key="Input.Border.Static"    Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Input.Border.MouseOver" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Input.Border.Pressed"   Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Input.Border.Focused"   Color="{StaticResource Static.Blue.1}" />
+    <SolidColorBrush x:Key="Input.Border.Disabled"  Color="#2B2A2A" />
+
+    <!--DEFAULT INPUT BACKGROUND COLORS-->
+    <SolidColorBrush x:Key="Input.Background.Static"    Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Input.Background.MouseOver" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Input.Background.Pressed"   Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Input.Background.Focused"   Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Input.Background.Disabled"  Color="{StaticResource Widget.Background.Color}" />
+
+    <!--DEFAULT INPUT & GLYPH FOREGROUND COLORS-->
+    <SolidColorBrush x:Key="Input.Foreground.Static"    Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Input.Foreground.MouseOver" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Input.Foreground.Pressed"   Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Input.Foreground.Focused"   Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Input.Foreground.Disabled"  Color="{StaticResource Static.Foreground.1}" Opacity=".5" />
+
+    <!--BUTTON TYPE BACKGROUND COLOR-->
+    <LinearGradientBrush x:Key="Button.Background.Static" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Background.MouseOver" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Background.Pressed" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Background.Focused" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Background.Disabled" StartPoint="0.5,0" EndPoint="0.5,1" Opacity=".4">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--BUTTON TYPE BORDER COLOR-->
+    <SolidColorBrush x:Key="Button.Border.Static" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Button.Border.MouseOver" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Button.Border.Pressed" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Button.Border.Disabled" Color="{StaticResource Base.Border.Color}" Opacity=".4"/>
+    <SolidColorBrush x:Key="Button.Border.Focus" Color="{StaticResource Static.Yellow.1}"/>
+
+    <!--BUTTON TYPE FOREGROUND COLOR-->
+    <SolidColorBrush x:Key="Button.Foreground.Static" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.Foreground.MouseOver" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.Foreground.Pressed" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.Foreground.Disabled" Color="{StaticResource Static.Foreground.1}" Opacity=".4"/>
+
+    <!--WINDOW HEADER BUTTON COLORS-->
+    <SolidColorBrush x:Key="WindowHeaderButton.Foreground.Light.Static" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Foreground.Static"    Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Foreground.MouseOver" Color="{StaticResource Static.Blue.1}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Foreground.Pressed"   Color="{StaticResource Static.Blue.1}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Foreground.Disabled"  Color="{StaticResource Static.Foreground.1}" Opacity=".2"/>
+
+    <SolidColorBrush x:Key="WindowHeaderButton.Background.Static"    Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Background.MouseOver" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Background.Pressed"   Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="WindowHeaderButton.Background.Disabled"  Color="{StaticResource Color.Transparent}"/>
+
+    <!--OSMANLI LOGIN BUTTON COLOR-->
+    <LinearGradientBrush x:Key="OsmanliFx.Wrap.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#198F86" Offset="0.0"/>
+        <GradientStop Color="#08423E" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--Orange Button Style-->
+    <SolidColorBrush x:Key="Orange.Button.Flat.Static.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Orange.Button.Flat.MouseOver.Background" Color="{StaticResource Static.Yellow.2}"/>
+    <SolidColorBrush x:Key="Orange.Button.Flat.Pressed.Background" Color="{StaticResource Static.Yellow.3}"/>
+    <SolidColorBrush x:Key="Orange.Button.Flat.Disabled.Background" Color="{StaticResource Static.Yellow.1}" Opacity=".5"/>    
+    <LinearGradientBrush x:Key="Orange.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Orange.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Orange.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Orange.Button.Disabled.Background" StartPoint="0.5,0" EndPoint="0.5,1" Opacity=".5">
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Orange.Button.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Orange.Button.MouseOver.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Orange.Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Orange.Button.Disabled.Border" Color="{StaticResource Orange.4}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Orange.Button.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Orange.Button.MouseOver.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Orange.Button.Pressed.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Orange.Button.Disabled.Foreground" Color="{StaticResource Widget.Background.Color}" Opacity=".5"/>
+
+    <!--Green Button Style-->
+    <LinearGradientBrush x:Key="Green.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.2"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Green.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.3"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Green.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.5"/>
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.8"/>
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Green.Button.Disabled.Background" Color="#45332b" />
+    <SolidColorBrush x:Key="Green.Button.Static.Border" Color="{StaticResource Green.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="Green.Button.MouseOver.Border" Color="{StaticResource Green.1}" Opacity=".7"/>
+    <SolidColorBrush x:Key="Green.Button.Pressed.Border" Color="{StaticResource Green.1}" Opacity=".7"/>
+    <SolidColorBrush x:Key="Green.Button.Disabled.Border" Color="{StaticResource Orange.0}" Opacity=".15"/>
+    <SolidColorBrush x:Key="Green.Button.Static.Foreground" Color="{StaticResource Light.Gray.1}"/>
+    <SolidColorBrush x:Key="Green.Button.MouseOver.Foreground" Color="#f1bda4"/>
+    <SolidColorBrush x:Key="Green.Button.Pressed.Foreground" Color="#fbd5c3"/>
+    <SolidColorBrush x:Key="Green.Button.Disabled.Foreground" Color="{StaticResource Dark.Gray.10}"/>
+
+
+    <!--/////////////////////DEFAULT DATAGRID STYLE///////////////////////////-->
+    <!--DataGrid Header-->
+    <SolidColorBrush x:Key="DataGrid.Header.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Header.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Header.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <LinearGradientBrush x:Key="DataGrid.Header.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DataGrid.Header.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DataGrid.Header.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="DataGrid.Header.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <!--DataCell-->
+    <SolidColorBrush x:Key="DataGrid.Cell.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Focused.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.LostFocus.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".4"/>
+
+    <SolidColorBrush x:Key="DataGrid.Cell.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}" />
+    <SolidColorBrush x:Key="DataGrid.Cell.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Focused.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.LostFocus.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+
+    <SolidColorBrush x:Key="DataGrid.Cell.MouseOver.Border" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Selected.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.Focused.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Cell.LostFocus.Border" Color="#FF535674"/>
+    <!--Row Header-->
+    <SolidColorBrush x:Key="DataGrid.Row.Header.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Row.Header.MouseOver.Background" Color="{StaticResource Base.Background.Color}" Opacity=".8"/>
+    <SolidColorBrush x:Key="DataGrid.Row.Header.Pressed.Background" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Row.Header.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <!--DataGrid Base-->
+    <SolidColorBrush x:Key="DataGrid.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DataGrid.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Horizontal.GridLines.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Vertical.GridLines.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Row.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DataGrid.Alternate.Row.Static.Background" Color="{StaticResource Base.Background.Color}"/>
+
+
+
+    <!--/////////////////////////////////////-->
+    <!--//////////BASE THEME COLORS//////////-->
+    <SolidColorBrush x:Key="Static.Highlight.Brush" Color="White" />
+    <SolidColorBrush x:Key="Static.Red.1.Brush" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Static.Green.1.Brush" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Static.Blue.1.Brush" Color="{StaticResource Static.Blue.1}" />
+    <SolidColorBrush x:Key="Static.Orange.0.Brush" Color="{StaticResource Static.Blue.2}" />
+    <SolidColorBrush x:Key="Static.Yellow.1.Brush" Color="{StaticResource Static.Yellow.1}" />
+
+    <!--Page Background Standart-->
+    <SolidColorBrush x:Key="GridSplitter.Background" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Page.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Page.Background.Accent" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Page.Background.2" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="Page.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Page.Foreground.Middle" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Page.Foreground.Middle.2" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Page.Foreground.White" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="Page.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="GridSplitter.Border" Color="{StaticResource Base.Border.Color}" />
+
+    <!--Feature Tool Colors-->
+    <SolidColorBrush x:Key="TourControl.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="TourControl.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="TourControl.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="TourControl.Close.Static.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="TourControl.Close.Hover.Foreground" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="TourControl.Button.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="TourControl.Button.Hover.Border" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="TourControl.Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="TourControl.Button.Hover.Foreground" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="TourControl.Blink.Color" Color="{StaticResource Static.Yellow.1}" />
+
+
+    <CornerRadius x:Key="Icon.ShadeButton.CornerRadius">0,0,0,0</CornerRadius>
+
+
+    <LinearGradientBrush x:Key="HeaderGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="HeaderGradientFocus" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#FF5F6286" Offset="0.0"/>
+        <GradientStop Color="#FF333547" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Header.Text.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Time.Clock.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Graph.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Graph.Anno.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Graph.ScrollBar.Static.Glyph" Color="{StaticResource Static.Foreground.1}" Opacity=".6" />
+
+    <SolidColorBrush x:Key="Mhc.Button.Static.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Mhc.Button.MouseOver.Foreground" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="Mhc.Button.Pressed.Foreground" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="Mhc.Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.2}" />
+
+    <SolidColorBrush x:Key="Circuit.Breaker.Highlight" Color="{StaticResource Static.Yellow.1}" />
+
+
+    <!--Search Component Colors-->
+    <SolidColorBrush x:Key="SearchItem.Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SearchItem.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="SearchItem.Button.Pressed.Foreground" Color="{StaticResource Static.Blue.1}" />
+    <SolidColorBrush x:Key="SearchItem.Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".3" />
+    <SolidColorBrush x:Key="SearchItem.Button.Static.Border" Color="{StaticResource Color.Transparent}" />
+
+
+    <!--DEFAULT TEXTBOX-->
+    <SolidColorBrush x:Key="TextBox.Static.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="TextBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TextBox.Focus.Border" Color="{StaticResource Static.Blue.1}"/>
+    <SolidColorBrush x:Key="TextBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TextBox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TextBox.Focus.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TextBox.Static.Caret" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TextBox.Selection.Brush" Color="{StaticResource Static.Blue.1}"/>
+    <Thickness x:Key="TextBox.Border.Thickness">1,1,1,1</Thickness>
+    <CornerRadius x:Key="TextBox.Corner.Radius">0</CornerRadius>
+    <Thickness x:Key="TextBox.Padding">5,5,5,5</Thickness>
+
+    <!--SEARCH TEXTBOX-->
+    <SolidColorBrush x:Key="Search.TextBox.Static.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Search.TextBox.MouseOver.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Search.TextBox.Focus.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="Search.TextBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Search.TextBox.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Focus.Border" Color="{StaticResource Static.Blue.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Label.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Label.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Label.Focus.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Search.TextBox.Focus.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <Thickness x:Key="Search.TextBox.Border.Thickness">1,1,1,1</Thickness>
+    <CornerRadius x:Key="Search.TextBox.Corner.Radius">0</CornerRadius>
+
+
+    <!--SIMPLE TEXTBOX-->
+    <SolidColorBrush x:Key="Simple.TextBox.Static.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="Simple.TextBox.MouseOver.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="Simple.TextBox.Focus.Background" Color="{StaticResource Input.Background.Color}"/>
+    <Thickness x:Key="Simple.TextBox.Border.Thickness">1,1,1,1</Thickness>
+    <CornerRadius x:Key="Simple.TextBox.Corner.Radius">0,0,0,0</CornerRadius>
+
+
+    <!--Group Colors-->
+    <LinearGradientBrush x:Key="GroupColors.Green" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#5AEE26" Offset="0.0"/>
+        <GradientStop Color="#24690C" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GroupColors.Blue" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#26D6EE" Offset="0.0"/>
+        <GradientStop Color="#0C4D69" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GroupColors.Red" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GroupColors.Purple" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#C626EE" Offset="0.0"/>
+        <GradientStop Color="#670C69" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GroupColors.Yellow" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#EEC226" Offset="0.0"/>
+        <GradientStop Color="#695A0C" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--DEFAULT SEPERATOR-->
+    <SolidColorBrush x:Key="Seperator.Static.Light" Color="White" Opacity="0.10"/>
+    <SolidColorBrush x:Key="Seperator.Static.Dark" Color="Black" Opacity="0.25"/>
+
+    <!--GROUP BOX-->
+    <SolidColorBrush x:Key="GroupBox.Foreground.Static" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="GroupBox.Outer.Border.Static" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="GroupBox.Middle.Border.Static" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="GroupBox.Inner.Border.Static" Color="{StaticResource Color.Transparent}"/>
+    <CornerRadius x:Key="GroupBox.Middle.Border.CornerRadius">3,3,3,3</CornerRadius>
+
+    <SolidColorBrush x:Key="Clear.GroupBox.Foreground.Static" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Clear.GroupBox.Outer.Border.Static" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Clear.GroupBox.Middle.Border.Static" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Clear.GroupBox.Inner.Border.Static" Color="{StaticResource Color.Transparent}"/>
+    <CornerRadius x:Key="Clear.GroupBox.Middle.Border.CornerRadius">3,3,3,3</CornerRadius>
+
+    <Thickness x:Key="AdvancedOrderControl.GroupBox.Border.Thickness">1,1,1,1</Thickness>
+
+
+    <!--PROGRESS BAR-->
+    <LinearGradientBrush x:Key="ProgressBar.Progress" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="0" />
+        <GradientStop Color="{StaticResource Static.Yellow.1}" Offset="0.5" />
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="1.0" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ProgressBar.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="0.3"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ProgressBar.Border" Color="{StaticResource Base.Border.Color}"/>
+
+
+    <!--////////////SCROLLBAR STYLE SETTINGS////////////-->
+    <!--RepeatButton ScrollBarButton-->
+    <SolidColorBrush x:Key="ScrollBarButton.Default.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.MouseOver.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.Pressed.Background" Color="#FF595B79"/>
+    <SolidColorBrush x:Key="ScrollBarButton.Disabled.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.Default.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.MouseOver.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.Pressed.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ScrollBarButton.Disabled.Border" Color="{StaticResource Color.Transparent}"/>
+    <!--Thumb Color-->
+    <SolidColorBrush x:Key="ScrollBarThumb.Default.Fill" Color="#4F5162"/>
+    <SolidColorBrush x:Key="ScrollBarThumb.MouseOver.Fill" Color="#FF595B79"/>
+    <SolidColorBrush x:Key="ScrollBarThumb.Dragging.Fill" Color="#FF595B79"/>
+    <!--Scrollbar-->
+    <SolidColorBrush x:Key="ScrollBar.Default.Background" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="ScrollBar.Default.Border" Color="{StaticResource Base.Border.Color}"/>
+    <!--Scrollbar Glyph-->
+    <SolidColorBrush x:Key="ScrollBar.Default.Glyph" Color="#FFA0A1B7" />
+    <SolidColorBrush x:Key="ScrollBar.MouseOver.Glyph" Color="#FFA0A1B7" />
+    <SolidColorBrush x:Key="ScrollBar.Pressed.Glyph" Color="#FFA0A1B7" />
+    <SolidColorBrush x:Key="ScrollBar.Disabled.Glyph" Color="#FFA0A1B7" Opacity=".5"/>
+    <!--////////////SCROLLBAR STYLE SETTINGS////////////-->
+
+
+
+    <!--Default Button-->
+    <CornerRadius x:Key="Button.Corner.Radius">0</CornerRadius>
+    <!--<LinearGradientBrush x:Key="Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.12}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.6}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.6}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Button.Disabled.Background" StartPoint="0.5,0" EndPoint="0.5,1" Opacity=".5">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.12}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Button.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Button.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>-->
+
+    <!--OptimizationButton Colors-->
+    <LinearGradientBrush x:Key="OptimizationList.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OptimizationList.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OptimizationList.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OptimizationList.Button.Disabled.Background" StartPoint="0.5,0" EndPoint="0.5,1" Opacity=".5">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="OptimizationList.Button.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.Focus.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OptimizationList.Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+
+    <!--LINK BUTTON-->
+    <SolidColorBrush x:Key="LinkButton.Static.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="LinkButton.Static.Foreground.Light" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="LinkButton.MouseOver.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="LinkButton.Disabled.Foreground" Color="{StaticResource Static.Foreground.2}" Opacity="0.5"/>
+
+
+    <!--SIMPLE BUTTON-->
+    <SolidColorBrush x:Key="SimpleButton.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}"/>
+    <SolidColorBrush x:Key="SimpleButton.MouseOver.Background" Color="{StaticResource MainMenu.Gradient.Stop.3}"/>
+    <SolidColorBrush x:Key="SimpleButton.Pressed.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <SolidColorBrush x:Key="SimpleButton.Disabled.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" Opacity=".35"/>    
+    <SolidColorBrush x:Key="SimpleButton.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="SimpleButton.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>    
+    <SolidColorBrush x:Key="SimpleButton.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SimpleButton.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SimpleButton.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+
+    <!--MIC RECORD BUTTON-->
+    <SolidColorBrush x:Key="MicButton.Static.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="MicButton.MouseOver.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="MicButton.Pressed.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="MicButton.Static.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="MicButton.MouseOver.Background" Color="{StaticResource Red.1}"/>
+    <SolidColorBrush x:Key="MicButton.Pressed.Background" Color="{StaticResource Green.4}"/>
+    <SolidColorBrush x:Key="MicButton.Info.Background" Color="{StaticResource Blue.2}"/>
+    <SolidColorBrush x:Key="MicButton.Static.Border" Color="{StaticResource Orange.7}"/>
+    <SolidColorBrush x:Key="MicButton.MouseOver.Border" Color="{StaticResource Orange.7}"/>
+    <SolidColorBrush x:Key="MicButton.Pressed.Border" Color="{StaticResource Orange.7}"/>
+
+    <!--ALERTS VIEW BUTTONS-->
+    <SolidColorBrush x:Key="AlertsView.RecordedAlert.Static.Background" Color="{StaticResource Blue.1}"/>
+    <SolidColorBrush x:Key="AlertsView.AddCondition.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}"/>
+    <SolidColorBrush x:Key="AlertsView.AddCondition.InnerButton.Static.Background" Color="{StaticResource Blue.1}"/>
+    <SolidColorBrush x:Key="AlertsView.AddCondition.Static.Foreground" Color="{StaticResource Static.Foreground.2}" Opacity=".5"/>
+    <SolidColorBrush x:Key="AlertsView.AddCondition.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}" Opacity=".8"/>
+    <SolidColorBrush x:Key="AlertsView.AddCondition.Pressed.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="AlertsView.NotificationCloseButton.Static.Background" Color="{StaticResource Light.Gray.1}"/>
+
+    <!--DIALOG BOX BUTTONS-->
+    <SolidColorBrush x:Key="DialogBox.Submit.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DialogBox.Submit.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DialogBox.Submit.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DialogBox.Submit.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+
+    <LinearGradientBrush x:Key="DialogBox.Submit.Static.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DialogBox.Submit.MouseOver.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DialogBox.Submit.Pressed.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="DialogBox.Header.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="DialogBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DialogBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DialogBox.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+
+    <!--UPDOWN TEXTBOX REPEAT BUTTONS-->
+    <Thickness x:Key="RepeatUpButton.Horizontal.Border.Thickness">1,1,1,1</Thickness>
+    <Thickness x:Key="RepeatDownButton.Horizontal.Border.Thickness">0,1,1,1</Thickness>
+    <SolidColorBrush x:Key="RepeatButton.Static.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RepeatButton.MouseOver.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RepeatButton.Pressed.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RepeatButton.Disabled.Glyph" Color="#474859" />
+    <LinearGradientBrush x:Key="RepeatButton.Static.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RepeatButton.MouseOver.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RepeatButton.Pressed.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="RepeatButton.Disabled.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="RepeatButton.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="RepeatButton.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="RepeatButton.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="RepeatButton.Disabled.Border" Color="#2B2A2A"/>
+
+
+    <!--SETTINGS BUTTON-->
+    <SolidColorBrush x:Key="Settings.Static.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Settings.Static.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="Settings.MouseOver.Foreground" Color="{StaticResource Light.Gray.4}"/>
+
+
+    <!--SAVE BUTTON-->
+    <SolidColorBrush x:Key="Default.Save.Static.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Default.Save.MouseOver.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Default.Save.Pressed.Foreground" Color="{StaticResource Static.Yellow.3}"/>
+
+
+    <!--TWITTER BUTTONS-->
+    <SolidColorBrush x:Key="Twitter.Share.Static.Background" Color="{StaticResource Blue.3}"/>
+    <SolidColorBrush x:Key="Twitter.Share.MouseOver.Background" Color="{StaticResource Blue.4}"/>
+    <SolidColorBrush x:Key="Twitter.Share.Checked.Background" Color="{StaticResource Blue.4}"/>
+
+    <!--BUYSELL BUTTONS-->
+    <SolidColorBrush x:Key="BuySell.Button.Static.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <LinearGradientBrush x:Key="Buy.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Buy.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Buy.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Sell.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Sell.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Sell.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--WAITED ORDER BUTTONS-->
+    <LinearGradientBrush x:Key="WaitedOrder.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="WaitedOrder.Button.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="WaitedOrder.Button.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="WaitedOrder.Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="WaitedOrder.Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="WaitedOrder.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="WaitedOrder.Button.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+
+    <SolidColorBrush x:Key="WaitedOrder.X.Button.Static.Foreground" Color="{StaticResource Light.Gray.1}"/>
+    <SolidColorBrush x:Key="WaitedOrder.X.Button.MouseOver.Foreground" Color="{StaticResource Light.Gray.1}"/>
+    <SolidColorBrush x:Key="WaitedOrder.X.Button.Pressed.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <LinearGradientBrush x:Key="WaitedOrder.Red.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Red.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Red.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WaitedOrder.Green.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Green.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Green.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="WaitedOrder.Blue.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Blue.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Blue.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Blue.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Blue.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Blue.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="WaitedOrder.Blue.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Blue.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Blue.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--ORDER CONFIRMATION BUTTONS-->
+    <SolidColorBrush x:Key="OrderConfirmation.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OrderConfirmation.Hover.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OrderConfirmation.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OrderConfirmation.Path.Fill" Color="{StaticResource Light.Gray.4}"/>
+    <LinearGradientBrush x:Key="OrderConfirmation.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Hover.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="OrderConfirmation.Succes.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Succes.Hover.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Succes.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="OrderConfirmation.Success.Border" Color="#021808"/>
+
+    <LinearGradientBrush x:Key="OrderConfirmation.Cancel.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Cancel.Hover.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderConfirmation.Cancel.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="OrderConfirmation.Cancel.Border" Color="{StaticResource Red.3}"/>
+    <Thickness x:Key="Order.Confirmation.Border.Thickness">0,0,0,0</Thickness>
+    <SolidColorBrush x:Key="OrderConfirmation.Outer.Border" Color="{StaticResource Color.Transparent}"/>
+
+    <!--SPREADSHEET TOOLBAR BUTTON-->
+    <LinearGradientBrush x:Key="Spreadsheet.Toolbar.Btn.Background.Static" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.7}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Spreadsheet.Toolbar.Btn.Background.Active" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.7}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Btn.Foreground.Static" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Btn.Foreground.Active" Color="{StaticResource Static.Blue.2}" />
+
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Popup.Btn.Foreground.Static" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Popup.Btn.Foreground.Active" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Popup.Btn.Background.Active" Color="{StaticResource Color.Transparent}" />
+
+
+    <!--HEADER COMBO BUTTONS-->
+    <SolidColorBrush x:Key="HeaderSaveComboBoxToggleButton.Static.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="HeaderSaveComboBoxToggleButton.Checked.Foreground" Color="{StaticResource Base.Bronze.Color.1}"/>
+    <SolidColorBrush x:Key="HeaderSaveComboBoxToggleButton.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+
+
+    <!--CHART TOOL BUTTON-->
+    <SolidColorBrush x:Key="ChartTool.Btn.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Foreground.MouseOver" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Foreground.Active" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Border.Active" Color="{StaticResource Static.Blue.1}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Background.Static" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Background.MouseOver" Color="{StaticResource Static.Blue.2}" />
+    <SolidColorBrush x:Key="ChartTool.Btn.Background.Active" Color="{StaticResource Static.Blue.2}" />
+
+
+    <!--CALENDAR COLORS-->
+    <SolidColorBrush x:Key="Calendar.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Calendar.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Calendar.Header.Static.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="Calendar.Header.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <LinearGradientBrush x:Key="Calendar.Header.Static.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Calendar.Header.MouseOver.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Static.Blue.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Blue.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Calendar.DayNames.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".7"/>
+    <LinearGradientBrush x:Key="Calendar.Day.Selected.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Static.Blue.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Blue.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Calendar.Day.MouseOver.Background" Color="{StaticResource Static.Blue.1}"/>
+    <SolidColorBrush x:Key="Calendar.Day.Selected.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Calendar.Today.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="Calendar.Day.Today.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="Calendar.Day.Active.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Calendar.Day.Inactive.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Calendar.Disabled.Color" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Calendar.Blackout.Path" Color="{StaticResource Static.Yellow.1}" />
+
+
+    <!--DATE PICKER COLORS-->
+    <Thickness x:Key="DatePicker.ComboBox.Border.Thickness">1,1,1,1</Thickness>
+    <Thickness x:Key="DatePicker.ComboBox.Button.Border.Thickness">1,0,0,0</Thickness>
+    <CornerRadius x:Key="DatePicker.ComboBox.Border.Corner.Radius">0,0,0,0</CornerRadius>
+    <SolidColorBrush x:Key="Text.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Text.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DatePicker.Button.Static.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="DatePicker.Static.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.MouseOver.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Pressed.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Static.Editable.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Static.Editable.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Static.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.MouseOver.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Pressed.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="DatePicker.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <LinearGradientBrush x:Key="DateComboBox.Static.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DateComboBox.MouseOver.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="DateComboBox.Pressed.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--///////////////////////////////DEFAULT TOGGLE BUTTON COLORS///////////////////////////////-->
+    <LinearGradientBrush x:Key="Toggle.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Toggle.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Toggle.Button.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Toggle.Button.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Toggle.Button.Disabled.Background" StartPoint="0.5,0" EndPoint="0.5,1" Opacity=".5">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Toggle.Button.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Toggle.Button.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Checked.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Toggle.Button.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Toggle.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Checked.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Toggle.Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <CornerRadius x:Key="Toggle.Button.Corner.Radius">0</CornerRadius>
+
+
+    <!--///////////////////////////////ORANGE TOGGLE BUTTON COLORS///////////////////////////////-->
+    <LinearGradientBrush x:Key="Orange.Toggle.Button.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Orange.Toggle.Button.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Orange.Toggle.Button.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Orange.Toggle.Button.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Orange.Toggle.Button.Checked.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Orange.Toggle.Button.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Orange.Toggle.Button.MouseOver.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Orange.Toggle.Button.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+
+    <!--MARKET DEPTH VIEW TOGGLE BUTTONS-->
+    <SolidColorBrush x:Key="Depth.SummaryPopup.Background" Color="#FFffffbc"/>
+
+    <!--BUTTON LIST TOGGLE-->
+    <SolidColorBrush x:Key="Movable.Toggle.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Movable.Toggle.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <LinearGradientBrush x:Key="Movable.Toggle.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Movable.Toggle.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#0045B4" Offset="0.0"/>
+        <GradientStop Color="#518FF2" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+
+    <!--Alarm Aktif / Pasif Button-->
+    <SolidColorBrush x:Key="Alert.ActivePassive.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Alert.ActivePassive.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Alert.ActivePassive.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Alert.ActivePassive.Static.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="Alert.ActivePassive.Checked.Background" Color="{StaticResource Static.Green.1}"/>
+
+    <!--Alert Sound ToggleButton-->
+    <SolidColorBrush x:Key="Alert.Sound.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Alert.Sound.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Alert.Sound.Static.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="Alert.Sound.Checked.Background" Color="{StaticResource Static.Green.1}"/>
+
+
+    <!--Alert List True/False-->
+    <SolidColorBrush x:Key="Alert.List.Static.Foreground" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="Alert.List.Checked.Foreground" Color="{StaticResource Green.2}"/>
+
+
+    <!--Alert List Active/Passive-->
+    <SolidColorBrush x:Key="Alert.LisBool.Static.Foreground" Color="{StaticResource Red.2}"/>
+    <SolidColorBrush x:Key="Alert.LisBool.Static.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="Alert.LisBool.Checked.Foreground" Color="{StaticResource Green.3}"/>
+    <SolidColorBrush x:Key="Alert.LisBool.Checked.Background" Color="{StaticResource Static.Green.1}"/>
+
+
+    <!--QUICK INFORMATION PANEL TOGGLE-->
+    <SolidColorBrush x:Key="QuickInformation.IconToggle.Static.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="QuickInformation.IconToggle.Selected.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <LinearGradientBrush x:Key="QuickInformation.IconToggle.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="QuickInformation.IconToggle.Selected.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.5"/>
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--TWITTER TOGGLE-->
+    <SolidColorBrush x:Key="Twitter.Static.Background" Color="{StaticResource Blue.3}"/>
+    <SolidColorBrush x:Key="Twitter.MouseOver.Background" Color="{StaticResource Blue.4}"/>
+    <SolidColorBrush x:Key="Twitter.Checked.Background" Color="{StaticResource Blue.4}"/>
+    <SolidColorBrush x:Key="Twitter.Static.Foreground" Color="{StaticResource Light.Gray.4}"/>
+
+
+    <!--SNIPPING TOOL TOGGLE-->
+    <LinearGradientBrush x:Key="Snipping.PreviewShow.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Dark.Gray.7}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Black}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--DETAIL WINDOW CHART SETTINGS TOGGLE-->
+    <SolidColorBrush x:Key="Detail.Chart.Settings.Static.Background" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="Detail.Chart.Settings.MouseOver.Background" Color="{StaticResource Static.Yellow.3}" />
+    <SolidColorBrush x:Key="Detail.Chart.Settings.Checked.Background" Color="{StaticResource Static.Yellow.2}" />
+    <SolidColorBrush x:Key="Detail.Chart.Settings.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Detail.Chart.Settings.MouseOver.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Detail.Chart.Settings.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+
+
+
+    <!--TL/LOT TOGGLE-->
+    <LinearGradientBrush x:Key="Tlot.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Tlot.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Tlot.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Tlot.Brush" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Tlot.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Tlot.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Tlot.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+
+
+    <!--SHOW PASSWORD TOGGLE-->
+    <SolidColorBrush x:Key="ShowPassword.Toggle.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ShowPassword.Toggle.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="ShowPassword.Toggle.Static.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="ShowPassword.Toggle.Checked.Background" Color="{StaticResource Static.Yellow.1}"/>
+
+
+
+    <!--READONLY TOGGLE BUTTON-->
+    <SolidColorBrush x:Key="Readonly.ToggleButton.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Readonly.ToggleButton.Foreground" Color="{StaticResource Light.Gray.1}"/>
+    <SolidColorBrush x:Key="Readonly.ToggleButton.Checked.Foreground" Color="{StaticResource Dark.Gray.8}"/>
+
+
+    <!--EXTRA MINI TICKET BIDASK DIRECTION TOGGLE-->
+    <LinearGradientBrush x:Key="ExtraMiniTicket.BidAskDirection.Bid" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="0.49"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.50"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ExtraMiniTicket.BidAskDirection.Ask" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.49"/>
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="0.50"/>
+        <GradientStop Color="{StaticResource Dark.Gray.9}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--LINK TOGGLE BUTTON-->
+    <SolidColorBrush x:Key="LinkToggleButton.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="LinkToggleButton.MouseOver.Foreground" Color="{StaticResource Static.Yellow.3}"/>
+    <SolidColorBrush x:Key="LinkToggleButton.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="LinkToggleButton.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+
+    <SolidColorBrush x:Key="LinkToggleButtonLight.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="LinkToggleButtonLight.MouseOver.Foreground" Color="{StaticResource Static.Yellow.3}" />
+    <SolidColorBrush x:Key="LinkToggleButtonLight.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="LinkToggleButtonLight.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".2"/>
+
+
+    <!--///////////////////////////////////DEFAULT CHECKBOX///////////////////////////////////-->
+    <SolidColorBrush x:Key="OptionMark.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Background" Color="#FF19191F" />
+    <SolidColorBrush x:Key="OptionMark.Pressed.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="OptionMark.Disabled.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" Opacity=".5" />
+
+    <SolidColorBrush x:Key="OptionMark.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Border" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="OptionMark.Pressed.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="OptionMark.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5" />
+    
+    <SolidColorBrush x:Key="OptionMark.Static.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="OptionMark.Pressed.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="OptionMark.Checked.Glyph" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="OptionMark.Disabled.Glyph" Color="#FF19191F" Opacity=".5"/>
+    
+    <SolidColorBrush x:Key="OptionMark.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OptionMark.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="OptionMark.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <Thickness x:Key="OptionMark.Border.Thickness">2,2,2,2</Thickness>
+
+
+    <!--///////////////////////////ADVANCED ORDER CONTROL PYS CHECKBOX///////////////////////////-->
+    <SolidColorBrush x:Key="AOC.Checkbox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AOC.Checkbox.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AOC.Checkbox.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <Thickness x:Key="AOC.SBtn.Border">1,1,0,1</Thickness>
+    <CornerRadius x:Key="AOC.EditableButton.Corner.Radius">0</CornerRadius>
+
+    <!--SEANCE CLOCK CHECKBOX-->
+    <SolidColorBrush x:Key="Seance.Checkbox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Seance.Checkbox.Mouseover.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Seance.Checkbox.Pressed.Foreground" Color="{StaticResource Base.Bronze.Color.1}"/>
+    <SolidColorBrush x:Key="Seance.Checkbox.Checked.Foreground" Color="{StaticResource Base.Bronze.Color.1}"/>
+
+
+    <!--LINK STYLE CHECKBOX-->
+    <SolidColorBrush x:Key="Link.Checkbox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Link.Checkbox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Link.Checkbox.Pressed.Foreground" Color="{StaticResource Base.Bronze.Color.1}"/>
+    <SolidColorBrush x:Key="Link.Checkbox.Checked.Foreground" Color="{StaticResource Base.Bronze.Color.1}"/>
+
+
+    <!--NEWS VIEW DATE FILTER CHECKBOX-->
+    <SolidColorBrush x:Key="DateTime.Checkbox.Static.Border" Color="#00000000"/>
+    <SolidColorBrush x:Key="DateTime.Checkbox.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DateTime.Checkbox.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="DateTime.Checkbox.Static.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="DateTime.Checkbox.Checked.Background" Color="{StaticResource Static.Green.1}"/>
+    
+    <SolidColorBrush x:Key="News.DateTime.Area.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <LinearGradientBrush x:Key="News.DateTime.Area.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--BLOCK CHECKBOX-->
+    <SolidColorBrush x:Key="Graph.Settings.Select.Static" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Graph.Settings.Select.Active" Color="{StaticResource Base.Bronze.Color.1}"/>
+
+
+    <!--DEFAULT RADIO BUTTON-->
+    <SolidColorBrush x:Key="RadioButton.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Background" Color="#FF19191F" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="RadioButton.Disabled.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" Opacity=".5" />
+
+    <SolidColorBrush x:Key="RadioButton.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Border" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="RadioButton.Pressed.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="RadioButton.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5" />
+
+    <SolidColorBrush x:Key="RadioButton.Static.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="RadioButton.Pressed.Glyph" Color="#FF19191F"/>
+    <SolidColorBrush x:Key="RadioButton.Checked.Glyph" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="RadioButton.Disabled.Glyph" Color="#FF19191F" Opacity=".5"/>
+    
+    <SolidColorBrush x:Key="RadioButton.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RadioButton.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RadioButton.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="RadioButton.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <Thickness x:Key="RadioButton.Border.Thickness">2,2,2,2</Thickness>
+
+    <SolidColorBrush x:Key="HeaderRadioButton.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="HeaderRadioButton.MouseOver.Foreground" Color="{StaticResource Static.Yellow.0}"/>
+    <SolidColorBrush x:Key="HeaderRadioButton.Pressed.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="HeaderRadioButton.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="HeaderRadioButton.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".2"/>
+
+
+    <!--CURRENCY RADIO BUTTON-->
+    <SolidColorBrush x:Key="Curreny.Radio.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.MouseOver.Background" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Checked.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Disabled.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Checked.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Curreny.Radio.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+
+    <SolidColorBrush x:Key="Grouped.Radio.Checked.Background" Color="{StaticResource Base.Bronze.Color.1}"/>
+
+    <!--BLOCK RADIO BUTTON-->
+    <SolidColorBrush x:Key="Graph.Radio.Settings.Select.Static" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Graph.Radio.Settings.Select.Active" Color="{StaticResource Base.Border.Color}"/>
+
+
+    <!--MENU COLORS-->
+    <Thickness x:Key="MainMenu.Border.Thickness">0,0,0,0</Thickness>
+    <SolidColorBrush x:Key="MainMenu.Static.Border" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="MainMenu.Static.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <LinearGradientBrush x:Key="MainMenu.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="Menu.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5" />
+    <SolidColorBrush x:Key="Menu.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="MainMenu.Header.MouseOver.Background" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="MainMenu.Header.Checked.Background" Color="#FF74799c"/>
+
+    <LinearGradientBrush x:Key="InputGestureText.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Orange.8}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Orange.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MenuItem.MouseOver.Background" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="MainMenu.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="MainMenu.Pressed.Foreground" Color="{StaticResource Blue.0}" />
+    <LinearGradientBrush x:Key="MainMenu.Popup.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MenuItem.Static.Glyph" Color="{StaticResource Static.Foreground.2}"/>
+
+    <!--TOOLTIP COLORS-->
+    <SolidColorBrush x:Key="Tooltip.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Tooltip.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Tooltip.Static.Border" Color="{StaticResource Base.Background.Color}"/>
+
+
+    <!--AUTOHIDE TOOLBAR-->
+    <SolidColorBrush x:Key="TTray.Static.Glyph" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="TTray.MouseOver.Glyph" Color="{StaticResource  Static.Yellow.2}" />
+    <SolidColorBrush x:Key="TTray.Pressed.Glyph" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="TTray.Disabled.Glyph" Color="{StaticResource Static.Foreground.1}" Opacity=".4"/>
+
+    <SolidColorBrush x:Key="ToolBarMenuBorder" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ToolBarSubMenuBackground" Color="{StaticResource Base.Background.Color}"/>
+
+
+
+    <!--TWITTER WINDOW COLORS-->
+    <SolidColorBrush x:Key="AppForegroundBrush" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AppBackgroundBrush" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="TitleBarForegroundBrush" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="TitleBarBackgroundBrush" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="HyperLinkBrush">#99bbee</SolidColorBrush>
+    <SolidColorBrush x:Key="NavBarForegroundBrush" Color="{StaticResource Dark.Gray.6}" />
+    <SolidColorBrush x:Key="NavBarMouseOverBrush">#557799</SolidColorBrush>
+    <SolidColorBrush x:Key="TweetMetaInfoForegroundBrush" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="TweetActionsForegroundBrush" Color="{StaticResource Dark.Gray.6}" />
+    <SolidColorBrush x:Key="TweetActionsFavoritesSymbolForegroundBrush">IndianRed</SolidColorBrush>
+    <SolidColorBrush x:Key="TweetActionsRetweetSymbolForegroundBrush">Green</SolidColorBrush>
+    <SolidColorBrush x:Key="ComposeBackgroundBrush" Color="{StaticResource Dark.Gray.10}" />
+    <SolidColorBrush x:Key="ComposeTextBoxForegroundBrush" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="ComposeTextBoxBackgroundBrush" Color="{StaticResource Dark.Gray.5}" />
+    <SolidColorBrush x:Key="ComposeButtonForegroundBrush" Color="{StaticResource Light.Gray.2}" />
+    <SolidColorBrush x:Key="ComposeButtonBackgroundBrush" Color="{StaticResource Dark.Gray.5}" />
+    <SolidColorBrush x:Key="ComposeCharacterCounterForegroundBrush" Color="{StaticResource Light.Gray.2}" />
+    <SolidColorBrush x:Key="UserInfoBorderBrush" Color="{StaticResource Dark.Gray.10}" />
+    <SolidColorBrush x:Key="UserInfoFollowsYouForegroundBrush" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="UserInfoVerticalBarBorderBrush" Color="{StaticResource Dark.Gray.8}" />
+    <SolidColorBrush x:Key="UserInfoProfileImageBorderBrush">DarkGoldenrod</SolidColorBrush>
+    <SolidColorBrush x:Key="SearchTextBoxForegroundBrush" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="SearchTextBoxBackgroundBrush" Color="{StaticResource Dark.Gray.5}" />
+    <SolidColorBrush x:Key="StandardBorderBrush" Color="{StaticResource Dark.Gray.4}" />
+    <SolidColorBrush x:Key="StandardBrush" Color="{StaticResource Dark.Gray.4}" />
+    <SolidColorBrush x:Key="PressedBrush" Color="{StaticResource Dark.Gray.6}" />
+    <SolidColorBrush x:Key="HoverBrush" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="{StaticResource AppBackgroundColor}" />
+
+
+
+    <!--DEFAULT TREEVIEW-->
+    <SolidColorBrush x:Key="TreeView.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeView.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TreeView.Disabled.Background" Color="{StaticResource Widget.Background.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="TreeView.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TreeView.Disabled.Border" Color="{StaticResource Base.Border.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="TreeViewItem.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TreeViewItem.LostFocus.Foreground" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="TreeViewItem.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <SolidColorBrush x:Key="TreeViewItem.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.LostFocus.Background" Color="#FF535674"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Fill" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Checked.Fill" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Fill" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Fill" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Disabled.Fill" Color="{StaticResource Static.Foreground.2}" Opacity=".5"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Stroke" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Static.Checked.Stroke" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Stroke" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.MouseOver.Checked.Stroke" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TreeViewItem.TreeArrow.Disabled.Stroke" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+
+    <!--INDICATOR TREEVIEW-->
+    <SolidColorBrush x:Key="Indicator.Checkbox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Indicator.Checkbox.Checked.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Indicator.MainItem.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Indicator.MainItem.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+    <SolidColorBrush x:Key="Indicator.MainItem.Static.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Indicator.MainItem.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.Selected.Foreground" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Indicator.SubItem.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+
+
+    <!--DEFAULT LISTBOX-->
+    <SolidColorBrush x:Key="ListBox.Static.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="ListBox.Alternate.Background" Color="{StaticResource Base.Background.Color}" />    
+    <SolidColorBrush x:Key="ListBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>    
+    <SolidColorBrush x:Key="ListBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ListBox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ListBox.SelectedInactive.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ListBox.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Item.MouseOver.Border" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="Item.SelectedInactive.Border" Color="#FF535674"/>
+    <SolidColorBrush x:Key="Item.SelectedActive.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Item.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="Item.SelectedInactive.Background" Color="#FF535674"/>
+    <SolidColorBrush x:Key="Item.SelectedActive.Background" Color="{StaticResource Static.Yellow.1}"/>    
+    <CornerRadius x:Key="ListBox.Static.CornerRadius">0</CornerRadius>
+
+    <!--///////////////////////////////////OPTION PANEL LIST VIEW STYLE///////////////////////////////////-->
+    <SolidColorBrush x:Key="Option.ListBox.Static.Foreground" Color="{StaticResource Dark.Gray.8}"/>
+
+    <!--////////////////////// ALERT PAGE LIST VIEW //////////////////////-->
+    <SolidColorBrush x:Key="Alert.ListView.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Alert.ListView.Disabled.Background" Color="{StaticResource Static.Foreground.1}" Opacity=".5"/>
+
+    <!--POPUP STYLE LISTVIEW-->
+    <SolidColorBrush x:Key="PopupStyle.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <SolidColorBrush x:Key="PopupStyle.Alternate.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}"/>
+    <SolidColorBrush x:Key="PopupStyle.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="PopupStyle.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="PopupStyle.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="PopupStyle.MouseOver.Border" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="PopupStyle.SelectedInactive.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="PopupStyle.SelectedActive.Border" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="PopupStyle.MouseOver.Background" Color="{StaticResource Static.Yellow.3}"/>
+    <SolidColorBrush x:Key="PopupStyle.SelectedInactive.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="PopupStyle.SelectedActive.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="TemplateSelection.Popup.SaveButton.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+
+    <!--///////////////////////////////DEFAULT TABCONTROL///////////////////////////////-->
+    <SolidColorBrush x:Key="TabItem.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TabItem.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TabItem.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Disabled.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="TabItem.Panel.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TabItem.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="TabItem.Disabled.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TabItem.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Selected.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="TabItem.Disabled.Border" Color="{StaticResource Base.Border.Color}"/>
+
+
+    <!--ALERT PAGE TABCONTROL-->
+    <SolidColorBrush x:Key="Alert.TabItem.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Alert.TabItem.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Alert.TabItem.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Alert.TabItem.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+    <LinearGradientBrush x:Key="Alert.TabItem.Selected.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Alert.TabControl.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+
+
+    <!--DEFAULT COMBOBOX-->
+    <Thickness x:Key="ComboBox.Border.Thickness">1,1,1,1</Thickness>
+    <Thickness x:Key="ComboBox.Button.Border.Thickness">1,0,0,0</Thickness>
+    <CornerRadius x:Key="ComboBox.Border.Corner.Radius">0,0,0,0</CornerRadius>
+    <SolidColorBrush x:Key="ComboBox.Static.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Glyph" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Glyph" Color="#474859" />
+    <SolidColorBrush x:Key="ComboBox.Static.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="ComboBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Border" Color="#2B2A2A" />
+    <SolidColorBrush x:Key="ComboBox.Static.Editable.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Editable.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Editable.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Border" Color="#2B2A2A" />
+    <SolidColorBrush x:Key="ComboBox.Static.Editable.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Editable.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Editable.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Background" Color="{StaticResource Widget.Background.Color}" />
+    <LinearGradientBrush x:Key="ComboBox.Static.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBox.MouseOver.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBox.Pressed.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ComboBox.Disabled.Editable.Button.Background" EndPoint="0,1" StartPoint="0,0">
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Widget.Background.Color}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ComboBox.Static.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.MouseOver.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Pressed.Editable.Button.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Disabled.Editable.Button.Border" Color="#2B2A2A"/>
+    <SolidColorBrush x:Key="ComboBox.Text.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ComboBox.Text.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="ComboBox.Text.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Static.Popup.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="ComboBox.Static.Popup.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHover.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelectedHover.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelectedNoFocus.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewFocus.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHoverFocus.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHover.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelected.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelectedHover.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewSelectedNoFocus.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewFocus.Border" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="ComboBoxItem.ItemsviewHoverFocus.Border" Color="{StaticResource Static.Yellow.1}"/>
+
+
+
+    <!--SO SIMPLE COMBOBOX-->
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Static.Editable.Button.Background" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Checked.Editable.Button.Background" Color="{StaticResource Static.Foreground.2}"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Item.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Item.MouseOver.Foreground" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Item.Selected.Foreground" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Item.MouseOver.Background" Color="{StaticResource Static.Yellow.1}" Opacity="0.7"/>
+    <SolidColorBrush x:Key="SoSimple.ComboBox.Item.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Sosimple.ComboBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+
+
+    <!--ALERT CONDITION COMBOBOX-->
+    <Thickness x:Key="AlertCondition.ComboBox.Static.Editable.Border.Thickness">1,1,1,1</Thickness>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>    
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.MouseOver.Background" Color="{StaticResource Item.MouseOver.Color}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Selected.Background" Color="{StaticResource Static.Yellow.1}"/>    
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Checked.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Selected.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Editable.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Editable.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="AlertCondition.ComboBox.Static.Editable.Fill" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="AlertConditionCombo.Glyph.Static.Fill" Color="{StaticResource Static.Foreground.1}"/>
+    <LinearGradientBrush x:Key="AlertConditionCombo.Arrow.Static.ToggleBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="AlertConditionCombo.Arrow.MouseOver.ToggleBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+
+    <!--SHARE COMBOBOX-->
+    <SolidColorBrush x:Key="Share.ComboBox.Static.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Share.ComboBox.Static.Editable.Button.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Share.ComboBox.Checked.Editable.Button.Background" Color="{StaticResource Base.Bronze.Color.1}"/>
+    <SolidColorBrush x:Key="Share.ComboBox.Popup.Background" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="Share.ComboBox.Item.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Share.ComboBox.Item.Hover.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="Share.Toggle.Foreground" Color="{StaticResource Blue.3}"/>
+
+
+    <!--SAVE COMBOBOX-->
+    <LinearGradientBrush x:Key="SaveCombo.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SaveCombo.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SaveCombo.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="SaveCombo.Popup.Background" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="SaveCombo.Brush" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="SaveCombo.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SaveCombo.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SaveCombo.Checked.Foreground" Color="{StaticResource Static.Yellow.1}"/>
+
+
+    <!--SPREADSHEET COMBOBOX-->
+    <LinearGradientBrush x:Key="Spreadsheet.Toolbar.Combo.Background.Static" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.7}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Spreadsheet.Toolbar.Combo.Background.Active" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Light.Gray.7}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Combo.Foreground.Static" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Combo.Foreground.Active" Color="{StaticResource Orange.1}" />
+    <SolidColorBrush x:Key="Spreadsheet.Toolbar.Combo.Popup.Background" Color="{StaticResource Light.Gray.1}"/>
+
+
+    <!--THEME SELECTOR COMBO COLORS-->
+    <SolidColorBrush x:Key="Theme.ComboBox.Static.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Theme.ComboBox.Static.Editable.Button.Background" Color="{StaticResource Color.Transparent}"/>
+    <SolidColorBrush x:Key="Theme.ComboBox.Checked.Editable.Button.Background" Color="#FF0E0F19"/>
+    <SolidColorBrush x:Key="Theme.ComboBox.Item.Static.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="Theme.ComboBox.Separator.Dark" Color="{StaticResource Dark.Gray.4}"/>
+    <SolidColorBrush x:Key="Theme.ComboBox.Separator.Light" Color="{StaticResource Dark.Gray.9}"/>
+
+
+    <!--COLOR PICKER COMBO-->
+    <SolidColorBrush x:Key="ColorItem.Static.Border" Color="{StaticResource Black}"/>
+    <SolidColorBrush x:Key="ColorItem.Static.Outer.Border" Color="{StaticResource Dark.Gray.9}"/>
+    <SolidColorBrush x:Key="ColorItem.MouseOver.Outer.Border" Color="{StaticResource Dark.Gray.9}"/>
+    <SolidColorBrush x:Key="ColorItem.Static.Inner.Border" Color="{StaticResource Dark.Gray.7}"/>
+    <SolidColorBrush x:Key="ColorItem.MouseOver.Inner.Border" Color="{StaticResource Dark.Gray.7}"/>
+
+
+
+
+
+
+
+
+    <!--GRAPHIC SETTINGS COLORS-->
+    <SolidColorBrush x:Key="Graph.Settings.Area.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Graph.Settings.Area.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Graph.Settings.Caption.Color" Color="{StaticResource Static.Foreground.1}"/>
+    <!--GRAPHIC SETTINGS COLORS-->
+
+    <!--TRADER TIMEOUT COLORS-->
+    <SolidColorBrush x:Key="TraderTimeout.Mid.Bg" Color="{StaticResource Dark.Gray.3}" />
+    <SolidColorBrush x:Key="TraderTimeout.Icon.Fill" Color="{StaticResource Orange.1}" />
+    <LinearGradientBrush x:Key="TraderTimeout.Timer.Bg" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Orange.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Orange.8}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <!--TRADER TIMEOUT COLORS-->
+
+    <LinearGradientBrush x:Key="OW.Green.Border.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="0.3"/>
+        <GradientStop Color="{StaticResource Green.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OW.Gray.Border.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Dark.Gray.10}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.7}" Offset="0.3"/>
+        <GradientStop Color="{StaticResource Dark.Gray.7}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OW.Red.Border.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.3"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--ORDER CONFIRMATION-->
+    <!--OrderConfirmationView.xaml-->
+    <SolidColorBrush x:Key="Order.Confirmation.Caption.Foreground" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="Order.Confirmation.Foreground.Middle" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="Order.Confirmation.ValuesBackground" Color="{StaticResource Light.Gray.4}" Opacity=".05"/>
+    <SolidColorBrush x:Key="Order.Confirmation.Foreground.Open" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="Order.Confirmation.Green.Background" Color="{StaticResource Green.2}" />
+    <SolidColorBrush x:Key="Order.Confirmation.Red.Background" Color="{StaticResource Red.2}" />
+    <SolidColorBrush x:Key="Order.Confirmation.Brown.Background" Color="#5b472c" />
+    <LinearGradientBrush x:Key="Order.Confirmation.Red.Header" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Order.Confirmation.Green.Header" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Order.Confirmation.Gold.Header" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#e69a09" Offset="0.0"/>
+        <GradientStop Color="#483a09" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="Order.Confirmation.Brown.Header" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#81633b" Offset="0.0"/>
+        <GradientStop Color="#342715" Offset="1.0"/>
+    </LinearGradientBrush>
+    <!--ORDER CONFIRMATION-->
+
+    <!--OPTION/WARRANT COLORS-->
+    <SolidColorBrush x:Key="OptWar.SymbolHolder.Border" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="BidAskCellForeground" Color="{StaticResource Light.Gray.4}"/>
+
+    <SolidColorBrush x:Key="AskCellColor" Color="{StaticResource Green.1}"/>
+    <SolidColorBrush x:Key="AskCellColorFocus" Color="#3E8835"/>
+    <SolidColorBrush x:Key="AskCellColorMouseOver" Color="{StaticResource Green.2}"/>
+
+    <SolidColorBrush x:Key="BidCellColor" Color="#8f4848"/>
+    <SolidColorBrush x:Key="BidCellColorFocus" Color="#FF882A2A"/>
+    <SolidColorBrush x:Key="BidCellColorMouseOver" Color="#773838"/>
+
+    <SolidColorBrush x:Key="BlueCellColor" Color="#4C85A5"/>
+    <SolidColorBrush x:Key="BlueCellColorFocus" Color="#5CA0C6"/>
+    <SolidColorBrush x:Key="BlueCellColorMouseOver" Color="#3E6B85"/>
+
+    <SolidColorBrush x:Key="YellowCellColor" Color="#BFA340"/>
+    <SolidColorBrush x:Key="YellowCellColorFocus" Color="#E6C44D"/>
+    <SolidColorBrush x:Key="YellowCellColorMouseOver" Color="#9A8334"/>
+    <!--OPTION/WARRANT COLORS-->
+
+    <!--PORTFOLIO ANALYSE VIEW COLORS-->
+    <!--Bar Colors-->
+    <SolidColorBrush x:Key="Overall.Current.Color" Color="#00805f"/>
+    <SolidColorBrush x:Key="Overall.New.Color" Color="#ff8300"/>
+    <SolidColorBrush x:Key="Index.Current.Color" Color="#510080"/>
+    <SolidColorBrush x:Key="Index.New.Color" Color="#ff0061"/>
+    <!--PORTFOLIO ANALYSE VIEW COLORS-->
+
+    <!--HEAT MAP COLOR-->
+    <!--HeatMap.xaml & UpsDownsHeatMap.xaml-->
+    <LinearGradientBrush x:Key="HeatMapGradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#1A212121" Offset="0.0"/>
+        <GradientStop Color="#4D000000" Offset="1.0"/>
+    </LinearGradientBrush>
+    <!--HEAT MAP COLOR-->
+
+    <!--QUICK INFORMATION PANEL COLORS-->
+    <!--QuickInformationPanel.xaml-->
+    <!--AREA BACKGROUND-->
+    <SolidColorBrush x:Key="QuickInfo.Background.Static" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="QuickInfo.Settings.Area.Holder" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <!--ITEM TOGGLE BUTTON COLORS-->
+    <SolidColorBrush x:Key="QuickInfoToggle.Static.Background" Color="#FF2A2C38" />
+    <SolidColorBrush x:Key="QuickInfoToggle.MouseOver.Background" Color="#FF333443" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Pressed.Background" Color="#FF474856" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Checked.Background" Color="#FF474856" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Disabled.Background" Color="#FF292A36" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Static.Foreground" Color="#FFFCFCFC" />
+    <SolidColorBrush x:Key="QuickInfoToggle.MouseOver.Foreground" Color="#FFFCFCFC" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Pressed.Foreground" Color="#FFFCFCFC" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Checked.Foreground" Color="#FFFCFCFC" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Disabled.Foreground" Color="#FF939399" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Static.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="QuickInfoToggle.MouseOver.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Pressed.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Checked.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="QuickInfoToggle.Disabled.Border" Color="{StaticResource Color.Transparent}" />
+    <Thickness x:Key="QuickInfoToggle.Border.Thickness">0,0,0,0</Thickness>
+    <Thickness x:Key="QuickInfoToggle.Padding.Thickness">5,5,5,5</Thickness>
+    <Thickness x:Key="QuickInfoToggle.Margin.Thickness">0,4,4,0</Thickness>
+    <!--QuickInformationPanel.xaml-->
+
+    <!--UniversalInsturments.xaml-->
+    <SolidColorBrush x:Key="UniversalInsturments.Area.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="UniversalInsturments.Caption.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="UniversalInsturments.Value.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UniversalInsturments.Positive.Color" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="UniversalInsturments.Negative.Color" Color="{StaticResource Static.Red.1}" />
+    <!--UniversalInsturments.xaml-->
+    <!--QUICK INFORMATION PANEL COLORS-->
+
+    <!--SEASONAL CHART-->
+    <!--SeasonalChart.xaml-->
+    <SolidColorBrush x:Key="Seasonal.Selection.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Seasonal.Foreground.Static" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Seasonal.Chart.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Seasonal.Chart.Red" Color="{StaticResource Static.Red.1}" />
+    <!--SEASONAL CHART-->
+
+    <!--TRUE FALSE SLIDABLE CONTROL-->
+    <!--TrueFalseSlidableControl.xaml-->
+    <Color x:Key="TrueFalseSlidable.Stop1">#FF3A3C4B</Color>
+    <Color x:Key="TrueFalseSlidable.Stop2">#FF22232E</Color>
+    <SolidColorBrush x:Key="TrueFalseSlidable.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="TrueFalseSlidable.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="TrueFalseSlidable.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <Color x:Key="TrueFalseSlidable.Light">#E6303030</Color>
+    <Color x:Key="TrueFalseSlidable.DarkGray">#80303030</Color>
+    <!--TRUE FALSE SLIDABLE CONTROL-->
+
+    <!--SLIDEABLE STYLE RADIO BUTTON-->
+    <CornerRadius x:Key="Slideable.Style.CornerRadius">3,3,3,3</CornerRadius>
+    <Thickness x:Key="Slideable.Style.BorderThickness" >0,0,0,0</Thickness>
+    <SolidColorBrush x:Key="Slideable.Style.Static.BorderBrush" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="Slideable.Style.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Slideable.Style.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Slideable.Style.Pressed.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Slideable.Style.Checked.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Slideable.Style.Static.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="Slideable.Style.MouseOver.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" Opacity=".55" />
+    <SolidColorBrush x:Key="Slideable.Style.Pressed.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <LinearGradientBrush x:Key="Slideable.Style.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Slideable.Border.Price.Background" Color="{StaticResource Static.Blue.1}" />
+    <!--SLIDEABLE STYLE RADIO BUTTON-->
+
+    <!--TRADE ANALYSIS PISTON-->
+    <!--TradedAnalysisPisyonStyle.xaml-->
+    <!--<LinearGradientBrush x:Key="TradeAnalysisPiston.Rectangle.Red.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="TradeAnalysisPiston.Rectangle.Green.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>-->
+    <SolidColorBrush x:Key="TradeAnalysisPiston.Rectangle.Red.Background" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="TradeAnalysisPiston.Rectangle.Green.Background" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="TradeAnalysisPiston.Rectangle.Middle.Background" Color="White" />
+    <SolidColorBrush x:Key="TradeAnalysisPiston.Text" Color="{StaticResource Static.Foreground.1}" />
+
+    <SolidColorBrush x:Key="TradeAnalysis.Background.Middle" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="TradeAnalysis.Background.Red" Color="{StaticResource Red.2}" />
+    <SolidColorBrush x:Key="TradeAnalysis.Background.Green" Color="{StaticResource Green.2}" />
+    <SolidColorBrush x:Key="TradeAnalysis.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="TradeAnalysis.Foreground.Middle" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="TradeAnalysis.Foreground.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="TradeAnalysis.Foreground.Green" Color="{StaticResource Static.Green.1}" />
+    <!--TRADE ANALYSIS PISTON-->
+
+    <!--MOVABLE LAYOUT ITEMS-->
+    <!--MovableLayoutItems.xaml-->
+    <SolidColorBrush x:Key="Movable.Stroke.Red" Color="{StaticResource Red.1}"/>
+    <SolidColorBrush x:Key="Movable.Background.Red" Color="{StaticResource Red.1}"/>
+    <SolidColorBrush x:Key="Movable.Border.Black" Color="{StaticResource Black}"/>
+    <SolidColorBrush x:Key="Movable.Path.Fill" Color="{StaticResource Dark.Gray.9}"/>
+    <!--MOVABLE LAYOUT ITEMS-->
+
+    <!--DEVEX COLORS-->
+    <!--DevexHeader.xaml-->
+    <SolidColorBrush x:Key="BackgroundForPseudoWindowContainerControl" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="FloatingContainer.Border.Static" Color="{StaticResource Dark.Gray.8}"/>
+    <SolidColorBrush x:Key="BackgroundForBarContainerControl" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <!--DEVEX COLORS-->
+
+    <!--COMBOBOX UP DOWN BUTTON-->
+    <!--ComboBoxUpDownBox.xaml-->
+    <SolidColorBrush x:Key="Cbudb.Toggle.Background.Static" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Cbudb.DropDown.Border.Static" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Cbudb.Border.Static" Color="{StaticResource Base.Border.Color}" />
+    <!--COMBOBOX UP DOWN BUTTON-->
+
+    <!--APPROVABLE COMBOBOX-->
+    <!--ApprovableComboBox.xaml-->
+    <SolidColorBrush x:Key="Approvable.Button.Background.Static" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="Approvable.Path.Fill.Ask" Color="{StaticResource Red.1}" />
+    <SolidColorBrush x:Key="Approvable.Path.Fill.Bid" Color="{StaticResource Static.Green.1}" />
+    <!--APPROVABLE COMBOBOX-->
+
+    <!--APPROVABLE TEXTBOX-->
+    <!--ApprovableTextBox.xaml-->
+    <SolidColorBrush x:Key="ApprovableTextBox.Button.Background.Static" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="ApprovableTextBox.Path.Fill.Ask" Color="{StaticResource Red.1}" />
+    <SolidColorBrush x:Key="ApprovableTextBox.Path.Fill.Bid" Color="{StaticResource Green.1}" />
+    <!--APPROVABLE TEXTBOX-->
+
+    <!--ALL TICK LIST CONTROL-->
+    <!--AllTicksListControl.xaml-->
+    <SolidColorBrush x:Key="AllTicks.Text.Foreground.Static" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AllTicks.Text.Foreground.Bid" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="AllTicks.Text.Foreground.Ask" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="AllTicks.Text.Foreground.NoDirection" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AllTicks.Text.Foreground.Diffrence" Color="{StaticResource Blue.3}" />
+    <SolidColorBrush x:Key="AllTicks.Border.Static" Color="{StaticResource Base.Border.Color}" />
+    <!--ALL TICK LIST CONTROL-->
+
+    <!--Alert Page Colors-->
+    <!--AlertsView.xaml-->
+    <SolidColorBrush x:Key="AlertsView.SymbolAutocomplete.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <CornerRadius x:Key="AlertsView.Symbol.Selection.BorderRadius">0</CornerRadius>
+    <SolidColorBrush x:Key="AlertsView.Symbol.Selection.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="AlertsView.Header.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Header.DarkBorderBrush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="AlertsView.Header.BorderBrush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="AlertsView.Header.TextColor" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AlertsView.Dark.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Border.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="AlertsView.Caption.Texts" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AlertsView.Condition.TextLight" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AlertsView.Condition.Normal.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Condition.MouseOver.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Condition.SelectionActive.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Condition.Border.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="AlertsView.Counter.Background" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="AlertsView.Blue.TextColor" Color="{StaticResource Blue.2}" />
+    
+    <SolidColorBrush x:Key="Alert.Record.Rows.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Alert.Record.Rows.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Alert.Record.Rows.Foreground.Light.Hover" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Alert.Record.Rows.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Alert.Record.Border.Outer" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Alert.Record.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Alert.Record.Background.Hover" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Alert.Record.Detail.Background" Color="{StaticResource Widget.Background.Color}" />
+    
+    <SolidColorBrush x:Key="Alert.Notification.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Alert.NotificationPopup.Background" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="Alert.NotificationPopup.Foreground.Light" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="Alert.NotificationPopup.Foreground.Blue" Color="{StaticResource Blue.1}" />
+    <SolidColorBrush x:Key="Alert.NotificationPopup.Foreground" Color="{StaticResource Dark.Gray.7}" />
+    <SolidColorBrush x:Key="Alert.NotificationPopup.BorderBrush" Color="{StaticResource Dark.Gray.10}" />
+    <SolidColorBrush x:Key="Order.Notification.Popup.Background" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="Order.Notification.Popup.Header.Foreground" Color="{StaticResource Light.Gray.2}"/>
+    <SolidColorBrush x:Key="Order.Notification.Popup.Message.Foreground" Color="{StaticResource Light.Gray.1}"/>
+    <SolidColorBrush x:Key="Order.Notification.Popup.Values.Background" Color="{StaticResource Dark.Gray.6}"/>
+    <!--Alert Page Colors-->
+
+    <!--
+    EventNotification Colors
+    -->
+    <SolidColorBrush x:Key="EventNotification.Base.Background" Color="{StaticResource Light.Gray.7}"/>
+    <SolidColorBrush x:Key="EventNotification.Explanation.Color" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="EventNotification.Explanation.Background" Color="{StaticResource Dark.Gray.9}"/>
+    <SolidColorBrush x:Key="EventNotification.PreInfo.Color" Color="{StaticResource Dark.Gray.7}"/>
+    <SolidColorBrush x:Key="EventNotification.Symbol.Color" Color="{StaticResource Static.Orange.1}"/>
+    <SolidColorBrush x:Key="EventNotification.Header.Background" Color="{StaticResource Static.Orange.1}"/>
+
+    <!--Anno Border Color For Chart Annotations-->
+    <SolidColorBrush x:Key="AnnoBorder.Static.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="AnnoBorder.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--Anno Border Color For Chart Annotations-->
+
+    <!--News Pages-->
+    <!--NewsView.xaml-->
+    <SolidColorBrush x:Key="NewsView.Path.Fill" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsView.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsView.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="NewsView.Background.Hidden" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="NewsDataGrid.Path.Fill" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsDataGrid.Text.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsDataGrid.Text.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="NewsDataGrid.Text.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="NewsDataGrid.Row.Background" Color="{StaticResource Widget.Background.Color}" />
+    <system:Double x:Key="NewsDataGrid.FontSize">12</system:Double>
+    <system:Double x:Key="NewsDataGrid.DetailFontSize">15</system:Double>
+    <FontFamily x:Key="NewsDataGrid.FontFamily">Segoe UI</FontFamily>
+
+    <LinearGradientBrush x:Key="NewsDataGrid.Caption.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="NewsDetail.NextPrev.Fill" Color="{StaticResource Static.Foreground.1}" />
+    <LinearGradientBrush x:Key="NewsDetail.Next.Normal" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NewsDetail.Next.Hover" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NewsDetail.Next.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NewsDetail.Prev.Normal" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NewsDetail.Prev.Hover" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="NewsDetail.Prev.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="NewsDetail.Icon.Normal" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsDetail.Icon.Hover" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="NewsDetail.Icon.Pressed" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="NewsDetail.News.Title" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsDetail.Border.Brush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="NewsDataGrid.ColumnHeader.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="NewsFeedback.TextBox.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsFilter.Row.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="NewsFilter.Row.AlternateBackground" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="NewsFilter.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.Grid.Background.Dark" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.Text.Foreground.Dark" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.Text.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.Text.Foreground.Lightest" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.Border.Brush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="NewsAdvancedSearch.TextBox" Color="{StaticResource Static.Foreground.1}" />
+    <!--News Pages-->
+
+    <!--Account Info Page-->
+    <!--AccountInfoControl.xaml-->
+    <SolidColorBrush x:Key="AccountInfo.CloseBtn.Static" Color="#00000000" />
+    <SolidColorBrush x:Key="AccountInfo.CloseBtn.Hover" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="AccountInfo.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--Account Info Page-->
+
+    <!--Aracı Kurum Dağılımı AKD-->
+    <!--AkdHeader.xaml-->
+    <SolidColorBrush x:Key="Akd.Header.Foreground" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="Akd.Header.Border" Color="{StaticResource Dark.Gray.10}" />
+    <!--Aracı Kurum Dağılımı AKD-->
+
+    <!--Buy & Sell Button-->
+    <!--BuySellButton.xaml-->
+    <LinearGradientBrush x:Key="BuySell.Background.Normal" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Blink" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Ask" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Ask.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Red.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Bid" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Background.Bid.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Green.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="BuySell.Pys.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="BuySell.Pys.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="BuySell.Border.Color" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="BuySell.Border.Hover" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="BuySell.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="BuySell.Foreground.Gray" Color="{StaticResource Static.Foreground.1}" />
+    <LinearGradientBrush x:Key="BuySell.Horizontal.Option.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BuySell.Horizontal.Option.Background.Pressed" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="BuySell.Horizontal.Red.Light" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="BuySell.Horizontal.Green.Light" Color="{StaticResource Static.Green.1}" />
+    <!--Buy & Sell Button-->
+
+    <!--Movable Button List-->
+    <!--MovableButtonList.xaml-->
+    <LinearGradientBrush x:Key="MovableButton.Border.Right" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.12}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="MovableButton.Border.Left" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="{StaticResource Light.Gray.4}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Dark.Gray.12}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MovableButton.Foreground.Light" Color="{StaticResource Static.Foreground.2}" />
+    <!--Movable Button List-->
+
+
+    <!--Indicator Options Panel-->
+    <!--IndicatorOptionsPanel.xaml-->
+    <SolidColorBrush x:Key="Indicator.NumericTextBox.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Indicator.NumericTextBox.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Indicator.Tabs.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Indicator.Border.Brush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Indicator.Dark.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Indicator.Dark.Background.2" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Indicator.Foreground.3" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <!--Indicator Options Panel-->
+
+    <!--Search Textbox-->
+    <!--SearchTextBoxCustomControl.xaml-->
+    <SolidColorBrush x:Key="SearchTextbox.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SearchTextbox.Foreground.Hover" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SearchTextbox.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SearchTextbox.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="SearchTextbox.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--Search Textbox-->
+
+    <!--Indicator Search Combo Box-->
+    <!--IndicatorSearchComboBox.xaml-->
+    <SolidColorBrush x:Key="IndicatorSearchCombo.Foreground.Light" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="IndicatorSearchCombo.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="IndicatorSearchCombo.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--Indicator Search Combo Box-->
+
+    <!--Market Depth-->
+    <!--MarketDepthControl.xaml-->
+    <SolidColorBrush x:Key="AdvancedTrade.MarketMaker.Cell"  Color="#FF181919" />
+    <SolidColorBrush x:Key="MarketDepth.MarketMaker.Background"  Color="#FF181919" />
+    <SolidColorBrush x:Key="MarketDepth.DataGrid.Header.Background"  Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="MarketDepth.DataGrid.Header.Border"  Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="MarketDepth.DataGrid.Background"  Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="MarketDepth.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="MarketDepth.Foreground.3" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="MarketDepth.Foreground.4" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="MarketDepth.Background.100" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="MarketDepth.Border.Static" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="MarketDepth.Border.Selected" Color="{StaticResource Color.Transparent}" />
+    <LinearGradientBrush x:Key="MarketDepth.Background.Gradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="MarketDepth.Background.Gradient.Mid" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="MarketDepth.Background.Summary" Color="{StaticResource Dark.Gray.3}" />
+    <SolidColorBrush x:Key="MarketDepth.NumericText.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <!--ButtonList.xaml-->
+    <SolidColorBrush x:Key="MarketDepth.ButtonList.Fill" Color="Yellow" />
+    <SolidColorBrush x:Key="MarketDepth.ButtonList.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="MDepth.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="MDepth.Sum.Border.Light" Color="{StaticResource Base.Border.Color}" />
+    <!--DepthHeader.xaml-->
+    <SolidColorBrush x:Key="MDepth.Header.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--MarketDepthControl.xaml-->
+    <SolidColorBrush x:Key="MDepth.BlinkColor" Color="BlueViolet" />
+    <SolidColorBrush x:Key="MDepth.Piston.Text.Foreground" Color="{StaticResource Light.Gray.1}" />
+    <!--TheoricalPriceControl-->
+    <Thickness x:Key="TheoricalPriceControl.Sum.Border.Thickness">0,0,0,0</Thickness>
+    <SolidColorBrush x:Key="TheoricalPriceControl.Sum.Border.Brush" Color="{StaticResource Color.Transparent}" />
+    <!--Market Depth-->
+
+    <!--Advanced Order Control-->
+    <!--AdvancedOrderControl.xaml-->
+    <SolidColorBrush x:Key="AOC.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Aoc.Autocomplete.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AOC.SymbolArea.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="AOC.SymbolArea.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="AOC.Border" Color="{StaticResource Base.Border.Color}" />
+    <LinearGradientBrush x:Key="AOC.Background.Gradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="AOC.Tooltip.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AOC.Tooltip.Background" Color="{StaticResource Light.Gray.5}" />
+    <SolidColorBrush x:Key="AOC.Foreground.Light" Color="{StaticResource Static.Foreground.1}" />
+    <!--Advanced Order Control-->
+
+    <!--Order Control-->
+    <!--AdvancedOrderControl.xaml-->
+    <!--OrderControl.xaml-->
+    <SolidColorBrush x:Key="OC.Background" Color="{StaticResource Dark.Gray.7}" />
+    <SolidColorBrush x:Key="OC.Border" Color="{StaticResource Dark.Gray.3}" />
+    <SolidColorBrush x:Key="OC.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="OC.Background.Orange" Color="{StaticResource Orange.0}" />
+    <!--Order Control-->
+
+    <!--Update Field Item-->
+    <!--UpdateFieldBar.xaml-->
+    <SolidColorBrush x:Key="UpdateFieldBar.Grid.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="UpdateField.Background.1" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="UpdateField.Background.2" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="UpdateField.Header.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UpdateField.DetailView.Header.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UpdateField.Value.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UpdateField.Value.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="UpdateField.Value.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Ticket.Symbol.Foreground" Color="{StaticResource Static.Foreground.1}" />
+
+    <SolidColorBrush x:Key="UpdateBoxBorder" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="UpdateBoxBackground" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="UpdateBoxForeground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UpdateBoxHeaderBackground" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="UpdateBoxHeaderForeground" Color="{StaticResource Static.Foreground.2}" />
+
+    <!--DETAIL TICKET COLORS-->
+    <SolidColorBrush x:Key="Ticket.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <SolidColorBrush x:Key="Ticket.Firing.Background" Color="{StaticResource Static.Blue.2}"/>
+    <SolidColorBrush x:Key="Ticket.Green.Background" Color="{StaticResource Static.Green.1}"/>
+    <SolidColorBrush x:Key="Ticket.Red.Background" Color="{StaticResource Static.Red.1}"/>
+    <SolidColorBrush x:Key="Endex.Static.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Endex.Static.Caption" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Endex.Static.Caption.2" Color="{StaticResource Static.Foreground.1}"/>
+
+    <SolidColorBrush x:Key="Ticket.Subheader.Border.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <SolidColorBrush x:Key="Ticket.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Ticket.Lighting.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Ticket.Green.Foreground" Color="{StaticResource Static.Green.1}"/>
+    <SolidColorBrush x:Key="Ticket.Red.Foreground" Color="{StaticResource Static.Red.1}"/>
+
+    <!--DETAIL TICKET COLORS-->
+    <!--Update Field Item-->
+
+    <!--Up-Down Text Box-->
+    <!--UpDownButton.xaml-->
+    <SolidColorBrush x:Key="UpDownText.Background" Color="{StaticResource Input.Background.Color}" />
+    <SolidColorBrush x:Key="UpDownText.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="UpDownText.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="UpDownText.Foreground.Disabled" Color="#474859" />
+    <!--Up-Down Text Box-->
+
+    <!--Symbol Auto Complete Text Box-->
+    <!--SymbolAutoCompleteBox.xaml-->
+    <SolidColorBrush x:Key="SymbolAutocomplete.Foreground" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="SymbolAutocomplete.ArrowFill" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="SymbolAutocomplete.Background" Color="{StaticResource Color.Transparent}" />
+    <!--Symbol Auto Complete Text Box-->
+
+    <!--Price Combo box-->
+    <!--PriceComboBox.xaml-->
+    <SolidColorBrush x:Key="PriceCombo.Background" Color="{StaticResource Base.Border.Color}" />
+    <!--Price Combo box-->
+
+
+    <!--Advanced Order Header Panel-->
+    <!--AdvancedOrderHeaderPanel.xaml-->
+    <SolidColorBrush x:Key="AdvancedOrderHeaderPanel.Foreground.Lv5" Color="{StaticResource Dark.Gray.10}" />
+    <SolidColorBrush x:Key="AdvancedOrderHeaderPanel.Foreground.Orange" Color="{StaticResource Orange.0}" />
+    <!--Advanced Order Header Panel-->
+
+    <!--Bid Ask Control-->
+    <!--BidAskControl.xaml-->
+    <SolidColorBrush x:Key="BidAskControl.Background" Color="{StaticResource Soft.Button.Color}" />
+    <SolidColorBrush x:Key="BidAskControl.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <LinearGradientBrush x:Key="BidAskControl.Bid.Color" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BidAskControl.Ask.Color" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <!--Bid Ask Control-->
+
+    <!--ORDER PANELS-->
+    <!--OrderContingentPanel.xaml-->
+    <SolidColorBrush x:Key="Ocp.Foreground.Static" Color="{StaticResource Dark.Gray.3}" />
+    <SolidColorBrush x:Key="Ocp.Background.Static" Color="{StaticResource Light.Gray.4}" />
+    <!--OrderHeaderPanel.xaml-->
+    <SolidColorBrush x:Key="Ohp.Path.Fill.White" Color="{StaticResource Light.Gray.4}" />
+    <!--OrderSendPanel.xaml-->
+    <SolidColorBrush x:Key="OrderSendPanel.Foreground.Lv1" Color="{StaticResource Light.Gray.1}" />
+    <LinearGradientBrush x:Key="OrderSendPanel.Background.RedLight" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderSendPanel.Background.RedMid" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderSendPanel.Background.GreenLight" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="OrderSendPanel.Background.GreenMid" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <!--PricePanel.xaml-->
+    <SolidColorBrush x:Key="PricePanel.Foreground.020" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PricePanel.Foreground.061" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="PricePanel.Foreground.Orange" Color="{StaticResource Base.Bronze.Color.1}" />
+    <!--ORDER PANELS-->
+
+    <!--PRICESHEET COLORS (Klasik Fiyat Penceresi, Bist100, Bist50, etc...)-->
+    <SolidColorBrush x:Key="PriceSheet.Header.Cell.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PriceSheet.Header.Cell.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.Static.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.Symbol.Border" Color="{StaticResource Base.Border.Color}" Opacity=".1" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.Symbol.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.Symbol.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.HighColor" Color="{StaticResource Green.1}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.LowColor" Color="{StaticResource Red.1}" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.UpdateFontColor" Color="Black" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.UpdateBackgroundColor" Color="Yellow" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.BidColor" Color="Green" />
+    <SolidColorBrush x:Key="PriceSheet.Cell.AskColor" Color="Red" />
+    <SolidColorBrush x:Key="Pricesheet.News.Title" Color="{StaticResource Green.2}" />
+    <!--PRICESHEET COLORS (Klasik Fiyat Penceresi, Bist100, Bist50, etc...)-->
+
+    <!--SettlementDistributionReportView-->
+    <!--SettlementDistributionReportView.xaml-->
+    <SolidColorBrush x:Key="TradeReport.Summery.Border" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="TradeReport.Tab.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="TradeReport.Default.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="TradeReport.Default.Background.Dark" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="TradeReport.Default.Foreground.57" Color="{StaticResource Static.Foreground.1}" Opacity=".75" />
+    <SolidColorBrush x:Key="TradeReport.Default.Color.Red.Mid" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="TradeReport.Default.Color.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="TradeReport.Default.Color.Blue" Color="#ff4686B2" />
+    <SolidColorBrush x:Key="MKK.TextArea.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="MKK.TextArea.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <!--SettlementDistributionReportView-->
+
+    <!--TickListControl-->
+    <!--TickListControl.xaml-->
+    <SolidColorBrush x:Key="TickList.Header.Pressed" Color="{StaticResource Light.Gray.4}" Opacity=".2" />
+    <LinearGradientBrush x:Key="TickList.Header.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="TickList.Foreground.70" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="TickList.Border.99" Color="{StaticResource Base.Border.Color}" />
+    <Thickness x:Key="TickList.Border.Thickness">0,0,2,0</Thickness>
+    <!--TickListControl-->
+
+    <!--OrderGridView-->
+    <!--OrderGridView.xaml-->
+    <SolidColorBrush x:Key="OrderGrid.Foreground.70" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="OrderGrid.Border.100" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="OrderGrid.Border.99" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="OrderGrid.Background.99" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="OrderGrid.Fill.00" Color="{StaticResource Static.Foreground.1}" />
+    <!--OrderDxGridView.xaml-->
+    <SolidColorBrush x:Key="Ogv.Foreground" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="Ogv.Background" Color="{StaticResource Widget.Background.Color}" />
+    <!--OrderGridView-->
+
+    <!--SymbolFieldsSingleSelection / SymbolFieldsSelection-->
+    <!--SymbolFieldsSingleSelectionWindow.xaml-->
+    <!--SymbolFieldsSelectionWindow.xaml-->
+    <SolidColorBrush x:Key="SymbolFields.Border.93" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="SymbolFields.Background.100" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="SymbolFields.Background.97" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="SymbolFields.Background.94" Color="{StaticResource Dark.Gray.11}" />
+    <SolidColorBrush x:Key="SymbolFields.Background.85" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="SymbolFields.Foreground.00" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SymbolFields.Fill.61" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SymbolFields.Foreground.61" Color="{StaticResource Static.Foreground.1}" />
+    <!--SymbolFieldsSingleSelection / SymbolFieldsSelection-->
+
+    <!--AkdReportView-->
+    <!--AkdReportView.xaml-->
+    <SolidColorBrush x:Key="Akd.Foreground.61" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="Akd.Border.93" Color="{StaticResource Dark.Gray.3}" Opacity=".2" />
+    <SolidColorBrush x:Key="Akd.Chart.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Akd.Chart.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Akd.Chart.Blue" Color="#FF4686B2" />
+    <SolidColorBrush x:Key="Akd.Save.Border.Background" Color="{StaticResource Color.Transparent}"/>
+    <!--AkdReportView-->
+
+    <!--Chart Header-->
+    <!--ChartHeader.xaml-->
+    <SolidColorBrush x:Key="Chart.Foreground.61" Color="{StaticResource Static.Foreground.1}" Opacity=".61" />
+    <SolidColorBrush x:Key="Chart.Foreground.70" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="Chart.Foreground.20" Color="{StaticResource Static.Foreground.1}" />
+    <!--Chart Header-->
+
+    <!--ChartView-->
+    <!--ChartView.xaml-->
+    <SolidColorBrush x:Key="ChartView.Foreground.00" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="ChartView.Foreground.20" Color="{StaticResource Light.Gray.1}" />
+    <SolidColorBrush x:Key="ChartView.Foreground.61" Color="{StaticResource Dark.Gray.9}" />
+    <SolidColorBrush x:Key="ChartView.Background.99" Color="{StaticResource Dark.Gray.7}" />
+    <SolidColorBrush x:Key="ChartView.Foreground.Orange" Color="{StaticResource Orange.0}" />
+    <!--ChartView-->
+
+    <!--LOADING WAIT-->
+    <!--LoadingWait.xaml-->
+    <SolidColorBrush x:Key="CirclesColor" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="LoadingWaitBackground" Color="{StaticResource Widget.Background.Color}" Opacity=".5" />
+    <!--LOADING WAIT-->
+
+
+    <!--PORTFOLIO VIEW-->
+    <!--PortfolioView.xaml-->
+    <SolidColorBrush x:Key="PortfolioView.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PortfolioView.Wrap.Border" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PortfolioView.Wrap.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PortfolioView.Border" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="PortfolioView.Background.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="PortfolioView.Path.Fill" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="PortfolioView.Status.Background" Color="{StaticResource Base.Background.Color}" />
+    <!--PORTFOLIO VIEW-->
+
+    <!--UPS DOWNS VIEW-->
+    <!--UpsDowns.xaml-->
+    <SolidColorBrush x:Key="UpsDowns.Grid.Border" Color="{StaticResource Base.Border.Color}" />
+    <!--UPS DOWN VIEW-->
+
+    <!--TRADER LOGIN VIEW-->
+    <!--TraderLoginView.xaml-->
+    <SolidColorBrush x:Key="Trader.Login.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <BitmapImage x:Key="Trader.Background.Image" UriSource="pack://application:,,,/Matriks.Wpf.Controls;component/resources/images/trader-login-blue-background.png"/>
+    <BitmapImage x:Key="Trader.Logo.Image" UriSource="pack://application:,,,/Matriks.Wpf.Controls;component/resources/images/trader-login-dark-logo.png"/>
+    <BitmapImage x:Key="IQ.Navigation.Logo" UriSource="pack://application:,,,/Matriks.Wpf.Controls;component/resources/images/IQNavLogo.jpg"/>
+    <!--TRADER LOGIN VIEW-->
+
+    <!--Percentage Black's-->
+    <SolidColorBrush x:Key="Black090" Color="{StaticResource Dark.Gray.4}" />
+    <SolidColorBrush x:Key="Black085" Color="{StaticResource Dark.Gray.10}" />
+    <SolidColorBrush x:Key="Black020" Color="{StaticResource Light.Gray.1}" />
+
+
+    <SolidColorBrush x:Key="Green100" Color="{StaticResource Static.Green.1}" />
+    <!--Percentage Yellow's-->
+    <SolidColorBrush x:Key="Yellow100" Color="#FFC6951C" />
+    <!--Percentage Orange's-->
+    <SolidColorBrush x:Key="Orange100" Color="{StaticResource Orange.0}" />
+    <!--Percentage Blue Light's-->
+    <SolidColorBrush x:Key="Blue100" Color="{StaticResource Blue.2}" />
+    <!--Percentage Red Dark's-->
+    <SolidColorBrush x:Key="RedDark100" Color="{StaticResource Red.2}" />
+    <!--Percentage Red Mid's-->
+    <SolidColorBrush x:Key="RedMid100" Color="{StaticResource Static.Red.1}" />
+    <!--Percentage Red's-->
+    <SolidColorBrush x:Key="Red100" Color="{StaticResource Red.1}" />
+    <!--Negative Red's-->
+    <SolidColorBrush x:Key="NegativeRed" Color="{StaticResource Static.Red.1}" />
+    <!--THEME COLORS REWORK 24.05.2016 TUESDAY-->
+
+
+    <LinearGradientBrush x:Key="RedGradientUp" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Red.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Red.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GreenGradientUp" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Green.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Green.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GrayGradientLeft" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="GrayGradientRight" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="YellowGradientUp" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#FFC6951C" Offset="0.0"/>
+        <GradientStop Color="#FF785705" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="BlueGradientUp" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Blue.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Blue.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="FixedPriceSheetColumnColor" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="FixedPriceSheetColumnFontColor" Color="White" />
+    <SolidColorBrush x:Key="ButtonBackground" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="MenuForeground" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="MenuTopLeaveleHeaderForeground" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="HoverTopLeveMenuItemBackground" Color="#FFF78A09" />
+    <SolidColorBrush x:Key="HoverTopLeveMenuItemBorder" Color="#FFF78A09" />
+    <SolidColorBrush x:Key="HoverTopLeveMenuItemForeground" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="MenuPopUpBackground" Color="{StaticResource Dark.Gray.6}" />
+    <SolidColorBrush x:Key="MenuPopUpBorder" Color="{StaticResource Dark.Gray.2}"  />
+    <SolidColorBrush x:Key="HoverSubMenuItemBackground" Color="#FFF78A09" />
+    <SolidColorBrush x:Key="HoverSubMenuItemBorder" Color="{StaticResource Blue.4}" />
+    <SolidColorBrush x:Key="HoverSubMenuItemForeground" Color="{StaticResource Light.Gray.4}" />
+    <SolidColorBrush x:Key="DisabledMenuItemForeground" Color="{StaticResource Dark.Gray.6}" />
+
+    <!--BuyerSellerBrokerView-->
+    <SolidColorBrush x:Key="BuyerSellerBrokerView.SeperateArea.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="BuyerSellerBrokerView.Static.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="BuyerSellerBrokerView.StaticText.Foreground" Color="{StaticResource Static.Foreground.1}" />
+
+    <!--BuyerSellerEquityView-->
+    <SolidColorBrush x:Key="BuyerSellerEquity.ColoredCell.Foreground" Color="{StaticResource Dark.Gray.2}" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.InAndOut.Green.Background" Color="#C1DEBE" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.InAndOut.Blue.Background" Color="#BEDEDA" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.InAndOut.Red.Background" Color="#DEBEBE" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.InAndOut.Yellow.Background" Color="#DEDDBE" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.Cell.Green.Foreground" Color="#9BE293" />
+    <SolidColorBrush x:Key="BuyerSellerEquity.Cell.Red.Foreground" Color="#E57575" />
+
+    <!--Speech Popup Resources-->
+    <SolidColorBrush x:Key="SpeechListener.Popup.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="SpeechListener.BorderBrush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="SpeechListener.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="SpeechListener.Foreground" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="SpeechListener.Line.Background" Color="#ff8600" />
+    <SolidColorBrush x:Key="SpeechListener.Line.Border" Color="#ffa300" />
+    <SolidColorBrush x:Key="SpeechInfo.Border.Brush" Color="{StaticResource Base.Border.Color}"  />
+    <SolidColorBrush x:Key="SpeechInfo.Caption.Text" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="SpeechInfo.Border.Background.1" Color="#d130fb" />
+    <SolidColorBrush x:Key="SpeechInfo.Border.Background.2" Color="#f79e02" />
+    <SolidColorBrush x:Key="SpeechInfo.Border.Background.3" Color="#fb1d1d" />
+    <SolidColorBrush x:Key="SpeechInfo.Border.Background.4" Color="#00babd" />
+
+    <SolidColorBrush x:Key="SpeechInfo.Border.Background.5" Color="#00b9ee" />
+    <LinearGradientBrush x:Key="SpeechInfo.Border.Background.5.Gradient" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#FF00c5fd" Offset="0.0"/>
+        <GradientStop Color="#FF00799b" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="SpeechInfo.Text.Base" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="SpeechInfo.Text.1" Color="#d85cf8" />
+    <SolidColorBrush x:Key="SpeechInfo.Text.2" Color="#f79e02" />
+    <SolidColorBrush x:Key="SpeechInfo.Text.3" Color="#ff5d5a" />
+    <SolidColorBrush x:Key="SpeechInfo.Text.4" Color="#00dbdd" />
+    <SolidColorBrush x:Key="SpeechInfo.Path.Fill" Color="{StaticResource Light.Gray.4}" />
+
+
+    <!--Matriks Prime Dashboard Colors-->
+    <LinearGradientBrush x:Key="Prime.Bar.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Prime.Bar.Border" Color="{StaticResource Base.Border.Color}" />
+    <LinearGradientBrush x:Key="Prime.Bar.Event.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Prime.Popup.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Prime.Popup.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Prime.Bar.Event.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Prime.Bar.DataItem.Foreground.1" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Prime.Bar.DataItem.Foreground.2" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Prime.Bar.DataItem.Positive" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Prime.Bar.DataItem.Negative" Color="{StaticResource Static.Red.1}" />
+
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.Foreground.1" Color="{StaticResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.Foreground.2" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.Foreground.Positive" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.Foreground.Negative" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.ButtonArea.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Prime.InstitutionalRecommendation.ButtonArea.Border" Color="{StaticResource Base.Border.Color}" />
+
+    <SolidColorBrush x:Key="Prime.IndicatorSignal.Foreground.1" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Prime.IndicatorSignal.Foreground.Positive" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Prime.IndicatorSignal.Foreground.Negative" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Prime.Pivot.Border.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Prime.Pivot.Border.Brush" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Prime.Pivot.Value.Foreground.1" Color="{StaticResource Static.Foreground.1}" Opacity=".75" />
+    <SolidColorBrush x:Key="Prime.Pivot.Value.Foreground.2" Color="{StaticResource Static.Foreground.1}" />
+
+    <SolidColorBrush x:Key="Prime.Indicator.Area.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Prime.Indicator.Chart.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Prime.Indicator.Bar.Fill" Color="{StaticResource Blue.3}" />
+    <SolidColorBrush x:Key="Prime.Indicator.Bar.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <Color x:Key="Prime.Indicator.Bar.Foreground.1">#FFC9C5C0</Color>
+    <SolidColorBrush x:Key="Prime.Indicator.Bar.Foreground.2" Color="{StaticResource Static.Foreground.1}" />
+
+    <SolidColorBrush x:Key="Prime.Ratio.Area.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="Prime.Ratio.Chart.Background" Color="{StaticResource Widget.Background.Color}" />
+
+    <SolidColorBrush x:Key="Prime.SymbolRow.Foreground.1" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Prime.SymbolRow.Positive" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Prime.SymbolRow.Negative" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Prime.SymbolRow.SwitchIcon" Color="{StaticResource Static.Foreground.2}" Opacity=".5" />
+
+    <SolidColorBrush x:Key="Prime.Transactions.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="Prime.Transactions.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="Prime.Transactions.Orange" Color="{StaticResource Static.Yellow.1}" />
+
+
+    <!--Kar Al - Zarar Durdur - İz Süren Stop Renkleri-->
+    <SolidColorBrush x:Key="ProtectionOrder.Info.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="ProtectionOrder.StopOrder.Info.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="ProtectionOrder.StopOrder.StaticTitle.Foreground" Color="{StaticResource Static.Foreground.1}" />
+
+    <!--ArtificialIntelligence List View Renkleri-->
+    <SolidColorBrush x:Key="AIList.Border.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="AIListView.ListArea.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="AIListView.ListArea.Border" Color="{StaticResource Base.Border.Color}" />
+
+    <!--ArtificialIntelligence List Item Renkleri-->
+    <SolidColorBrush x:Key="AIListItem.Foreground.Normal" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="AIListItem.Foreground.Selected" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="AIListItem.Background.Normal" Color="{StaticResource Base.Background.Color}" />
+    <LinearGradientBrush x:Key="AIListItem.Background.Selected" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="AIListItem.InfoBorder.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="AIListItem.Btn.Background.Normal" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="AIListItem.TrainCircle.Border" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <LinearGradientBrush x:Key="AIListItem.TrainCircle.Background" StartPoint="0.5,0" EndPoint="0,1">
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--ArtifictialIntelligence Wizart View-->
+    <SolidColorBrush x:Key="AIWizard.Background" Color="{StaticResource Widget.Background.Color}"/>
+
+
+    <SolidColorBrush x:Key="AISearch.Area.Background" Color="{StaticResource Base.Background.Color}"/>
+    <SolidColorBrush x:Key="AIPopup.ButtonArea.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}"/>
+
+    <!--RangeSliderColors-->
+    <SolidColorBrush x:Key="Slider.Bar.Background" Color="{StaticResource Black}" />
+    <SolidColorBrush x:Key="Slider.Circle.Border" Color="{StaticResource Black}" />
+    <LinearGradientBrush x:Key="Slider.Circle.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Dark.Gray.7}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Black}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <!--Loop Progress Animation-->
+    <SolidColorBrush x:Key="Progress.Bar.Track.Background.Brush" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="Progress.Bar.Track.Background.Alternate.Brush" Color="{StaticResource Widget.Background.Color}" Opacity="0.1" />
+
+    <!--Portföy Gridi Özel Emir Buton Renkleri-->
+    <LinearGradientBrush x:Key="Portfolio.Exclusive.Order.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Blue.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Blue.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="Portfolio.Exclusive.Order.Foreground" Color="{StaticResource Static.Foreground.1}" />
+
+    <!--Hint / Submit / Cancel Button Colors-->
+    <SolidColorBrush x:Key="Hint.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Hint.MouseOver.Foreground" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="Hint.Disabled.Foreground" Color="{StaticResource Bronze.Colo.2}" />
+    <SolidColorBrush x:Key="Submit.Static.Foreground" Color="{StaticResource Green.1}" />
+    <SolidColorBrush x:Key="Submit.MouseOver.Foreground" Color="{StaticResource Green.2}" />
+    <SolidColorBrush x:Key="Submit.Disabled.Foreground" Color="{StaticResource Bronze.Colo.2}" />
+    <SolidColorBrush x:Key="Cancel.Static.Foreground" Color="{StaticResource Red.1}" />
+    <SolidColorBrush x:Key="Cancel.MouseOver.Foreground" Color="{StaticResource Red.2}" />
+    <SolidColorBrush x:Key="Cancel.Disabled.Foreground" Color="{StaticResource Bronze.Colo.2}" />
+
+
+    <!--Chain Alert Control Colors-->
+    <SolidColorBrush x:Key="ChainAlert.PopupPlusBtn.Disabled.Foreground" Color="{StaticResource Widget.Background.Color}" Opacity=".5"/>
+    <SolidColorBrush x:Key="ChainAlert.PopupPlusBtn.Static.Foreground" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="ChainAler.PopupPlusBtn.Static.Background" Color="{StaticResource Static.Yellow.1}" />
+    <LinearGradientBrush x:Key="ChainAler.PopupPlusBtn.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Yellow.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ChainAler.PopupPlusBtn.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="{StaticResource Static.Yellow.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource Static.Yellow.0}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <SolidColorBrush x:Key="ChainAler.PopupPlusBtn.Disabled.Background" Color="{StaticResource Static.Yellow.1}" Opacity=".5"/>
+
+
+    <!--ScreenSelectionControl Colors-->
+    <!--SCREEN SELECTION COMBOBOX-->
+    <SolidColorBrush x:Key="ScreenSelect.Item.Button.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="ScreenSelect.Item.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="ScreenSelect.Item.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="ScreenSelect.Item.Checked.Background" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="ScreenSelect.Item.Path" Color="{StaticResource Static.Blue.1}" />
+
+    <SolidColorBrush x:Key="SSC.TextBox.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="SSC.TextBox.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="SSC.TextBox.Static.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="SSC.TextBox.MouseOver.Background" Color="{StaticResource Input.Background.Color}"/>
+    <SolidColorBrush x:Key="SSC.TextBox.Focus.Background" Color="{StaticResource Input.Background.Color}"/>
+
+    <Thickness x:Key="SSC.ToggleButton.Border.Thickness">1</Thickness>
+    <SolidColorBrush x:Key="SSC.ToggleButton.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="SSC.ToggleButton.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <LinearGradientBrush x:Key="SSC.ToggleButton.Static.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SSC.ToggleButton.MouseOver.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.3}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SSC.ToggleButton.Pressed.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="SSC.ToggleButton.Checked.Background" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.1}" Offset="0.0"/>
+        <GradientStop Color="{StaticResource MainMenu.Gradient.Stop.2}" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="CorelationMatris.FilterArea.Background" Color="{StaticResource Widget.Background.Color}"/>
+
+
+    <!--IQ FAST EXPLORER-->
+    <SolidColorBrush x:Key="FastExplorer.Bar.Color" Color="{StaticResource Static.Blue.1}"/>
+
+
+    <!--Korelasyon Liste Elementi Arkaplanı-->
+    <SolidColorBrush x:Key="Corelation.ListItem.Background" Color="{StaticResource Widget.Background.Color}"/>
+    <SolidColorBrush x:Key="Corelation.ListItem.Background.MouseOver" Color="{StaticResource Item.MouseOver.Color}" />
+    <SolidColorBrush x:Key="Corelation.ListItem.Background.Pressed" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="Corelation.ListItem.Foreground.Static" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Corelation.ListItem.Foreground.MouseOver" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Corelation.ListItem.Foreground.Pressed" Color="{StaticResource Widget.Background.Color}"/>
+
+
+    <!--AKD RENKLİ KOLONLAR-->
+    <SolidColorBrush x:Key="AKD.ColoredCell.Foreground" Color="{StaticResource Light.Gray.4}"/>
+    <SolidColorBrush x:Key="AKD.ColoredCell.Background.Green" Color="#FF88A44E"/>
+    <SolidColorBrush x:Key="AKD.ColoredCell.Background.Red" Color="#FFC65F5C"/>
+    <!--<SolidColorBrush x:Key="AKD.ColoredCell.Background.Blue" Color="#FF5CA0C6"/>-->
+    <!--<SolidColorBrush x:Key="AKD.ColoredCell.Background.Yellow" Color="#FFE6C44D"/>-->
+
+    <!--Korelasyon Matrisi Mini Chart Renkleri-->
+    <Color x:Key="CorelationMatris.MiniChart.Color1">#ff8F8AC4</Color>
+    <Color x:Key="CorelationMatris.MiniChart.Color2">#ffEC6525</Color>
+    <SolidColorBrush x:Key="CorelationMatris.MiniChart.Line1" Color="{StaticResource CorelationMatris.MiniChart.Color1}"/>
+    <SolidColorBrush x:Key="CorelationMatris.MiniChart.Line2" Color="{StaticResource CorelationMatris.MiniChart.Color2}"/>
+
+
+    <!--Company Card Colors-->
+    <SolidColorBrush x:Key="CompanyCard.Caption.1" Color="#9E5410" />
+    <SolidColorBrush x:Key="CompanyCard.Caption.2" Color="#0F5DA5" />
+    <SolidColorBrush x:Key="CompanyCard.Caption.3" Color="#972A12" />
+    <SolidColorBrush x:Key="CompanyCard.Caption.4" Color="#36620A" />
+    <SolidColorBrush x:Key="CompanyCard.Caption.FG" Color="{StaticResource Light.Gray.4}" Opacity=".8" />
+    <SolidColorBrush x:Key="CompanyCard.Field.Border" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="CompanyCard.Field.Header" Color="{StaticResource Base.Background.Color}" />
+
+
+    <!--Chart Shortcut Colors-->
+    <SolidColorBrush x:Key="Shortcut.Button.Static.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="Shortcut.Button.MouseOver.Background" Color="{StaticResource Base.Border.Color}" />
+    <SolidColorBrush x:Key="Shortcut.Button.Active.Background" Color="{StaticResource Base.Bronze.Color.1}" />
+    <SolidColorBrush x:Key="Shortcut.Button.Disabled.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}" Opacity=".1"/>
+    <SolidColorBrush x:Key="Shortcut.Button.Static.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Shortcut.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Shortcut.Button.Active.Foreground" Color="{StaticResource Static.Foreground.2}" />
+    <SolidColorBrush x:Key="Shortcut.Button.Disabled.Foreground" Color="{StaticResource Static.Foreground.2}" Opacity=".1" />
+
+    <!--Chart Capital Increase Colors-->
+    <SolidColorBrush x:Key="CapitalIncreaseOtherColor" Color="#6BEEE8AA" />
+    <SolidColorBrush x:Key="CapitalIncreaseDividendColor" Color="#1EAFEEEE" />
+    <SolidColorBrush x:Key="CapitalIncreaseUnvaluedColor" Color="#1E00B4FF" />
+    <SolidColorBrush x:Key="CapitalIncreaseValuedColor" Color="#1E00FFFF" />
+
+    <!--Balance Sheet Analysis Row Colors-->
+    <SolidColorBrush x:Key="BalanceSheet.Analysis.MainRow.Color" Color="{StaticResource Static.Yellow.1}"/>
+    <SolidColorBrush x:Key="BalanceSheet.Analysis.SubMainRow.Color" Color="{StaticResource Static.Yellow.3}" Opacity="1"/>
+
+
+    <!--Moving Popup-->
+    <SolidColorBrush x:Key="MovingPopup.Background" Color="{StaticResource MainMenu.Gradient.Stop.1}"/>
+    <SolidColorBrush x:Key="MovingPopup.Border" Color="{StaticResource Dark.Gray.10}"/>
+    <SolidColorBrush x:Key="MovingPopup.Fill" Color="{StaticResource Light.Gray.1}"/>
+
+    <SolidColorBrush x:Key="Cloud.Service.Icon.Fill" Color="{StaticResource Bronze.Colo.3}" />
+
+    <!--Discord tarzı search renkleri-->
+    <!--Search Overlay-->
+    <SolidColorBrush x:Key="MatriksSearchDialogBox.Overlay.Background" Color="{StaticResource Base.Background.Color}" Opacity=".75" />
+    <!--Search Holder Border-->
+    <system:Double x:Key="MatriksSearchDialogBox.Holder.Border.Width">550</system:Double>
+    <system:Double x:Key="MatriksSearchDialogBox.Holder.Border.MinHeight">220</system:Double>
+    <SolidColorBrush x:Key="MatriksSearchDialogBox.Holder.Border.Background" Color="{StaticResource Widget.Background.Color}" />
+    <!--Search Textbox-->
+    <SolidColorBrush x:Key="Application.Search.TextBox.Static.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Application.Search.TextBox.MouseOver.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Application.Search.TextBox.Focus.Background" Color="{StaticResource Base.Background.Color}" />
+    <SolidColorBrush x:Key="Application.Search.TextBox.Static.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.MouseOver.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.Focus.Border" Color="{StaticResource Base.Border.Color}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.Focus.Foreground" Color="{StaticResource Static.Foreground.1}"/>
+    <SolidColorBrush x:Key="Application.Search.TextBox.Selection.Brush" Color="{StaticResource Static.Blue.1}" Opacity=".5"/>
+    <!--Search Items Control-->
+    <SolidColorBrush x:Key="Application.Search.ItemsControl.Icon.Background" Color="{StaticResource Static.Blue.2}" />
+    <!--Result ListBox-->
+    <SolidColorBrush x:Key="Application.Search.ListBox.Static.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Static.Border" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Item.Sub.Static.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Item.MouseOver.Background" Color="{StaticResource Static.Blue.2}" Opacity=".3" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Item.SelectedInactive.Background" Color="{StaticResource Static.Blue.2}" Opacity=".5" />
+    <SolidColorBrush x:Key="Application.Search.ListBox.Item.SelectedActive.Background" Color="{StaticResource Static.Blue.2}" Opacity=".5" />
+
+    <!--QA List Screen Styles-->
+    <Thickness x:Key="OuterBorder.Thickness">0,0,0,1</Thickness>
+    <SolidColorBrush x:Key="OuterBorder.Border.Color" Color="{StaticResource MainMenu.Gradient.Stop.2}" />
+    <SolidColorBrush x:Key="QA.Menu.Glyph" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="QA.Category.Holder" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="QA.Category.Foreground" Color="{StaticResource Widget.Background.Color}" />
+
+
+    <SolidColorBrush x:Key="SymbolSearch.Header.Foreground" Color="{StaticResource Static.Foreground.2}" />
+
+    <SolidColorBrush x:Key="ManagePreferences.NoLisence.Background" Color="{StaticResource Static.Blue.2}" Opacity=".9" />
+    <SolidColorBrush x:Key="ManagePreferences.NoLisence.Foreground" Color="{StaticResource Static.Foreground.1}" />
+
+    <SolidColorBrush x:Key="Toolbar.Search.Popup.Icon.Background" Color="{StaticResource Base.Background.Color}" />
+
+
+    <!--Popup Control Renkler-->
+    <SolidColorBrush x:Key="PopupControl.InPage.Button.Background" Color="{StaticResource Color.Transparent}" />
+    <SolidColorBrush x:Key="PopupControl.InPage.Button.Normal.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PopupControl.InPage.Button.MouseOver.Foreground" Color="{StaticResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PopupControl.InPage.Button.Pressed.Foreground" Color="{StaticResource Base.Bronze.Color.1}" />
+
+    <SolidColorBrush x:Key="PopupControl.Popup.Background" Color="{DynamicResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="PopupControl.Popup.Border" Color="{DynamicResource Base.Border.Color}" />
+
+    <SolidColorBrush x:Key="PopupControl.InPopup.Static.Foreground" Color="{DynamicResource Static.Foreground.1}" />
+    <SolidColorBrush x:Key="PopupControl.InPopup.MouseOver.Foreground" Color="{DynamicResource Static.Foreground.1}" Opacity=".7" />
+    <SolidColorBrush x:Key="PopupControl.InPopup.Pressed.Foreground" Color="{DynamicResource Static.Yellow.1}" />
+
+    <SolidColorBrush x:Key="Algo.TextArea.Background" Color="{StaticResource Widget.Background.Color}" />
+    <SolidColorBrush x:Key="AlgoWizard.Part.Border" Color="{StaticResource MainMenu.Gradient.Stop.1}" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Orange" Color="#f79e02" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Teal" Color="#36DDDE" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Red" Color="#ff5d5a" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Purple" Color="#d85cf8" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Lime" Color="#98CE30" />
+    <SolidColorBrush x:Key="AlgoWizard.Section.Blue" Color="#2893E9" />
+
+    <LinearGradientBrush x:Key="TradeLogin.Orange.Static.Background" StartPoint="0,0" EndPoint="0,1">
+        <GradientStop Color="#36DDDE" Offset="0.0"/>
+        <GradientStop Color="#1EADAE" Offset="1.0"/>
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="OptionWarrant.RiskBackground.Red" Color="{StaticResource Static.Red.1}" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskBackground.Green" Color="{StaticResource Static.Green.1}" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskBackground.Yellow" Color="{StaticResource Static.Yellow.1}" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskBackground.Gray" Color="#acacac" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskFont.Red" Color="#FFFFFF" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskFont.Green" Color="#000000" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskFont.Yellow" Color="#000000" />
+    <SolidColorBrush x:Key="OptionWarrant.RiskFont.Gray" Color="#000000" />
+
+</ResourceDictionary>

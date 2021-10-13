@@ -1,0 +1,861 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/ClientApiAppDemo;component/Themes/FrameworkElements/SeparatorBase.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+    
+
+    <!--İşlenen Stiller-->
+    <Style x:Key="Icon.Holder.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Static}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="0" Padding="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Separator x:Name="SeparatorItem" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Stretch" Style="{DynamicResource Seperator.Horizontal.Invert}" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.MouseOver}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Disabled}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="OverridesDefaultStyle" Value="False">
+                            <Setter Property="Visibility" TargetName="SeparatorItem" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Icon.Holder.Light.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Light.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Static}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="0" Padding="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Separator x:Name="SeparatorItem" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Stretch" Style="{DynamicResource Seperator.Horizontal.Invert}" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.MouseOver}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Disabled}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="OverridesDefaultStyle" Value="False">
+                            <Setter Property="Visibility" TargetName="SeparatorItem" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LinkToggleButton" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource LinkToggleButton.Static.Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <TextBlock HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter/>
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButton.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButton.Checked.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButton.Disabled.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="LinkToggleButtonLight" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource LinkToggleButtonLight.Static.Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <TextBlock HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}">
+                        <ContentPresenter/>
+                    </TextBlock>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButtonLight.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButtonLight.Checked.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource LinkToggleButtonLight.Disabled.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsHitTestVisible" Value="True" />
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHitTestVisible" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Static}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Pressed}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Disabled}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Disabled}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Button.Foreground.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Orange.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Orange.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Orange.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Orange.Button.Static.Border}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsHitTestVisible" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Orange.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0"/>
+                        </Trigger>
+                        <Trigger Property="IsHitTestVisible" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource Orange.Button.Flat.Static.Background}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsHitTestVisible" Value="False" />
+                                <Condition Property="IsMouseOver" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.MouseOver.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsHitTestVisible" Value="False" />
+                                <Condition Property="IsPressed" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.Pressed.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsHitTestVisible" Value="False" />
+                                <Condition Property="IsEnabled" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.Disabled.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Checked.Orange.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource Toggle.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Toggle.Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Toggle.Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Toggle.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Toggle.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Toggle.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.Checked.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.Checked.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Toggle.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Toggle.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Toggle.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ButtonListToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource Movable.Toggle.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Movable.Toggle.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Margin" Value="1,0,0,0"/>
+        <Setter Property="Width" Value="18"/>
+        <Setter Property="Height" Value="18"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border SnapsToDevicePixels="true" x:Name="BorderContent" 
+                            Margin="{TemplateBinding Margin}"
+                            Background="{TemplateBinding Background}" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2">
+                        <ContentPresenter SnapsToDevicePixels="True" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" RecognizesAccessKey="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Checked.Background}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Static.Background}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Alarm Aktif / Pasif Button-->
+    <Style TargetType="{x:Type ToggleButton}" x:Key="AlertActivePassive">
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="Background" Value="{DynamicResource Alert.ActivePassive.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Alert.ActivePassive.Static.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Alert.ActivePassive.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="5,0,0,0"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            Padding="{TemplateBinding Padding}"
+                            Margin="{TemplateBinding Margin}"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                            SnapsToDevicePixels="true">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock x:Name="AlertText" Foreground="{TemplateBinding Foreground}" Text="Pasife Al" FontSize="{TemplateBinding FontSize}" VerticalAlignment="Center" Margin="2,0,0,0"/>
+                            <Path Margin="5,0,0,0" Width="14" Height="14" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="M 5.517,1.339 C 3.927,2.559 2.337,3.78 0.74,5.008 -0.167,3.915 -0.165,1.984 1.21,0.852 2.524,-0.229 4.521,-0.01 5.517,1.339 Z M 17.417,2.129 C 16.964,0.984 16.108,0.312 14.886,0.181 13.8,0.065 12.898,0.47 12.193,1.332 13.795,2.561 15.382,3.78 16.978,5.006 17.597,4.334 17.798,3.09 17.417,2.129 Z M 1.946,17.935 C 1.768,18.114 1.813,18.413 1.995,18.577 2.181,18.743 2.472,18.735 2.659,18.549 3.106,18.108 3.546,17.66 3.993,17.219 4.132,17.081 4.282,16.954 4.442,16.809 4.145,16.598 3.893,16.418 3.663,16.253 3.085,16.815 2.507,17.366 1.946,17.935 Z M 9.472,9.587 C 9.601,9.475 9.71,9.397 9.798,9.3 9.991,9.085 9.986,8.765 9.796,8.582 9.604,8.397 9.29,8.401 9.077,8.596 8.96,8.703 8.845,8.813 8.741,8.933 8.639,9.053 8.557,9.069 8.411,8.982 7.196,8.271 5.976,7.57 4.757,6.867 4.693,6.831 4.632,6.787 4.564,6.765 4.437,6.723 4.306,6.723 4.231,6.856 4.163,6.984 4.208,7.102 4.317,7.191 4.372,7.236 4.438,7.27 4.501,7.306 5.679,7.988 6.858,8.668 8.036,9.35 8.091,9.382 8.143,9.417 8.227,9.47 8.011,9.677 7.812,9.863 7.62,10.052 7.259,10.41 6.897,10.769 6.54,11.133 6.37,11.308 6.339,11.56 6.446,11.755 6.546,11.939 6.745,12.042 6.967,11.987 7.088,11.957 7.211,11.883 7.301,11.796 7.809,11.302 8.305,10.799 8.805,10.298 9.123,9.98 9.123,9.98 9.522,10.208 9.557,10.228 9.59,10.25 9.627,10.265 9.766,10.324 9.9,10.333 9.998,10.193 10.076,10.078 10.019,9.922 9.869,9.822 9.761,9.751 9.644,9.689 9.472,9.587 Z M 8.851,5.126 C 9.126,5.13 9.357,4.911 9.367,4.635 9.377,4.361 9.154,4.127 8.879,4.118 8.592,4.109 8.354,4.335 8.352,4.618 8.351,4.893 8.575,5.122 8.851,5.126 Z M 3.825,9.156 C 3.538,9.156 3.311,9.388 3.319,9.675 3.325,9.952 3.553,10.169 3.833,10.164 4.11,10.16 4.331,9.935 4.329,9.657 4.327,9.38 4.103,9.157 3.825,9.156 Z M 13.897,10.165 C 14.176,10.163 14.399,9.938 14.399,9.662 14.399,9.382 14.178,9.16 13.899,9.157 13.614,9.154 13.383,9.386 13.389,9.67 13.394,9.949 13.618,10.167 13.897,10.165 Z M 8.878,14.196 C 8.591,14.186 8.355,14.411 8.353,14.694 8.349,14.969 8.574,15.197 8.851,15.202 9.128,15.206 9.359,14.987 9.367,14.712 9.375,14.437 9.155,14.205 8.878,14.196 Z M 14.056,16.252 C 13.826,16.417 13.574,16.597 13.277,16.808 13.437,16.954 13.588,17.08 13.726,17.218 14.173,17.659 14.613,18.107 15.06,18.548 15.248,18.735 15.539,18.742 15.724,18.576 15.906,18.412 15.951,18.113 15.773,17.934 15.212,17.366 14.634,16.815 14.056,16.252 Z M 14.64,4.059 C 16.044,5.519 16.91,7.512 16.911,9.726 16.911,9.734 16.909,9.742 16.909,9.749 16.909,9.75 16.909,9.751 16.909,9.753 16.909,9.761 16.907,9.769 16.907,9.777 16.905,10.077 16.884,10.373 16.85,10.665 16.846,10.696 16.846,10.73 16.842,10.763 16.84,10.761 16.836,10.759 16.834,10.757 16.334,14.561 13.104,17.544 9.176,17.692 9.178,17.696 9.178,17.698 9.18,17.701 9.084,17.705 8.989,17.707 8.893,17.708 8.885,17.708 8.879,17.708 8.872,17.708 8.868,17.708 8.864,17.708 8.858,17.708 8.854,17.708 8.85,17.708 8.846,17.708 8.838,17.708 8.832,17.708 8.825,17.708 8.729,17.707 8.634,17.705 8.538,17.701 8.54,17.698 8.54,17.696 8.542,17.692 4.614,17.544 1.384,14.561 0.884,10.757 0.88,10.759 0.878,10.761 0.876,10.763 0.872,10.73 0.872,10.697 0.868,10.665 0.835,10.373 0.813,10.077 0.811,9.777 0.811,9.768 0.809,9.76 0.809,9.753 0.809,9.751 0.809,9.75 0.809,9.749 0.809,9.741 0.807,9.733 0.807,9.726 0.81,7.512 1.675,5.519 3.079,4.059 3.102,4.034 3.126,4.005 3.149,3.98 3.274,3.854 3.409,3.736 3.542,3.618 3.605,3.564 3.661,3.505 3.724,3.453 3.831,3.363 3.949,3.282 4.062,3.198 4.156,3.127 4.248,3.052 4.345,2.985 4.438,2.92 4.538,2.866 4.634,2.806 4.759,2.729 4.882,2.647 5.011,2.577 5.095,2.531 5.183,2.494 5.269,2.452 5.417,2.378 5.564,2.301 5.716,2.236 5.802,2.2 5.892,2.172 5.979,2.139 6.137,2.078 6.293,2.015 6.456,1.965 6.556,1.934 6.657,1.914 6.757,1.887 6.915,1.845 7.07,1.799 7.23,1.766 7.349,1.741 7.472,1.729 7.591,1.71 7.737,1.687 7.882,1.659 8.032,1.644 8.167,1.63 8.306,1.629 8.444,1.622 8.577,1.615 8.71,1.601 8.847,1.601 8.851,1.601 8.855,1.601 8.859,1.601 8.865,1.601 8.869,1.601 8.873,1.601 9.01,1.601 9.141,1.615 9.275,1.622 9.413,1.629 9.552,1.63 9.687,1.644 9.837,1.659 9.982,1.687 10.13,1.71 10.249,1.729 10.37,1.742 10.489,1.766 10.649,1.799 10.805,1.845 10.964,1.888 11.064,1.914 11.165,1.935 11.263,1.965 11.425,2.016 11.581,2.079 11.74,2.139 11.828,2.173 11.918,2.2 12.004,2.236 12.156,2.301 12.303,2.378 12.451,2.452 12.537,2.495 12.625,2.532 12.709,2.577 12.838,2.647 12.961,2.729 13.086,2.806 13.182,2.866 13.281,2.92 13.375,2.984 13.473,3.051 13.564,3.127 13.658,3.197 13.771,3.281 13.888,3.362 13.996,3.452 14.059,3.504 14.115,3.563 14.178,3.617 14.311,3.735 14.446,3.852 14.571,3.979 14.593,4.005 14.616,4.033 14.64,4.059 Z M 15.05,9.662 C 15.048,7.965 14.351,6.435 13.23,5.337 12.039,4.291 10.464,3.643 8.847,3.612 8.101,3.626 7.367,3.749 6.677,3.969 4.341,4.809 2.671,7.033 2.669,9.661 2.667,12.953 5.31,15.643 8.589,15.719 8.589,15.719 8.589,15.72 8.589,15.721 L 9.13,15.721 C 9.13,15.72 9.13,15.719 9.13,15.719 12.409,15.644 15.052,12.954 15.05,9.662 Z" />
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Alert.ActivePassive.Checked.Foreground}"/>
+                            <Setter Property="Background" Value="{DynamicResource Alert.ActivePassive.Checked.Background}"/>
+                            <Setter Property="TextBlock.Text" Value="Aktive Et" TargetName="AlertText"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--TWITTER TOGGLE-->
+    <Style x:Key="Twitter.ToggleButton.Style" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Twitter.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Twitter.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                        <Path Width="16" Height="16" Stretch="Uniform" Fill="{TemplateBinding Foreground}" Data="M 17.766,3.735 C 17.408,4.028 17.282,4.324 17.275,4.784 17.197,10.017 13.587,14.39 8.474,15.406 5.816,15.934 3.291,15.485 0.866002,14.129 1.826,13.96 2.739,13.885 3.594,13.622 4.437,13.362 5.221,12.912 6.031,12.545 6.011,12.461 5.991,12.377 5.972,12.293 4.395,12.084 3.267,11.294 2.621,9.787 3.133,9.736 3.581,9.69 4.029,9.646 2.368,8.903 1.347,7.75 1.213,5.868 1.743,6.009 2.224,6.136 2.705,6.263 1.295,4.771 0.821,3.161 1.72,1.152 3.885,3.54 6.438,4.933 9.584,5.103 9.648,4.404 9.616,3.758 9.779,3.165 10.455,0.703 13.385,-0.44 15.469,1.032 16.278,1.604 16.905,1.532 17.665,1.19 17.93,1.071 18.195,0.955 18.46,0.837 18.514,0.879 18.566,0.921 18.619,0.964 18.182,1.537 17.745,2.11 17.23,2.786 17.845,2.638 18.389,2.507 19.144,2.325 18.604,2.889 18.224,3.36 17.766,3.735 Z"/>
+                        <!--<Canvas Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" MaxWidth="20" MaxHeight="20" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                            <Path Fill="{TemplateBinding Foreground}" Data="M 17.766,3.735 C 17.408,4.028 17.282,4.324 17.275,4.784 17.197,10.017 13.587,14.39 8.474,15.406 5.816,15.934 3.291,15.485 0.866002,14.129 1.826,13.96 2.739,13.885 3.594,13.622 4.437,13.362 5.221,12.912 6.031,12.545 6.011,12.461 5.991,12.377 5.972,12.293 4.395,12.084 3.267,11.294 2.621,9.787 3.133,9.736 3.581,9.69 4.029,9.646 2.368,8.903 1.347,7.75 1.213,5.868 1.743,6.009 2.224,6.136 2.705,6.263 1.295,4.771 0.821,3.161 1.72,1.152 3.885,3.54 6.438,4.933 9.584,5.103 9.648,4.404 9.616,3.758 9.779,3.165 10.455,0.703 13.385,-0.44 15.469,1.032 16.278,1.604 16.905,1.532 17.665,1.19 17.93,1.071 18.195,0.955 18.46,0.837 18.514,0.879 18.566,0.921 18.619,0.964 18.182,1.537 17.745,2.11 17.23,2.786 17.845,2.638 18.389,2.507 19.144,2.325 18.604,2.889 18.224,3.36 17.766,3.735 Z"/>
+                        </Canvas>-->
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Twitter.MouseOver.Background}"/>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Twitter.Checked.Background}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    
+    <!--CHART VIEW TOOL BUTTONS STYLE-->
+    <Style x:Key="ChartTool.ToggleBtn.Style" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource ChartTool.Btn.Background.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" >
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" Margin="{TemplateBinding Padding}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ChartTool.Btn.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ChartTool.Btn.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground.Active}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ChartTool.Btn.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ChartTool.Btn.Background.Active}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground.Active}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ChartTool.Btn.Border.Active}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ChartTool.Btn.Background.Active}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--ADVANCED TRADE VIEW-->
+    <Style x:Key="Advanced.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsHitTestVisible" Value="True" />
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsHitTestVisible" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Static}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Pressed}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="Transparent"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="Transparent"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--İşlenmemiş Stiller-->
+
+
+    <!--Alert Sound ToggleButton-->
+    <Style TargetType="{x:Type ToggleButton}" x:Key="AlertSoundToggleButton">
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Background" Value="{DynamicResource Alert.Sound.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Alert.Sound.Static.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" 
+                            Width="{TemplateBinding Height}"
+                            Height="{TemplateBinding Height}"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true">
+
+                        <StackPanel >
+                            <Border x:Name="alertPassive" Visibility="Visible" Width="{TemplateBinding Height}" Height="{TemplateBinding Height}" Padding="4">
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 3.633,11.135 C 3.437,11.047 3.265,10.981 3.086,10.898 3,10.853 2.915,10.781 2.834,10.728 3.61,8.684 6.664,6.857 9.018,7.032 9.032,7.317 9.042,7.603 9.06,7.945 6.73,8.14 4.898,9.142 3.633,11.135 Z M 18.046,6.98 C 18.522,7.341 18.999,7.703 19.48,8.07 19.568,8 19.641,7.945 19.704,7.887 20.295,7.343 20.908,6.817 21.475,6.247 22.324,5.391 23.163,4.527 23.959,3.626 24.728,2.754 24.589,1.45 23.722,0.73 22.749,-0.0799997 21.348,0.107 20.638,1.176 19.579,2.764 18.673,4.44 17.842,6.155 17.601,6.647 17.604,6.649 18.046,6.98 Z M 7.935,5.62 C 8.165,5.583 8.394,5.538 8.648,5.497 8.64,5.148 8.615,4.847 8.604,4.565 5.385,4.605 1.853,6.713 0.538,9.671 1.229,10.27 1.212,10.256 1.654,9.573 3.157,7.321 5.252,6.002 7.935,5.62 Z M 9.61,20.563 C 9.92,21.296 10.5,21.699 11.296,21.74 11.97,21.774 12.514,21.491 12.926,20.951 11.912,20.18 10.908,19.418 9.892,18.643 9.441,19.241 9.328,19.885 9.61,20.563 Z M 17.54,20.783 C 17.753,20.913 17.877,21.153 17.924,21.42 18.004,21.954 17.643,22.353 17.104,22.264 16.864,22.224 16.604,22.123 16.411,21.977 13.141,19.537 9.881,17.083 6.615,14.635 6.151,14.286 5.695,13.933 5.228,13.593 4.946,13.389 4.692,13.165 4.54,12.844 4.52,12.706 4.5,12.572 4.481,12.435 4.71,11.82 5.296,11.623 5.871,12.03 6.156,12.234 6.36,12.205 6.644,12.071 8.14,11.36 9.436,10.369 10.626,9.231 11.162,8.719 11.685,8.186 12.248,7.707 12.798,7.239 13.448,6.925 14.165,6.788 15.063,6.617 15.906,6.803 16.699,7.224 17.625,7.715 18.459,8.337 19.185,9.09 20.324,10.266 20.586,11.636 20.076,13.176 19.847,13.866 19.478,14.487 19.125,15.115 18.274,16.628 17.616,18.213 17.312,19.93 17.304,19.971 17.304,20.014 17.292,20.05 17.211,20.351 17.22,20.592 17.54,20.783 Z M 16.518,8.094 C 16.164,7.995 15.446,8.005 14.998,8.094 13.906,8.313 12.978,8.824 12.21,9.616 11.085,10.778 9.8,11.743 8.421,12.591 8.28,12.681 8.131,12.769 7.976,12.867 8.147,13.178 8.313,13.476 8.478,13.772 8.5,13.766 8.515,13.766 8.525,13.761 8.583,13.731 8.644,13.696 8.708,13.661 10.258,12.735 11.692,11.665 12.958,10.372 13.862,9.447 14.964,8.974 16.304,9.099 16.374,8.766 16.448,8.431 16.518,8.094 Z M 23.028,16.367 C 23.5,19.031 22.9,21.425 21.226,23.549 21.087,23.732 20.95,23.922 20.791,24.126 21.04,24.373 21.267,24.574 21.472,24.772 23.774,22.528 24.865,18.576 23.768,15.529 22.854,15.571 22.873,15.57 23.028,16.367 Z M 21.375,16.345 C 21.281,16.362 21.168,16.367 21.074,16.395 20.888,16.458 20.72,16.528 20.515,16.601 20.983,18.913 20.353,20.897 18.799,22.637 19.048,22.876 19.255,23.076 19.462,23.273 21.29,21.777 22.229,18.356 21.375,16.345 Z"/>
+                            </Border>
+                            <Border x:Name="alertActive" Visibility="Collapsed" Width="{TemplateBinding Height}" Height="{TemplateBinding Height}" Padding="4">
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="M 15.735,6.98 C 16.533,5.334 17.404,3.725 18.419,2.2 19.103,1.173 20.445,0.993 21.382,1.773 22.215,2.463 22.347,3.716 21.609,4.553 20.847,5.417 20.038,6.247 19.227,7.069 18.681,7.616 18.092,8.121 17.523,8.643 17.464,8.7 17.395,8.751 17.309,8.82 16.849,8.467 16.388,8.12 15.93,7.775 15.508,7.455 15.506,7.455 15.735,6.98 Z M 7.833,20.814 C 8.129,21.52 8.687,21.904 9.452,21.943 10.098,21.977 10.619,21.708 11.015,21.187 10.042,20.446 9.079,19.714 8.103,18.971 7.67,19.545 7.56,20.164 7.833,20.814 Z M 6.984,0.781 C 6.865,0.605 6.659,0.522 6.46,0.551 6.379,0.562 6.302,0.591 6.229,0.64 L 4.559,1.776 C 4.311,1.945 4.248,2.282 4.415,2.528 L 19.264,24.217 C 19.383,24.39 19.59,24.478 19.787,24.448 19.867,24.434 19.946,24.408 20.016,24.357 L 21.689,23.223 C 21.935,23.055 22.001,22.714 21.833,22.469 L 6.984,0.781 Z M 6.968,14.188 C 6.907,14.223 6.848,14.256 6.79,14.286 6.782,14.288 6.769,14.288 6.744,14.296 6.587,14.013 6.429,13.725 6.264,13.427 6.411,13.333 6.555,13.247 6.691,13.161 7.421,12.713 8.108,12.215 8.774,11.684 L 8.041,10.617 C 7.11,11.418 6.11,12.125 4.984,12.66 4.712,12.787 4.515,12.816 4.242,12.621 3.689,12.23 3.126,12.421 2.908,13.01 2.926,13.143 2.945,13.273 2.962,13.403 3.109,13.712 3.354,13.925 3.624,14.125 4.074,14.449 4.512,14.791 4.956,15.122 8.092,17.476 11.223,19.829 14.362,22.172 14.549,22.315 14.795,22.411 15.026,22.448 15.432,22.514 15.725,22.291 15.798,21.946 L 9.347,12.525 C 8.592,13.127 7.803,13.688 6.968,14.188 Z M 14.465,8.842 C 14.461,8.863 14.455,8.881 14.451,8.901 L 17.83,13.839 C 17.846,13.798 17.868,13.763 17.882,13.722 18.374,12.244 18.12,10.927 17.028,9.797 16.331,9.075 15.529,8.478 14.641,8.005 14.293,7.821 13.935,7.689 13.57,7.613 L 14.404,8.83 C 14.423,8.835 14.448,8.837 14.465,8.842 Z" />
+                            </Border>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource Alert.Sound.Checked.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Alert.Sound.Checked.Foreground}"/>
+                            <Setter TargetName="alertPassive" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="alertActive" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Alert List True/False-->
+    <Style TargetType="{x:Type ToggleButton}" x:Key="AlertListTrueFalse">
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource Alert.List.Static.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" 
+                            Width="{TemplateBinding Height}"
+                            Height="{TemplateBinding Height}"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            Margin="{TemplateBinding Margin}"
+                            SnapsToDevicePixels="true"
+                            CornerRadius="12">
+
+                        <StackPanel Width="{TemplateBinding Height}" Height="{TemplateBinding Height}">
+
+                            <Canvas x:Name="active" Visibility="Collapsed" Width="{TemplateBinding Height}" Height="{TemplateBinding Height}">
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 18.177,6.899 C 18.49,6.919 18.594,7.142 18.408,7.395 L 10.658,17.914 C 10.472,18.166 10.174,18.162 9.995,17.904 L 6.628,13.072 C 6.448,12.815 6.458,12.401 6.649,12.152 L 6.734,12.04 C 6.924,11.791 7.271,11.759 7.505,11.969 L 9.811,14.044 C 10.043,14.254 10.401,14.231 10.605,13.992 L 16.425,7.737 C 16.638,7.507 17.029,7.205 17.293,7.064 17.558,6.925 18.177,6.899 18.177,6.899"/>
+                            </Canvas>
+                            <Canvas x:Name="passive" Visibility="Visible" Width="{TemplateBinding Height}" Height="{TemplateBinding Height}">
+                                <Path Fill="{TemplateBinding Foreground}" Data="F 1 M 4.952,6.171 C 4.16,5.38 3.788,4.459 4.123,4.124 4.458,3.789 5.38,4.161 6.171,4.952 L 7.562,6.343 C 8.354,7.134 9.647,7.134 10.438,6.343 L 11.83,4.952 C 12.621,4.16 13.542,3.788 13.878,4.123 14.213,4.458 13.841,5.379 13.049,6.17 L 11.658,7.562 C 10.867,8.353 10.867,9.647 11.658,10.437 L 13.049,11.829 C 13.841,12.62 14.213,13.541 13.878,13.877 13.542,14.212 12.621,13.839 11.83,13.049 L 10.438,11.656 C 9.647,10.866 8.354,10.866 7.562,11.656 L 6.171,13.049 C 5.38,13.839 4.458,14.212 4.123,13.877 3.788,13.541 4.16,12.62 4.952,11.829 L 6.343,10.437 C 7.134,9.647 7.134,8.353 6.343,7.562 L 4.952,6.171 Z M 0.25,0 L 0,0 0,0.25 0.25,0.25 0.25,0 Z M 18,17.75 L 17.75,17.75 17.75,18 18,18 18,17.75 Z" />
+                            </Canvas>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Alert.List.Checked.Foreground}"/>
+                            <Setter TargetName="passive" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="active" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Alert List Active/Passive-->
+    <Style TargetType="{x:Type ToggleButton}" x:Key="Alerts.List.ActivePassive">
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Background" Value="{DynamicResource Alert.LisBool.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Alert.LisBool.Static.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" 
+                            Width="{TemplateBinding Height}"
+                            Height="{TemplateBinding Height}"
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            Margin="{TemplateBinding Margin}"
+                            SnapsToDevicePixels="true">
+
+                        <StackPanel Width="{TemplateBinding Height}" Height="{TemplateBinding Height}">
+                            <Border x:Name="active" Visibility="Collapsed" Padding="3">
+                                <Path Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Data="M 5.517,1.339 C 3.927,2.559 2.337,3.78 0.74,5.008 -0.167,3.915 -0.165,1.984 1.21,0.852 2.524,-0.229 4.521,-0.01 5.517,1.339 Z M 17.417,2.129 C 16.964,0.984 16.108,0.312 14.886,0.181 13.8,0.065 12.898,0.47 12.193,1.332 13.795,2.561 15.382,3.78 16.978,5.006 17.597,4.334 17.798,3.09 17.417,2.129 Z M 1.946,17.935 C 1.768,18.114 1.813,18.413 1.995,18.577 2.181,18.743 2.472,18.735 2.659,18.549 3.106,18.108 3.546,17.66 3.993,17.219 4.132,17.081 4.282,16.954 4.442,16.809 4.145,16.598 3.893,16.418 3.663,16.253 3.085,16.815 2.507,17.366 1.946,17.935 Z M 9.472,9.587 C 9.601,9.475 9.71,9.397 9.798,9.3 9.991,9.085 9.986,8.765 9.796,8.582 9.604,8.397 9.29,8.401 9.077,8.596 8.96,8.703 8.845,8.813 8.741,8.933 8.639,9.053 8.557,9.069 8.411,8.982 7.196,8.271 5.976,7.57 4.757,6.867 4.693,6.831 4.632,6.787 4.564,6.765 4.437,6.723 4.306,6.723 4.231,6.856 4.163,6.984 4.208,7.102 4.317,7.191 4.372,7.236 4.438,7.27 4.501,7.306 5.679,7.988 6.858,8.668 8.036,9.35 8.091,9.382 8.143,9.417 8.227,9.47 8.011,9.677 7.812,9.863 7.62,10.052 7.259,10.41 6.897,10.769 6.54,11.133 6.37,11.308 6.339,11.56 6.446,11.755 6.546,11.939 6.745,12.042 6.967,11.987 7.088,11.957 7.211,11.883 7.301,11.796 7.809,11.302 8.305,10.799 8.805,10.298 9.123,9.98 9.123,9.98 9.522,10.208 9.557,10.228 9.59,10.25 9.627,10.265 9.766,10.324 9.9,10.333 9.998,10.193 10.076,10.078 10.019,9.922 9.869,9.822 9.761,9.751 9.644,9.689 9.472,9.587 Z M 8.851,5.126 C 9.126,5.13 9.357,4.911 9.367,4.635 9.377,4.361 9.154,4.127 8.879,4.118 8.592,4.109 8.354,4.335 8.352,4.618 8.351,4.893 8.575,5.122 8.851,5.126 Z M 3.825,9.156 C 3.538,9.156 3.311,9.388 3.319,9.675 3.325,9.952 3.553,10.169 3.833,10.164 4.11,10.16 4.331,9.935 4.329,9.657 4.327,9.38 4.103,9.157 3.825,9.156 Z M 13.897,10.165 C 14.176,10.163 14.399,9.938 14.399,9.662 14.399,9.382 14.178,9.16 13.899,9.157 13.614,9.154 13.383,9.386 13.389,9.67 13.394,9.949 13.618,10.167 13.897,10.165 Z M 8.878,14.196 C 8.591,14.186 8.355,14.411 8.353,14.694 8.349,14.969 8.574,15.197 8.851,15.202 9.128,15.206 9.359,14.987 9.367,14.712 9.375,14.437 9.155,14.205 8.878,14.196 Z M 14.056,16.252 C 13.826,16.417 13.574,16.597 13.277,16.808 13.437,16.954 13.588,17.08 13.726,17.218 14.173,17.659 14.613,18.107 15.06,18.548 15.248,18.735 15.539,18.742 15.724,18.576 15.906,18.412 15.951,18.113 15.773,17.934 15.212,17.366 14.634,16.815 14.056,16.252 Z M 14.64,4.059 C 16.044,5.519 16.91,7.512 16.911,9.726 16.911,9.734 16.909,9.742 16.909,9.749 16.909,9.75 16.909,9.751 16.909,9.753 16.909,9.761 16.907,9.769 16.907,9.777 16.905,10.077 16.884,10.373 16.85,10.665 16.846,10.696 16.846,10.73 16.842,10.763 16.84,10.761 16.836,10.759 16.834,10.757 16.334,14.561 13.104,17.544 9.176,17.692 9.178,17.696 9.178,17.698 9.18,17.701 9.084,17.705 8.989,17.707 8.893,17.708 8.885,17.708 8.879,17.708 8.872,17.708 8.868,17.708 8.864,17.708 8.858,17.708 8.854,17.708 8.85,17.708 8.846,17.708 8.838,17.708 8.832,17.708 8.825,17.708 8.729,17.707 8.634,17.705 8.538,17.701 8.54,17.698 8.54,17.696 8.542,17.692 4.614,17.544 1.384,14.561 0.884,10.757 0.88,10.759 0.878,10.761 0.876,10.763 0.872,10.73 0.872,10.697 0.868,10.665 0.835,10.373 0.813,10.077 0.811,9.777 0.811,9.768 0.809,9.76 0.809,9.753 0.809,9.751 0.809,9.75 0.809,9.749 0.809,9.741 0.807,9.733 0.807,9.726 0.81,7.512 1.675,5.519 3.079,4.059 3.102,4.034 3.126,4.005 3.149,3.98 3.274,3.854 3.409,3.736 3.542,3.618 3.605,3.564 3.661,3.505 3.724,3.453 3.831,3.363 3.949,3.282 4.062,3.198 4.156,3.127 4.248,3.052 4.345,2.985 4.438,2.92 4.538,2.866 4.634,2.806 4.759,2.729 4.882,2.647 5.011,2.577 5.095,2.531 5.183,2.494 5.269,2.452 5.417,2.378 5.564,2.301 5.716,2.236 5.802,2.2 5.892,2.172 5.979,2.139 6.137,2.078 6.293,2.015 6.456,1.965 6.556,1.934 6.657,1.914 6.757,1.887 6.915,1.845 7.07,1.799 7.23,1.766 7.349,1.741 7.472,1.729 7.591,1.71 7.737,1.687 7.882,1.659 8.032,1.644 8.167,1.63 8.306,1.629 8.444,1.622 8.577,1.615 8.71,1.601 8.847,1.601 8.851,1.601 8.855,1.601 8.859,1.601 8.865,1.601 8.869,1.601 8.873,1.601 9.01,1.601 9.141,1.615 9.275,1.622 9.413,1.629 9.552,1.63 9.687,1.644 9.837,1.659 9.982,1.687 10.13,1.71 10.249,1.729 10.37,1.742 10.489,1.766 10.649,1.799 10.805,1.845 10.964,1.888 11.064,1.914 11.165,1.935 11.263,1.965 11.425,2.016 11.581,2.079 11.74,2.139 11.828,2.173 11.918,2.2 12.004,2.236 12.156,2.301 12.303,2.378 12.451,2.452 12.537,2.495 12.625,2.532 12.709,2.577 12.838,2.647 12.961,2.729 13.086,2.806 13.182,2.866 13.281,2.92 13.375,2.984 13.473,3.051 13.564,3.127 13.658,3.197 13.771,3.281 13.888,3.362 13.996,3.452 14.059,3.504 14.115,3.563 14.178,3.617 14.311,3.735 14.446,3.852 14.571,3.979 14.593,4.005 14.616,4.033 14.64,4.059 Z M 15.05,9.662 C 15.048,7.965 14.351,6.435 13.23,5.337 12.039,4.291 10.464,3.643 8.847,3.612 8.101,3.626 7.367,3.749 6.677,3.969 4.341,4.809 2.671,7.033 2.669,9.661 2.667,12.953 5.31,15.643 8.589,15.719 8.589,15.719 8.589,15.72 8.589,15.721 L 9.13,15.721 C 9.13,15.72 9.13,15.719 9.13,15.719 12.409,15.644 15.052,12.954 15.05,9.662 Z" />
+                            </Border>
+                            <Border x:Name="passive" Visibility="Visible" Padding="2">
+                                <Path Fill="{TemplateBinding Foreground}" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Data="F 1 M 20.309,3.691 C 18.014,1.397 15.007,0.25 12,0.25 8.993,0.25 5.985,1.397 3.691,3.691 -0.897,8.28 -0.897,15.719 3.691,20.308 5.986,22.603 8.993,23.75 12,23.75 15.007,23.75 18.015,22.603 20.309,20.309 24.896,15.721 24.896,8.279 20.309,3.691 Z M 5.105,5.105 C 6.947,3.264 9.396,2.25 12,2.25 14.194,2.25 16.272,2.977 17.976,4.305 L 4.306,17.975 C 1.335,14.153 1.596,8.615 5.105,5.105 Z M 18.895,18.895 C 17.053,20.736 14.605,21.75 12,21.75 9.659,21.75 7.448,20.924 5.687,19.422 L 19.421,5.688 C 22.68,9.515 22.509,15.28 18.895,18.895 Z M 8.747,9.969 C 9.202,10.231 9.655,10.495 10.11,10.758 L 9.816,11.052 C 9.393,10.807 8.969,10.562 8.545,10.317 8.495,10.289 8.442,10.262 8.399,10.226 8.313,10.156 8.276,10.062 8.331,9.961 8.39,9.855 8.494,9.856 8.595,9.888 8.648,9.905 8.696,9.94 8.747,9.969 Z M 8.408,12.181 C 8.41,12.401 8.235,12.579 8.014,12.583 7.793,12.587 7.612,12.415 7.607,12.195 7.601,11.967 7.78,11.783 8.008,11.784 8.228,11.785 8.406,11.961 8.408,12.181 Z M 12.401,8.199 C 12.393,8.418 12.211,8.593 11.992,8.589 11.774,8.586 11.596,8.404 11.596,8.186 11.597,7.962 11.786,7.783 12.014,7.79 12.232,7.797 12.409,7.982 12.401,8.199 Z M 11.598,16.175 C 11.599,15.95 11.787,15.773 12.015,15.779 12.235,15.787 12.409,15.97 12.402,16.189 12.396,16.406 12.213,16.58 11.993,16.578 11.773,16.573 11.595,16.394 11.598,16.175 Z M 15.592,12.191 C 15.586,11.965 15.769,11.781 15.995,11.784 16.217,11.786 16.391,11.963 16.391,12.184 16.391,12.403 16.214,12.581 15.994,12.582 15.772,12.585 15.594,12.412 15.592,12.191 Z M 17.52,9.004 C 18.064,9.952 18.382,11.052 18.383,12.235 18.383,12.241 18.381,12.248 18.381,12.254 18.381,12.255 18.381,12.255 18.381,12.257 18.381,12.263 18.38,12.269 18.38,12.277 18.379,12.515 18.361,12.749 18.335,12.98 18.332,13.005 18.332,13.032 18.329,13.058 18.327,13.057 18.324,13.055 18.323,13.053 17.926,16.07 15.365,18.434 12.251,18.552 12.252,18.555 12.252,18.557 12.254,18.559 12.178,18.563 12.102,18.563 12.026,18.564 12.02,18.564 12.015,18.564 12.009,18.564 12.006,18.564 12.003,18.564 11.998,18.564 11.995,18.564 11.992,18.564 11.989,18.564 11.983,18.564 11.978,18.564 11.972,18.564 11.896,18.563 11.82,18.563 11.744,18.559 11.746,18.557 11.746,18.555 11.747,18.552 10.685,18.512 9.697,18.194 8.828,17.695 L 9.947,16.576 C 10.511,16.827 11.132,16.973 11.784,16.989 L 11.784,16.99 12.213,16.99 12.213,16.989 C 14.813,16.927 16.908,14.795 16.906,12.185 16.905,11.436 16.719,10.738 16.415,10.107 L 17.52,9.004 Z M 17.479,18.744 C 17.621,18.886 17.585,19.123 17.441,19.253 17.295,19.385 17.063,19.378 16.915,19.231 16.561,18.88 16.212,18.526 15.857,18.175 15.747,18.067 15.628,17.966 15.501,17.85 15.736,17.684 15.937,17.541 16.119,17.411 16.578,17.856 17.035,18.293 17.479,18.744 Z M 9.152,6.468 C 9.27,6.409 9.386,6.348 9.507,6.297 9.575,6.269 9.646,6.247 9.716,6.22 9.841,6.172 9.965,6.123 10.094,6.082 10.173,6.057 10.253,6.041 10.333,6.019 10.458,5.986 10.581,5.95 10.708,5.924 10.802,5.905 10.9,5.895 10.995,5.88 11.111,5.862 11.225,5.84 11.345,5.828 11.452,5.817 11.562,5.816 11.672,5.811 11.777,5.806 11.883,5.794 11.991,5.794 11.994,5.794 11.997,5.794 12,5.794 12.005,5.794 12.008,5.794 12.011,5.794 12.119,5.794 12.223,5.805 12.33,5.811 12.44,5.816 12.55,5.817 12.657,5.828 12.776,5.84 12.89,5.863 13.009,5.88 13.103,5.895 13.199,5.906 13.294,5.924 13.42,5.95 13.545,5.987 13.67,6.02 13.749,6.041 13.829,6.057 13.906,6.082 14.035,6.123 14.159,6.172 14.284,6.22 14.354,6.247 14.425,6.269 14.493,6.297 14.512,6.305 14.528,6.315 14.546,6.323 L 13.274,7.595 C 12.856,7.48 12.429,7.397 11.992,7.388 11.4,7.399 10.818,7.496 10.271,7.671 8.419,8.337 7.095,10.101 7.094,12.184 7.094,12.663 7.185,13.116 7.316,13.552 L 6.162,14.706 C 5.935,14.184 5.756,13.635 5.679,13.052 5.676,13.054 5.675,13.056 5.673,13.057 5.67,13.031 5.67,13.004 5.667,12.979 5.641,12.748 5.624,12.514 5.622,12.276 5.622,12.269 5.621,12.263 5.621,12.256 5.621,12.255 5.621,12.254 5.621,12.253 5.621,12.247 5.619,12.24 5.619,12.234 5.618,10.48 6.303,8.9 7.417,7.743 7.435,7.722 7.454,7.7 7.472,7.68 7.571,7.58 7.678,7.487 7.784,7.393 7.834,7.35 7.879,7.304 7.928,7.262 8.013,7.19 8.106,7.126 8.196,7.06 8.27,7.003 8.343,6.943 8.42,6.89 8.495,6.84 8.573,6.796 8.649,6.75 8.748,6.688 8.846,6.624 8.948,6.568 9.015,6.531 9.084,6.502 9.152,6.468 Z M 5.935,5.2 C 6.977,4.342 8.56,4.517 9.349,5.586 8.089,6.554 6.828,7.522 5.561,8.496 4.843,7.628 4.844,6.097 5.935,5.2 Z" />
+                            </Border>
+                        </StackPanel>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Alert.LisBool.Checked.Foreground}"/>
+                            <Setter TargetName="passive" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="active" Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource Alert.LisBool.Checked.Background}"></Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <!--DETAIL WINDOW CHART SETTINGS TOGGLE-->
+    <Style x:Key="Detail.Chart.Settings.ToggleButton.Style" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Detail.Chart.Settings.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Detail.Chart.Settings.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" CornerRadius="3">
+                        <Path Fill="{TemplateBinding Foreground}" Width="12" Height="12" Stretch="Uniform" 
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                  Data="F 1 M 11.826,7.507 L 10.844,7.004 C 10.985,6.343 10.983,5.674 10.856,5.034 L 11.84,4.54 C 12.004,4.457 12.051,4.173 11.942,3.907 L 11.704,3.325 C 11.595,3.059 11.36,2.889 11.186,2.945 L 10.137,3.284 C 9.779,2.738 9.311,2.262 8.748,1.886 L 9.098,0.84 C 9.155,0.664 8.987,0.43 8.723,0.319 L 8.141,0.076 C 7.877,-0.035 7.59,0.01 7.506,0.174 L 7.004,1.155 C 6.342,1.017 5.674,1.017 5.034,1.145 L 4.542,0.162 C 4.458,-0.004 4.172,-0.05 3.909,0.059 L 3.324,0.298 C 3.06,0.406 2.89,0.639 2.947,0.814 L 3.285,1.862 C 2.738,2.22 2.261,2.688 1.886,3.251 L 0.839,2.903 C 0.665,2.846 0.43,3.014 0.32,3.278 L 0.077,3.859 C -0.034,4.123 0.01,4.408 0.174,4.493 L 1.156,4.995 C 1.016,5.657 1.017,6.325 1.145,6.964 L 0.161,7.459 C -0.003,7.543 -0.05,7.826 0.059,8.093 L 0.297,8.675 C 0.406,8.941 0.639,9.112 0.815,9.055 L 1.863,8.716 C 2.221,9.261 2.689,9.738 3.253,10.113 L 2.903,11.16 C 2.844,11.336 3.014,11.57 3.277,11.681 L 3.86,11.924 C 4.124,12.035 4.409,11.99 4.495,11.826 L 4.997,10.845 C 5.657,10.983 6.326,10.983 6.967,10.855 L 7.46,11.838 C 7.542,12.004 7.827,12.05 8.093,11.942 L 8.677,11.704 C 8.941,11.595 9.111,11.361 9.054,11.186 L 8.716,10.138 C 9.262,9.78 9.738,9.313 10.113,8.75 L 11.16,9.096 C 11.336,9.155 11.57,8.987 11.68,8.721 L 11.924,8.141 C 12.035,7.877 11.99,7.59 11.826,7.507 M 4.86,8.719 C 3.358,8.09 2.652,6.362 3.281,4.86 3.909,3.358 5.637,2.651 7.141,3.28 8.641,3.91 9.348,5.637 8.719,7.139 8.092,8.641 6.363,9.348 4.86,8.719"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Detail.Chart.Settings.MouseOver.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Detail.Chart.Settings.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Detail.Chart.Settings.Checked.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Detail.Chart.Settings.Checked.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="Detail.Chart.Settings.ToggleButton.Orange.Style" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Orange.Toggle.Button.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" CornerRadius="3">
+                        <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Width="12" Height="12" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Data="F 1 M 11.826,7.507 L 10.844,7.004 C 10.985,6.343 10.983,5.674 10.856,5.034 L 11.84,4.54 C 12.004,4.457 12.051,4.173 11.942,3.907 L 11.704,3.325 C 11.595,3.059 11.36,2.889 11.186,2.945 L 10.137,3.284 C 9.779,2.738 9.311,2.262 8.748,1.886 L 9.098,0.84 C 9.155,0.664 8.987,0.43 8.723,0.319 L 8.141,0.076 C 7.877,-0.035 7.59,0.01 7.506,0.174 L 7.004,1.155 C 6.342,1.017 5.674,1.017 5.034,1.145 L 4.542,0.162 C 4.458,-0.004 4.172,-0.05 3.909,0.059 L 3.324,0.298 C 3.06,0.406 2.89,0.639 2.947,0.814 L 3.285,1.862 C 2.738,2.22 2.261,2.688 1.886,3.251 L 0.839,2.903 C 0.665,2.846 0.43,3.014 0.32,3.278 L 0.077,3.859 C -0.034,4.123 0.01,4.408 0.174,4.493 L 1.156,4.995 C 1.016,5.657 1.017,6.325 1.145,6.964 L 0.161,7.459 C -0.003,7.543 -0.05,7.826 0.059,8.093 L 0.297,8.675 C 0.406,8.941 0.639,9.112 0.815,9.055 L 1.863,8.716 C 2.221,9.261 2.689,9.738 3.253,10.113 L 2.903,11.16 C 2.844,11.336 3.014,11.57 3.277,11.681 L 3.86,11.924 C 4.124,12.035 4.409,11.99 4.495,11.826 L 4.997,10.845 C 5.657,10.983 6.326,10.983 6.967,10.855 L 7.46,11.838 C 7.542,12.004 7.827,12.05 8.093,11.942 L 8.677,11.704 C 8.941,11.595 9.111,11.361 9.054,11.186 L 8.716,10.138 C 9.262,9.78 9.738,9.313 10.113,8.75 L 11.16,9.096 C 11.336,9.155 11.57,8.987 11.68,8.721 L 11.924,8.141 C 12.035,7.877 11.99,7.59 11.826,7.507 M 4.86,8.719 C 3.358,8.09 2.652,6.362 3.281,4.86 3.909,3.358 5.637,2.651 7.141,3.28 8.641,3.91 9.348,5.637 8.719,7.139 8.092,8.641 6.363,9.348 4.86,8.719"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.MouseOver.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource Orange.Toggle.Button.MouseOver.Background}"/>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.Checked.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource Orange.Toggle.Button.Checked.Background}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--TL/LOT TOGGLE-->
+    <Style x:Key="Tlot.ToggleButton.Style" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="16"/>
+        <Setter Property="Height" Value="16"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="{DynamicResource Tlot.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Tlot.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Tlot.Brush}"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Toggle.Button.Corner.Radius}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ToggleButton">
+                    <Border Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" CornerRadius="{TemplateBinding Border.CornerRadius}" SnapsToDevicePixels="True">
+                        <Border Margin="2.5" Padding="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                            <Path Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Data="M 17.821,47.58 C 11.812,49.792 5.97,51.942 0.0209999,54.133 0.0209999,52.408 0.0209999,50.798 0.0209999,49.188 0.0209999,48.535 0.0699999,47.876 0.00699991,47.23 -0.0500001,46.637 0.214,46.422 0.724,46.236 6.187,44.238 11.638,42.207 17.105,40.22 17.683,40.01 17.858,39.737 17.834,39.154 17.79,38.088 17.821,37.018 17.821,35.778 11.863,37.971 6.011,40.125 0.0809994,42.307 0.0549994,42.027 0.0219994,41.833 0.0219994,41.64 0.0179994,39.549 0.0439994,37.458 0.00199937,35.369 -0.0100006,34.807 0.212999,34.618 0.688999,34.444 6.104,32.466 11.507,30.459 16.925,28.488 17.571,28.254 17.845,27.988 17.842,27.228 17.806,18.526 17.821,9.82501 17.821,1.12301 17.821,0.765009 17.821,0.406009 17.821,0.00100875 20.987,0.00100875 24.059,0.00100875 27.239,0.00100875 27.239,8.19101 27.239,16.373 27.239,24.667 36.837,21.132 46.302,17.644 55.864,14.121 55.882,14.431 55.909,14.679 55.909,14.927 55.915,16.965 55.893,19.004 55.93,21.041 55.94,21.585 55.752,21.805 55.257,21.987 46.195,25.309 37.143,28.659 28.08,31.978 27.478,32.198 27.202,32.448 27.246,33.13 27.313,34.194 27.264,35.266 27.264,36.459 36.838,32.933 46.317,29.442 55.911,25.909 55.911,27.768 55.921,29.484 55.907,31.2 55.9,31.975 56.106,32.928 55.737,33.474 55.387,33.99 54.411,34.09 53.704,34.351 45.185,37.493 36.669,40.637 28.142,43.751 27.477,43.994 27.241,44.283 27.243,45.02 27.27,58.138 27.263,71.256 27.263,84.374 27.263,84.658 27.263,84.941 27.263,85.352 36.775,83.987 44.646,79.771 50.861,72.57 57.06,65.386 60.054,56.962 60.154,47.436 63.267,47.436 66.336,47.436 69.502,47.436 69.518,47.65 69.563,47.899 69.554,48.145 68.881,66.08 60.985,79.838 45.547,89.043 37.258,93.986 28.14,95.762 18.524,95.029 17.83,94.976 17.816,94.629 17.816,94.111 17.823,83.762 17.821,73.415 17.821,63.066 17.821,58.232 17.821,53.397 17.82,48.563 17.821,48.284 17.821,48.006 17.821,47.58 Z" />
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Tlot.MouseOver.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Tlot.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="true">
+                <Setter Property="Background" Value="{DynamicResource Tlot.Checked.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource Tlot.Checked.Foreground}"/>
+                <Setter Property="ToolTip" Value="Hazır Miktar" />
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="ToolTip" Value="Hazır Miktar" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--SHOW PASSWORD TOGGLE-->
+    <Style x:Key="ShowPasswordToggle" TargetType="ToggleButton">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource ShowPassword.Toggle.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource ShowPassword.Toggle.Static.Background}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Background="{TemplateBinding Background}">
+                        <Path Data="F 1 M 10,15.744 C 7.873,15.744 6.142,14.014 6.142,11.887 6.142,9.759 7.872,8.029 10,8.029 12.127,8.029 13.857,9.759 13.857,11.887 13.857,14.014 12.127,15.744 10,15.744 Z M 10,9.028 C 8.424,9.028 7.142,10.31 7.142,11.886 7.142,13.461 8.424,14.743 10,14.743 11.576,14.743 12.857,13.461 12.857,11.886 12.857,10.311 11.576,9.028 10,9.028 Z M 18.381,12.637 C 18.381,8.015 14.621,4.256 10,4.256 5.379,4.256 1.62,8.015 1.62,12.637 1.62,12.912 1.844,13.137 2.12,13.137 2.396,13.137 2.62,12.912 2.62,12.637 2.62,8.567 5.931,5.256 10,5.256 14.069,5.256 17.381,8.567 17.381,12.637 17.381,12.912 17.604,13.137 17.881,13.137 18.156,13.137 18.381,12.912 18.381,12.637 Z M 0.001,0 L 0.001,0 0.001,0 0.001,0 0.001,0 0.001,0 M 20,19.999 L 20,19.999 20,19.999 20,19.999 20,19.999 20,19.999" Stretch="Uniform" Fill="{TemplateBinding Foreground}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Background" Value="{DynamicResource ShowPassword.Toggle.Checked.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ShowPassword.Toggle.Checked.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--READONLY TOGGLE BUTTON-->
+    <Style x:Key="Readonly.ToggleButton" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource Readonly.ToggleButton.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Readonly.ToggleButton.Background}"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border BorderThickness="0" Background="{TemplateBinding Background}">
+                        <Path x:Name="Part_Path" HorizontalAlignment="Center" Fill="{TemplateBinding Foreground}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="Part_Path" Property="Data" Value="F 1 M 11.507,2.54 L 13.128,0.94 C 13.308,0.762 13.603,0.763 13.783,0.942 L 16.083,3.242 C 16.264,3.422 16.264,3.716 16.083,3.895 L 14.472,5.504 11.507,2.54 Z M 6.931,8.35 L 6.364,7.782 3.807,10.338 C 3.627,10.517 3.626,10.813 3.807,10.993 L 5.992,13.191 C 6.172,13.372 6.466,13.372 6.646,13.193 L 9.214,10.631 7.703,9.121 6.687,10.137 C 5.984,10.84 5.236,11.241 5.024,11.029 4.812,10.817 5.213,10.069 5.916,9.366 L 6.931,8.35 Z M 7.778,6.369 L 8.344,6.935 11.039,4.239 10.474,3.674 7.778,6.369 Z M 13.327,6.527 L 11.811,5.011 9.116,7.707 10.629,9.22 13.327,6.527 Z M 5.022,14.836 C 5.144,14.817 5.216,14.766 5.256,14.702 5.259,14.704 5.262,14.706 5.265,14.708 5.269,14.702 5.266,14.693 5.269,14.687 5.278,14.667 5.28,14.646 5.282,14.624 5.295,14.549 5.278,14.465 5.186,14.374 L 2.649,11.851 C 2.542,11.744 2.439,11.723 2.355,11.755 2.355,11.755 2.354,11.755 2.353,11.755 2.347,11.758 2.34,11.754 2.334,11.757 2.335,11.76 2.338,11.763 2.339,11.766 2.264,11.799 2.205,11.882 2.185,12.019 L 1.812,14.507 1.812,14.507 1.767,14.807 C 1.767,14.808 1.767,14.808 1.767,14.808 L 1.767,14.809 C 1.724,15.1 1.926,15.302 2.218,15.258 L 2.218,15.258 C 2.218,15.258 2.218,15.258 2.219,15.258 L 2.518,15.213 C 2.518,15.213 2.518,15.213 2.518,15.213 L 5.022,14.836 Z M 16.071,4.646 L 15.319,5.397 C 16.505,8.015 16.113,11.177 14.137,13.433 L 3.567,2.86 C 4.934,1.661 6.664,1 8.499,1 9.614,1 10.688,1.25 11.669,1.708 L 12.427,0.961 C 11.229,0.335 9.89,0 8.499,0 6.229,0 4.095,0.884 2.489,2.489 -0.446001,5.425 -0.776001,9.988 1.489,13.297 L 1.691,11.944 C 1.702,11.871 1.73,11.815 1.752,11.755 0.48,9.107 0.848,5.867 2.861,3.567 L 13.433,14.14 C 12.065,15.339 10.335,16 8.499,16 7.372,16 6.286,15.745 5.297,15.276 5.234,15.298 5.17,15.319 5.098,15.33 L 3.725,15.531 C 5.123,16.484 6.771,17 8.499,17 10.77,17 12.904,16.116 14.51,14.511 17.175,11.846 17.692,7.838 16.071,4.646 Z" />
+                            <Setter Property="Foreground" Value="{DynamicResource Readonly.ToggleButton.Checked.Foreground}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="Part_Path" Property="Data" Value="F 1 M 4.213,14.309 C 4.422,14.517 4.356,14.723 4.064,14.768 L 1.261,15.19 C 0.969,15.234 0.766,15.032 0.81,14.741 L 1.227,11.951 C 1.271,11.659 1.477,11.591 1.686,11.799 L 4.213,14.309 Z M 15.062,3.228 L 12.772,0.939 C 12.592,0.76 12.298,0.76 12.119,0.937 L 10.505,2.53 13.457,5.481 15.061,3.879 C 15.24,3.701 15.24,3.408 15.062,3.228 Z M 5.708,10.092 C 5.008,10.792 4.263,11.192 4.052,10.98 3.84,10.768 4.24,10.024 4.939,9.324 L 10.041,4.22 9.478,3.659 2.841,10.293 C 2.662,10.471 2.661,10.764 2.84,10.943 L 5.016,13.132 C 5.195,13.312 5.488,13.312 5.667,13.134 L 12.318,6.498 10.809,4.99 5.708,10.092 Z" />
+                            <Setter Property="Foreground" Value="{DynamicResource Readonly.ToggleButton.Foreground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--EXTRA MINI TICKET BIDASK DIRECTION TOGGLE-->
+    <Style x:Key="ExtraMiniTicket.BidAskDirection.Toggle" TargetType="{x:Type ToggleButton}">
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource ExtraMiniTicket.BidAskDirection.Bid}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="0" Padding="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Separator Grid.Column="0" VerticalAlignment="Stretch" Style="{DynamicResource Seperator.Horizontal.Invert}"/>
+                            <Border Width="16" Height="16" Grid.Column="1">
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="M 2.881,5.094 C 3.819,4.248 4.703,3.461 5.576,2.662 6.401,1.907 7.228,1.153 8.03,0.375 8.326,0.088 8.612,0.042 8.935,0.251 9.202,0.423 9.479,0.604 9.691,0.835 10.278,1.478 10.275,1.795 9.691,2.444 8.219,4.082 6.737,5.709 5.188,7.417 5.571,7.8 5.953,8.15 6.293,8.538 6.436,8.699 6.61,8.99 6.552,9.129 6.472,9.315 6.187,9.515 5.979,9.527 4.393,9.625 2.804,9.684 1.215,9.736 0.797,9.75 0.544,9.533 0.562,9.081 0.623,7.526 0.666,5.97 0.762,4.417 0.777,4.182 0.983,3.854 1.186,3.768 1.338,3.703 1.66,3.916 1.847,4.076 2.203,4.378 2.518,4.731 2.881,5.094 Z M 13.12,10.905 C 12.181,11.751 11.298,12.539 10.425,13.338 9.6,14.093 8.773,14.848 7.97,15.626 7.674,15.912 7.388,15.958 7.064,15.749 6.797,15.576 6.52,15.396 6.309,15.164 5.722,14.521 5.725,14.204 6.308,13.556 7.781,11.919 9.264,10.29 10.811,8.583 10.429,8.201 10.046,7.851 9.706,7.463 9.564,7.302 9.39,7.01 9.448,6.872 9.528,6.686 9.813,6.485 10.021,6.473 11.608,6.377 13.197,6.317 14.785,6.265 15.203,6.251 15.456,6.469 15.438,6.921 15.378,8.476 15.334,10.032 15.238,11.585 15.224,11.82 15.017,12.148 14.815,12.233 14.663,12.298 14.341,12.086 14.154,11.926 13.798,11.622 13.482,11.269 13.12,10.905 Z" />
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ExtraMiniTicket.BidAskDirection.Ask}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

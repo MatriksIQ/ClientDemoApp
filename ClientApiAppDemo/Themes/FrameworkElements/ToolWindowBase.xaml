@@ -1,0 +1,76 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="WindowStyle" TargetType="{x:Type Window}">
+        <Style.Triggers>
+            <Trigger Property="Window.ResizeMode">
+                <Setter Property="Control.Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type Window}">
+                            <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}">
+                                <Grid>
+                                    <AdornerDecorator>
+                                        <ContentPresenter Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" />
+                                    </AdornerDecorator>
+                                    <ResizeGrip IsTabStop="False" Name="WindowResizeGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Collapsed" />
+                                </Grid>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <MultiTrigger>
+                                    <MultiTrigger.Conditions>
+                                        <Condition Property="Window.ResizeMode" Value="{x:Static ResizeMode.CanResizeWithGrip}" />
+                                        <Condition Property="Window.WindowState" Value="{x:Static WindowState.Normal}" />
+                                    </MultiTrigger.Conditions>
+                                    <Setter Property="UIElement.Visibility" TargetName="WindowResizeGrip">
+                                        <Setter.Value>
+                                            <x:Static Member="Visibility.Visible" />
+                                        </Setter.Value>
+                                    </Setter>
+                                </MultiTrigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Trigger.Value>
+                    <x:Static Member="ResizeMode.CanResizeWithGrip" />
+                </Trigger.Value>
+            </Trigger>
+        </Style.Triggers>
+        <Style.Resources>
+            <ResourceDictionary />
+        </Style.Resources>
+        <Setter Property="TextElement.Foreground">
+            <Setter.Value>
+                <DynamicResource ResourceKey="{x:Static SystemColors.WindowTextBrushKey}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Panel.Background">
+            <Setter.Value>
+                <DynamicResource ResourceKey="{x:Static SystemColors.WindowBrushKey}" />
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Window}">
+                    <Border BorderThickness="{TemplateBinding Border.BorderThickness}" BorderBrush="{TemplateBinding Border.BorderBrush}" Background="{TemplateBinding Panel.Background}">
+                        <Grid>
+                            <AdornerDecorator>
+                                <ContentPresenter Content="{TemplateBinding ContentControl.Content}" ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}" ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}" />
+                            </AdornerDecorator>
+                            <ResizeGrip IsTabStop="False" Name="WindowResizeGrip" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Visible" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DefaultWindowStyle" TargetType="{x:Type Window}">
+        <Setter Property="Background" Value="{DynamicResource Page.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Page.Foreground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Page.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="WindowStyle" Value="ToolWindow"/>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,1677 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:lex="http://wpflocalizeextension.codeplex.com">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="SeparatorBase.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!--İşlem yapılmış stiller-->
+    <Style x:Key="Icon.Holder.Button" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Static}"/>
+        <Setter Property="IsDefault" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="0" Padding="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Separator x:Name="SeparatorItem" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Stretch" Style="{DynamicResource Seperator.Horizontal.Invert}" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.MouseOver}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Disabled}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="False">
+                            <Setter Property="Visibility" TargetName="SeparatorItem" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Icon.Holder.Light.Button" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalContentAlignment" Value="Right"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Light.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Static}"/>
+        <Setter Property="IsDefault" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="0" Padding="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Separator x:Name="SeparatorItem" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="Stretch" Style="{DynamicResource Seperator.Horizontal.Invert}" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding Padding}" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.MouseOver}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource WindowHeaderButton.Foreground.Disabled}"/>
+                            <Setter Property="Background" Value="{DynamicResource WindowHeaderButton.Background.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="False">
+                            <Setter Property="Visibility" TargetName="SeparatorItem" Value="Collapsed" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Icon.ShadeButton.Style" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="#00000000"/>
+        <Setter Property="Foreground" Value="#FFFFFFFF"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Icon.ShadeButton.CornerRadius}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" CornerRadius="{TemplateBinding Border.CornerRadius}" Margin="0" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Opacity" Value="0.9"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Opacity" Value="1"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Opacity" Value="0.5"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Static}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Pressed}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Disabled}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Disabled}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Disabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type RepeatButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Pressed}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Disabled}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Disabled}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Button.Foreground.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Orange.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Orange.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Orange.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Orange.Button.Static.Border}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsDefault" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Orange.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0"/>
+                        </Trigger>
+                        <Trigger Property="IsDefault" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource Orange.Button.Flat.Static.Background}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="False" />
+                                <Condition Property="IsMouseOver" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.MouseOver.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="False" />
+                                <Condition Property="IsPressed" Value="true" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.Pressed.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsDefault" Value="False" />
+                                <Condition Property="IsEnabled" Value="false" />
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Button.Flat.Disabled.Background}"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Green.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Green.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Green.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Green.Button.Static.Border}"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Green.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Green.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Green.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Green.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Green.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Green.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Green.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Green.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Green.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Green.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Button.Triggerless" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="4">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SimpleButton" TargetType="{x:Type Button}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource SimpleButton.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource SimpleButton.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource SimpleButton.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource SimpleButton.MouseOver.Border}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource SimpleButton.MouseOver.Foreground}"/>
+                            <Setter Property="Background" Value="{DynamicResource SimpleButton.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource SimpleButton.Pressed.Foreground}"/>
+                            <Setter Property="Background" Value="{DynamicResource SimpleButton.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                        <Trigger Property="UseLayoutRounding" Value="False">
+                            <Setter Property="Border.CornerRadius" Value="0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="LinkButton" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource LinkButton.Static.Foreground}" />
+        <Setter Property="IsDefault" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" Padding="{TemplateBinding Padding}" BorderThickness="0" BorderBrush="#00000000" Background="#00000000">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Margin}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsDefault" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource LinkButton.Static.Foreground.Light}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource LinkButton.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource LinkButton.Disabled.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style x:Key="PortfolioUpdateButton" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Margin" Value="0,0,4,0"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="5,0">
+                            <Canvas x:Name="Icon" Width="16" Height="16" RenderTransformOrigin="0.5,0.5">
+                                <Canvas.RenderTransform>
+                                    <RotateTransform x:Name="CanvasRotate" Angle="0"/>
+                                </Canvas.RenderTransform>
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Width="16" Height="16" Data="F 1 M 22.672,17.185 C 21.276,20.319 18.852,22.318 15.662,23.325 15.56,23.364 15.444,23.344 15.364,23.264 15.26,23.16 15.257,22.993 15.354,22.889 18.862,18.297 18.194,12.531 15.621,8.967 L 13.425,11.159 C 13.168,11.417 12.937,11.333 12.909,10.968 L 12.253,1.825 C 12.227,1.463 12.505,1.18 12.87,1.195 L 22.299,1.603 C 22.663,1.618 22.753,1.842 22.494,2.098 L 20.473,4.118 C 23.84,8.046 24.789,12.434 22.672,17.185 Z M 11.575,13.841 L 9.38,16.033 C 6.804,12.469 6.138,6.703 9.646,2.112 9.741,2.006 9.74,1.841 9.636,1.737 9.556,1.657 9.438,1.636 9.34,1.679 6.147,2.683 3.722,4.682 2.327,7.816 0.21,12.566 1.159,16.954 4.525,20.884 L 2.504,22.902 C 2.248,23.161 2.336,23.382 2.701,23.399 L 12.129,23.806 C 12.494,23.822 12.771,23.536 12.746,23.175 L 12.09,14.031 C 12.064,13.667 11.832,13.581 11.575,13.841 Z" />
+                            </Canvas>
+                            <TextBlock Margin="4,0" Text="Güncelle" Foreground="{TemplateBinding Foreground}"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="CanvasRotate" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="-360" Duration="0:0:1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PortfolioUpdateButtonNoText" TargetType="{x:Type Button}">
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Margin" Value="0,0,4,0"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Horizontal" Margin="5,0">
+                            <Canvas x:Name="Icon" Width="16" Height="16" RenderTransformOrigin="0.5,0.5">
+                                <Canvas.RenderTransform>
+                                    <RotateTransform x:Name="CanvasRotate" Angle="0"/>
+                                </Canvas.RenderTransform>
+                                <Path Fill="{TemplateBinding Foreground}" Stretch="Uniform" Width="16" Height="16" Data="F 1 M 22.672,17.185 C 21.276,20.319 18.852,22.318 15.662,23.325 15.56,23.364 15.444,23.344 15.364,23.264 15.26,23.16 15.257,22.993 15.354,22.889 18.862,18.297 18.194,12.531 15.621,8.967 L 13.425,11.159 C 13.168,11.417 12.937,11.333 12.909,10.968 L 12.253,1.825 C 12.227,1.463 12.505,1.18 12.87,1.195 L 22.299,1.603 C 22.663,1.618 22.753,1.842 22.494,2.098 L 20.473,4.118 C 23.84,8.046 24.789,12.434 22.672,17.185 Z M 11.575,13.841 L 9.38,16.033 C 6.804,12.469 6.138,6.703 9.646,2.112 9.741,2.006 9.74,1.841 9.636,1.737 9.556,1.657 9.438,1.636 9.34,1.679 6.147,2.683 3.722,4.682 2.327,7.816 0.21,12.566 1.159,16.954 4.525,20.884 L 2.504,22.902 C 2.248,23.161 2.336,23.382 2.701,23.399 L 12.129,23.806 C 12.494,23.822 12.771,23.536 12.746,23.175 L 12.09,14.031 C 12.064,13.667 11.832,13.581 11.575,13.841 Z" />
+                            </Canvas>
+
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Button.Background.Pressed}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Pressed}"/>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="CanvasRotate" Storyboard.TargetProperty="(RotateTransform.Angle)" From="0" To="-360" Duration="0:0:1"/>
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Detail.Opener.Button" TargetType="{x:Type Button}">
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource Corelation.ListItem.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Corelation.ListItem.Background}"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="Transparent" BorderThickness="0" Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Corelation.ListItem.Foreground.MouseOver}"/>
+                            <Setter Property="Background" Value="{DynamicResource Corelation.ListItem.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Corelation.ListItem.Foreground.Pressed}"/>
+                            <Setter Property="Background" Value="{DynamicResource Corelation.ListItem.Background.Pressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource Mhc.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Shade.Button.Light" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <Grid>
+                            <Border x:Name="BackgroundBorder" Background="{TemplateBinding Background}" />
+                            <Border x:Name="ShadeBorder" Background="#FFFFFFFF" Opacity="0" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.MouseOver.Foreground}"/>
+                            <Setter Property="Opacity" TargetName="ShadeBorder" Value=".15"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Pressed.Foreground}"/>
+                            <Setter Property="Opacity" TargetName="ShadeBorder" Value=".35"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Focus}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Shade.Button.Dark" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Button.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Button.Background.Static}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Button.Border.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <Grid>
+                            <Border x:Name="BackgroundBorder" Background="{TemplateBinding Background}" />
+                            <Border x:Name="ShadeBorder" Background="#FF000000" Opacity="0" />
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.MouseOver.Foreground}"/>
+                            <Setter Property="Opacity" TargetName="ShadeBorder" Value=".15"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Pressed.Foreground}"/>
+                            <Setter Property="Opacity" TargetName="ShadeBorder" Value=".35"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Focus}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="AddCondition" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="MaxWidth" Value="90"/>
+        <Setter Property="Background" Value="{DynamicResource AlertsView.AddCondition.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource AlertsView.AddCondition.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Margin="{TemplateBinding Margin}" Padding="0" SnapsToDevicePixels="true" CornerRadius="0">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Grid.Column="0" Text="Koşul Ekle" Foreground="{TemplateBinding Foreground}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="5,0"/>
+                            <Border Grid.Column="1" Height="{TemplateBinding Height}" Width="{TemplateBinding Height}" HorizontalAlignment="Right" BorderThickness="0" Margin="-1" Padding="0" Background="{DynamicResource AlertsView.AddCondition.InnerButton.Static.Background}">
+                                <TextBlock Text="+" FontSize="16" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,-3,0,0" Foreground="{TemplateBinding Foreground}"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource AlertsView.AddCondition.MouseOver.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource AlertsView.AddCondition.Pressed.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.26"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ButtonListButton" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource Movable.Toggle.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Movable.Toggle.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Width" Value="15"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border SnapsToDevicePixels="true" x:Name="BorderContent" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="3">
+                        <Border  BorderThickness="1" BorderBrush="Transparent" CornerRadius="2">
+                            <ContentPresenter SnapsToDevicePixels="True" 
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}" 
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" 
+                                RecognizesAccessKey="True"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Checked.Background}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsMouseOver" Value="False">
+                            <Setter Property="Background" Value="{DynamicResource Movable.Toggle.Static.Background}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="DialogBox.Submit.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource DialogBox.Submit.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource DialogBox.Submit.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource DialogBox.Submit.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="3">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource DialogBox.Submit.MouseOver.Border}"/>
+                            <Setter Property="Background" Value="{DynamicResource DialogBox.Submit.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="BorderBrush" Value="{DynamicResource DialogBox.Submit.Pressed.Border}"/>
+                            <Setter Property="Background" Value="{DynamicResource DialogBox.Submit.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Spreadsheet.Toolbar.Btn.Style" TargetType="{x:Type Button}">
+        <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Background.Static}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Width" Value="62"/>
+        <Setter Property="Height" Value="57"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="2"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter Grid.Column="0" x:Name="contentPresenter" Focusable="False"
+                                                  HorizontalAlignment="Stretch" RecognizesAccessKey="True" SnapsToDevicePixels="True" 
+                                                  VerticalAlignment="Stretch"/>
+                            <StackPanel Grid.Column="2" VerticalAlignment="Stretch" Orientation="Horizontal">
+                                <Border Width="1" Background="#efefef"/>
+                                <Border Width="1" Background="#adaead"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Foreground.Static}"/>
+                            <Setter Property="Background" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Background.Active}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Foreground.Active}"/>
+                            <Setter Property="Background" Value="{DynamicResource Spreadsheet.Toolbar.Btn.Background.Active}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Spreadsheet.Toolbar.Popup.Btn" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Popup.Btn.Foreground.Static}"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{x:Null}" BorderThickness="0" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Popup.Btn.Foreground.Active}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Spreadsheet.Toolbar.Popup.Btn.Background.Active}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Spreadsheet.Toolbar.Popup.Btn.Foreground.Active}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Spreadsheet.Toolbar.Popup.Btn.Background.Active}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RepeatDownButton" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="MinWidth" Value="20"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource RepeatButton.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="{DynamicResource RepeatButton.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Static.Glyph}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Path x:Name="Arrow" Width="9" Height="5" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 2.019,5.253 C 1.241,4.475 0.875,3.569 1.204,3.239 1.534,2.91 2.44,3.276 3.218,4.054 L 4.586,5.422 C 5.363,6.201 6.636,6.201 7.414,5.422 L 8.782,4.054 C 9.559,3.276 10.466,2.91 10.796,3.239 11.125,3.569 10.759,4.475 9.982,5.253 L 8.613,6.621 C 7.835,7.399 6.929,8.305 6.599,8.634 6.27,8.964 5.73,8.964 5.4,8.634 5.071,8.305 4.165,7.399 3.387,6.621 L 2.019,5.253 Z" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.MouseOver.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.MouseOver.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.MouseOver.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.Pressed.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.Pressed.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Pressed.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.Disabled.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.Disabled.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Disabled.Glyph}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RepeatDownButton.PortfolioColors" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="MinWidth" Value="20"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Default.Save.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#00000000"/>
+        <Setter Property="Foreground" Value="{DynamicResource Header.Text.Foreground}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Path x:Name="Arrow" Width="9" Height="5" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 2.019,5.253 C 1.241,4.475 0.875,3.569 1.204,3.239 1.534,2.91 2.44,3.276 3.218,4.054 L 4.586,5.422 C 5.363,6.201 6.636,6.201 7.414,5.422 L 8.782,4.054 C 9.559,3.276 10.466,2.91 10.796,3.239 11.125,3.569 10.759,4.475 9.982,5.253 L 8.613,6.621 C 7.835,7.399 6.929,8.305 6.599,8.634 6.27,8.964 5.73,8.964 5.4,8.634 5.071,8.305 4.165,7.399 3.387,6.621 L 2.019,5.253 Z" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Default.Save.MouseOver.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Default.Save.Pressed.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RepeatUpButton" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="MinWidth" Value="20"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource RepeatButton.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Background" Value="{DynamicResource RepeatButton.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Static.Glyph}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Path x:Name="Arrow" Width="9" Height="5" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 2.019,5.253 C 1.241,4.475 0.875,3.569 1.204,3.239 1.534,2.91 2.44,3.276 3.218,4.054 L 4.586,5.422 C 5.363,6.201 6.636,6.201 7.414,5.422 L 8.782,4.054 C 9.559,3.276 10.466,2.91 10.796,3.239 11.125,3.569 10.759,4.475 9.982,5.253 L 8.613,6.621 C 7.835,7.399 6.929,8.305 6.599,8.634 6.27,8.964 5.73,8.964 5.4,8.634 5.071,8.305 4.165,7.399 3.387,6.621 L 2.019,5.253 Z" RenderTransformOrigin="0.5,0.5" >
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <RotateTransform Angle="180"/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.MouseOver.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.MouseOver.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.MouseOver.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.Pressed.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.Pressed.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Pressed.Glyph}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource RepeatButton.Disabled.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource RepeatButton.Disabled.Background}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource RepeatButton.Disabled.Glyph}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RepeatUpButton.PortfolioColors" TargetType="{x:Type RepeatButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="MinWidth" Value="20"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Default.Save.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="#00000000"/>
+        <Setter Property="Foreground" Value="{DynamicResource Header.Text.Foreground}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Path x:Name="Arrow" Width="9" Height="5" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Stretch="Uniform" Data="F 1 M 2.019,5.253 C 1.241,4.475 0.875,3.569 1.204,3.239 1.534,2.91 2.44,3.276 3.218,4.054 L 4.586,5.422 C 5.363,6.201 6.636,6.201 7.414,5.422 L 8.782,4.054 C 9.559,3.276 10.466,2.91 10.796,3.239 11.125,3.569 10.759,4.475 9.982,5.253 L 8.613,6.621 C 7.835,7.399 6.929,8.305 6.599,8.634 6.27,8.964 5.73,8.964 5.4,8.634 5.071,8.305 4.165,7.399 3.387,6.621 L 2.019,5.253 Z" RenderTransformOrigin="0.5,0.5" >
+                            <Path.RenderTransform>
+                                <TransformGroup>
+                                    <RotateTransform Angle="180"/>
+                                </TransformGroup>
+                            </Path.RenderTransform>
+                        </Path>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Default.Save.MouseOver.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Foreground" Value="{DynamicResource Default.Save.Pressed.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <!--İşlem yapılmamış stiller-->
+
+
+    <!--TWITTER BUTTONS-->
+    <Style x:Key="Twitter.Mini.Share.Button.Style" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Foreground" Value="{DynamicResource Twitter.Share.Static.Background}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Margin="{TemplateBinding Margin}" Padding="{TemplateBinding Padding}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" 
+                            Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" 
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" CornerRadius="2">
+                        <Path Width="16" Height="16" Stretch="Uniform" Fill="{TemplateBinding Foreground}" Data="M 17.766,3.735 C 17.408,4.028 17.282,4.324 17.275,4.784 17.197,10.017 13.587,14.39 8.474,15.406 5.816,15.934 3.291,15.485 0.866002,14.129 1.826,13.96 2.739,13.885 3.594,13.622 4.437,13.362 5.221,12.912 6.031,12.545 6.011,12.461 5.991,12.377 5.972,12.293 4.395,12.084 3.267,11.294 2.621,9.787 3.133,9.736 3.581,9.69 4.029,9.646 2.368,8.903 1.347,7.75 1.213,5.868 1.743,6.009 2.224,6.136 2.705,6.263 1.295,4.771 0.821,3.161 1.72,1.152 3.885,3.54 6.438,4.933 9.584,5.103 9.648,4.404 9.616,3.758 9.779,3.165 10.455,0.703 13.385,-0.44 15.469,1.032 16.278,1.604 16.905,1.532 17.665,1.19 17.93,1.071 18.195,0.955 18.46,0.837 18.514,0.879 18.566,0.921 18.619,0.964 18.182,1.537 17.745,2.11 17.23,2.786 17.845,2.638 18.389,2.507 19.144,2.325 18.604,2.889 18.224,3.36 17.766,3.735 Z"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Twitter.Share.MouseOver.Background}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Twitter.Share.Checked.Background}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--BUYSELL BUTTONS-->
+    <Style x:Key="BuyButton" TargetType="{x:Type Button}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource Buy.Button.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource BuySell.Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="4">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False"  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Buy.Button.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Buy.Button.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SellButton" TargetType="{x:Type Button}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Background" Value="{DynamicResource Sell.Button.Static.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource BuySell.Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="4">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Sell.Button.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" Value="{DynamicResource Sell.Button.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--WAITED ORDER BUTTONS-->
+    <Style x:Key="WaitedOrder.Standart.Button" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource WaitedOrder.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WaitedOrder.Red.Button" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource WaitedOrder.Red.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Red.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Red.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WaitedOrder.Green.Button" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource WaitedOrder.Green.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Green.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Green.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="WaitedOrder.Blue.Button" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource WaitedOrder.Blue.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Static.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Blue.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource WaitedOrder.X.Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource WaitedOrder.Blue.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource WaitedOrder.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--ORDER CONFIRMATION BUTTONS-->
+    <Style x:Key="OrderConfirmation.Submit.Button" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource OrderConfirmation.Static.Background}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Canvas Grid.Column="1" Width="37">
+                                <Path x:Name="Path_Bg" Fill="{DynamicResource OrderConfirmation.Succes.Static.Background}" Data="M 11.066,0 L 37.066,0 37.066,26 1.066,25.992 11.066,0 Z"/>
+                                <Path x:Name="Path_Border" Fill="{DynamicResource OrderConfirmation.Success.Border}" Data="M 11.066,0 L 9.997,0 0,25.992 1.066,25.992 11.066,0 Z"/>
+                                <Path x:Name="Path_Ico" Fill="{DynamicResource OrderConfirmation.Path.Fill}" Data="F 1 M 27.207,8.52 C 27.457,8.536 27.541,8.714 27.391,8.916 L 21.194,17.331 C 21.046,17.532 20.805,17.529 20.663,17.323 L 17.97,13.457 C 17.825,13.252 17.833,12.921 17.988,12.722 L 18.056,12.632 C 18.208,12.433 18.486,12.407 18.671,12.574 L 20.515,14.234 C 20.701,14.402 20.988,14.383 21.152,14.193 L 25.806,9.189 C 25.976,9.004 26.29,8.763 26.501,8.65 26.711,8.539 27.207,8.52 27.207,8.52"/>
+                            </Canvas>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="0" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Hover.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OrderConfirmation.Hover.Background}"/>
+                            <Setter Property="Fill" TargetName="Path_Bg" Value="{DynamicResource OrderConfirmation.Succes.Hover.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OrderConfirmation.Pressed.Background}"/>
+                            <Setter Property="Fill" TargetName="Path_Bg" Value="{DynamicResource OrderConfirmation.Succes.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="OrderConfirmation.Cancel.Button" TargetType="{x:Type Button}">
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource OrderConfirmation.Static.Background}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Canvas Grid.Column="0" Width="37">
+                                <Path x:Name="Path_Bg" Fill="{DynamicResource OrderConfirmation.Cancel.Static.Background}" Data="M 36,25.992 L 0,26 0,0 26,0 36,25.992 Z"/>
+                                <Path x:Name="Path_Border" Fill="{DynamicResource OrderConfirmation.Cancel.Border}" Data="M 36,25.992 L 37.066,25.992 27.069,0 26,0 36,25.992 Z"/>
+                                <Path x:Name="Path_Ico" Fill="{DynamicResource OrderConfirmation.Path.Fill}" Data="F 1 M 9.826,10.48 C 9.111,9.765 8.775,8.933 9.077,8.63 9.381,8.327 10.213,8.663 10.928,9.378 L 12.185,10.635 C 12.9,11.35 14.068,11.35 14.783,10.635 L 16.04,9.378 C 16.755,8.663 17.587,8.327 17.89,8.63 18.193,8.933 17.856,9.765 17.142,10.48 L 15.885,11.737 C 15.17,12.452 15.17,13.621 15.885,14.335 L 17.142,15.592 C 17.856,16.307 18.193,17.139 17.89,17.442 17.587,17.745 16.755,17.409 16.04,16.694 L 14.783,15.437 C 14.068,14.722 12.9,14.722 12.185,15.437 L 10.928,16.694 C 10.213,17.409 9.381,17.745 9.077,17.442 8.775,17.139 9.111,16.307 9.826,15.592 L 11.083,14.335 C 11.798,13.621 11.798,12.452 11.083,11.737 L 9.826,10.48 Z"/>
+                            </Canvas>
+                            <ContentPresenter x:Name="contentPresenter" Grid.Column="1" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="True" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Hover.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OrderConfirmation.Hover.Background}"/>
+                            <Setter Property="Fill" TargetName="Path_Bg" Value="{DynamicResource OrderConfirmation.Cancel.Hover.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource OrderConfirmation.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OrderConfirmation.Pressed.Background}"/>
+                            <Setter Property="Fill" TargetName="Path_Bg" Value="{DynamicResource OrderConfirmation.Cancel.Pressed.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value="0.4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--CHART TOOL BUTTON STYLE-->
+    <Style x:Key="ChartTool.Btn.Style" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Width" Value="30"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource ChartTool.Btn.Background.Static}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" >
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground.MouseOver}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ChartTool.Btn.Border}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ChartTool.Btn.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource ChartTool.Btn.Foreground.Active}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource ChartTool.Btn.Border.Active}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource ChartTool.Btn.Background.Active}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="Mic.Record.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="25"/>
+        <Setter Property="Height" Value="25"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="12.5" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground"  Value="{DynamicResource MicButton.Static.Foreground}"/>
+        <Setter Property="Background"  Value="{DynamicResource MicButton.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource MicButton.Static.Border}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border SnapsToDevicePixels="true" x:Name="BorderContent" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <Grid>
+                            <Border x:Name="MicIco" Padding="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <Path HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Fill="{TemplateBinding Foreground}" Data="M 2.63443,4.96696 C 2.62644,3.47746 3.00665,2.15079 4.13396,1.12655 5.43639,-0.0572101 6.97521,-0.289841 8.56596,0.342916 10.3265,1.0428 11.1928,2.49044 11.2627,4.3362 11.3373,6.3448 11.2794,8.35873 11.2794,10.3707 11.2807,10.3707 11.2814,10.3707 11.2827,10.3707 11.2827,12.3108 11.294,14.2516 11.28,16.1924 11.2641,18.4184 9.63601,20.3559 7.60712,20.5945 5.2686,20.869 3.26834,19.4991 2.79357,17.1622 2.59914,16.2024 2.64442,15.1868 2.63976,14.1971 2.62511,11.1204 2.65174,8.04368 2.63443,4.96696 Z M 12.5438,13.2307 C 12.5225,13.2334 12.5032,13.254 12.3681,13.3364 12.3681,14.2749 12.3747,15.2426 12.3667,16.2104 12.3414,19.2911 10.0142,21.6234 6.97188,21.6227 3.92754,21.622 1.61832,19.2997 1.59368,16.2077 1.58636,15.2406 1.59235,14.2742 1.59235,13.2433 1.31002,13.2207 1.07963,13.2134 0.852574,13.1822 0.223997,13.0971 -0.0430146,13.3091 0.00559363,13.9924 0.0675191,14.8638 -0.00239706,15.7438 0.0315621,16.6178 0.0948193,18.2316 0.647489,19.6626 1.72486,20.8796 2.8868,22.193 4.37833,22.8949 6.10159,23.168 6.10159,24.3319 6.10159,25.4538 6.10159,26.6668 4.81314,26.6668 3.57064,26.6668 2.33546,26.6668 2.33546,27.2869 2.33546,27.8147 2.33546,28.3145 5.48767,28.3145 8.57795,28.3145 11.6616,28.3145 11.6616,27.7376 11.6616,27.2278 11.6616,26.6555 10.3671,26.6555 9.1193,26.6555 7.77225,26.6555 7.77225,25.7004 7.80222,24.8064 7.76027,23.9158 7.73563,23.3787 7.87147,23.1614 8.44744,23.0305 11.2334,22.3957 13.0872,20.6988 13.7311,17.8993 13.9868,16.788 13.9342,15.5995 13.9635,14.4444 13.9988,13.0519 13.9721,13.0512 12.5438,13.2307 Z"/>
+                            </Border>
+                            <Border x:Name="LoadingIco" Visibility="Collapsed" RenderTransformOrigin=".5,.5">
+                                <Path Width="18" Height="18" Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="{TemplateBinding Foreground}" Data="F 1 M 4.62992,7.4709 C 4.62992,7.76313 4.38258,8 4.07743,8 3.77229,8 3.52495,7.76313 3.52495,7.4709 3.52495,7.17866 3.77229,6.9418 4.07743,6.9418 4.38258,6.9418 4.62992,7.17866 4.62992,7.4709 Z M 1.4255,5.75661 C 1.12035,5.75661 0.873015,5.99348 0.873015,6.28571 0.873015,6.57795 1.12035,6.81481 1.4255,6.81481 1.73065,6.81481 1.97799,6.57795 1.97799,6.28571 1.97799,5.99348 1.73047,5.75661 1.4255,5.75661 Z M 0.552486,3.55555 C 0.247337,3.55555 0,3.79242 0,4.08465 0,4.37689 0.247337,4.61375 0.552486,4.61375 0.857635,4.61375 1.10497,4.37689 1.10497,4.08465 1.10497,3.79242 0.857635,3.55555 0.552486,3.55555 Z M 6.56354,5.75661 C 6.25839,5.75661 6.01105,5.99348 6.01105,6.28571 6.01105,6.57795 6.25839,6.81481 6.56354,6.81481 6.86869,6.81481 7.11602,6.57795 7.11602,6.28571 7.11602,5.99348 6.86869,5.75661 6.56354,5.75661 Z M 7.44751,3.55555 C 7.14236,3.55555 6.89503,3.79242 6.89503,4.08465 6.89503,4.37689 7.14236,4.61375 7.44751,4.61375 7.75266,4.61375 8,4.37689 8,4.08465 8,3.79242 7.75266,3.55555 7.44751,3.55555 Z M 1.4255,1.3545 C 1.12035,1.3545 0.873015,1.59136 0.873015,1.8836 0.873015,2.17583 1.12035,2.4127 1.4255,2.4127 1.73065,2.4127 1.97799,2.17583 1.97799,1.8836 1.97799,1.59136 1.73047,1.3545 1.4255,1.3545 Z M 4.07743,-1.98413e-006 C 3.67487,-1.98413e-006 3.34815,0.312718 3.34815,0.698411 3.34815,1.0841 3.67487,1.39682 4.07743,1.39682 4.48,1.39682 4.80672,1.0841 4.80672,0.698411 4.80672,0.312718 4.48,-1.98413e-006 4.07743,-1.98413e-006 Z M 6.56354,1.01587 C 6.06338,1.01587 5.65746,1.40444 5.65746,1.8836 5.65746,2.36275 6.06338,2.75132 6.56354,2.75132 7.06369,2.75132 7.46961,2.36275 7.46961,1.8836 7.46961,1.40444 7.06369,1.01587 6.56354,1.01587 Z" />
+                                <Border.RenderTransform>
+                                    <RotateTransform/>
+                                </Border.RenderTransform>
+                                <Border.Triggers>
+                                    <EventTrigger RoutedEvent="Border.Loaded">
+                                        <EventTrigger.Actions>
+                                            <BeginStoryboard>
+                                                <Storyboard>
+                                                    <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(RotateTransform.Angle)"
+                                                                     From="0" To="360" Duration="0:0:1.5" SpeedRatio="1"
+                                                                     RepeatBehavior="Forever"/>
+                                                    
+                                                </Storyboard>
+                                            </BeginStoryboard>
+                                        </EventTrigger.Actions>
+                                    </EventTrigger>
+                                </Border.Triggers>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground"  Value="{DynamicResource MicButton.MouseOver.Foreground}"/>
+                            <Setter Property="Background"  Value="{DynamicResource MicButton.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource MicButton.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground"  Value="{DynamicResource MicButton.Pressed.Foreground}"/>
+                            <Setter Property="Background"  Value="{DynamicResource MicButton.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource MicButton.Pressed.Border}"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Path=IsOpen, ElementName=SpeechPopup}" Value="true">
+                            <Setter Property="Foreground"  Value="{DynamicResource MicButton.Pressed.Foreground}"/>
+                            <Setter Property="Background"  Value="{DynamicResource MicButton.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" Value="{DynamicResource MicButton.Pressed.Border}"/>
+                        </DataTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Visibility" TargetName="MicIco" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="LoadingIco" Value="Visible"/>
+                            <Setter Property="Background"  Value="{DynamicResource MicButton.Info.Background}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PopupControl.InPage.Button" TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="22"/>
+        <Setter Property="Height" Value="22"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Background" Value="{DynamicResource PopupControl.InPage.Button.Background}"/>
+        <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPage.Button.Normal.Foreground}"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="2" Margin="0" Padding="{TemplateBinding Padding}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPage.Button.MouseOver.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPage.Button.Pressed.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Opacity" Value=".4"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="PopupControl.InPopup.Button" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPopup.Static.Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border HorizontalAlignment="{TemplateBinding HorizontalAlignment}" VerticalAlignment="{TemplateBinding VerticalAlignment}" Padding="{TemplateBinding Padding}" BorderThickness="0" BorderBrush="#00000000" Background="#00000000">
+                        <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Margin="{TemplateBinding Margin}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPopup.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource PopupControl.InPopup.Pressed.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Opacity" Value=".45" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--SUBMIT TOGGLE BUTTON-->
+    <Style x:Key="SubmitButton" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource Submit.Static.Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Submit.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Submit.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource Submit.Disabled.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <!--CANCEL TOGGLE BUTTON-->
+    <Style x:Key="CancelButton" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource Cancel.Static.Foreground}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <ContentPresenter Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Cancel.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Cancel.MouseOver.Foreground}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource Cancel.Disabled.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <!--Chart Shortcut button style-->
+    <Style x:Key="Shortcut.Button.Style" TargetType="Button">
+        <Setter Property="Height" Value="14" />
+        <Setter Property="FontSize" Value="10" />
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Foreground" Value="{DynamicResource Shortcut.Button.Static.Foreground}" />
+        <Setter Property="Background" Value="{DynamicResource Shortcut.Button.Static.Background}" />
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Padding" Value="2"/>
+        <Setter Property="Margin" Value="0,0,1,0" />
+        <Setter Property="MinWidth" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Shortcut.Button.MouseOver.Foreground}" />
+                <Setter Property="Background" Value="{DynamicResource Shortcut.Button.MouseOver.Background}" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource Shortcut.Button.Active.Foreground}" />
+                <Setter Property="Background" Value="{DynamicResource Shortcut.Button.Active.Background}" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="{DynamicResource Shortcut.Button.Disabled.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource Shortcut.Button.Disabled.Background}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="GridPopupControl.Button.Style" TargetType="Button">
+        <Setter Property="Foreground" Value="{DynamicResource DataGrid.Header.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource DataGrid.Header.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource DataGrid.Header.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="0,0,1,1"/>
+        <Setter Property="Padding" Value="5,1"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" 
+                            BorderBrush="{TemplateBinding BorderBrush}" 
+                            BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" 
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                          Margin="{TemplateBinding Padding}" 
+                                          RecognizesAccessKey="True" 
+                                          SnapsToDevicePixels="True" 
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource DataGrid.Header.MouseOver.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource DataGrid.Header.MouseOver.Background}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Foreground" Value="{DynamicResource DataGrid.Header.Pressed.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource DataGrid.Header.Pressed.Background}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OptimizationList.Button.Style" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Foreground" Value="{DynamicResource OptimizationList.Button.Static.Foreground}"/>
+        <Setter Property="Background" Value="{DynamicResource OptimizationList.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource OptimizationList.Button.Static.Border}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Button.Corner.Radius}"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Button.Border.Static}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource OptimizationList.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OptimizationList.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource OptimizationList.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Button.Pressed.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OptimizationList.Button.Pressed.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource OptimizationList.Button.Pressed.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource OptimizationList.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource OptimizationList.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource OptimizationList.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource OptimizationList.Button.Focus.Border}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="Checked.Orange.Button" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{DynamicResource Toggle.Button.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Toggle.Button.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Toggle.Button.Static.Foreground}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Padding" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Button.IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Toggle.Button.MouseOver.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Toggle.Button.MouseOver.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Toggle.Button.MouseOver.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="{DynamicResource Orange.Toggle.Button.Checked.Foreground}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Orange.Toggle.Button.Checked.Border}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Toggle.Button.Disabled.Background}"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Toggle.Button.Disabled.Border}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource Toggle.Button.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+</ResourceDictionary>

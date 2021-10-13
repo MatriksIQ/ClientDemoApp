@@ -1,0 +1,230 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ContextMenu x:Key="TextBoxContextMenu">
+        <MenuItem Command="ApplicationCommands.Copy" />
+        <MenuItem Command="ApplicationCommands.Cut" />
+        <MenuItem Command="ApplicationCommands.Paste" />
+    </ContextMenu>
+
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <Style TargetType="{x:Type TextBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="ContextMenu" Value="{StaticResource TextBoxContextMenu}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Input.Border.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Input.Background.Static}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource Input.Static.Caret}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource Input.Static.Selection}"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource TextBox.Border.Thickness}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource TextBox.Corner.Radius}"/>
+        <Setter Property="Padding" Value="{DynamicResource TextBox.Padding}"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                CornerRadius="{TemplateBinding Border.CornerRadius}"
+                                SnapsToDevicePixels="True">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.MouseOver}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Focused}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Focused}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Disabled}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Disabled}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Simple.TextBox.Style" TargetType="{x:Type TextBox}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="ContextMenu" Value="{StaticResource TextBoxContextMenu}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource Input.Static.Caret}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource Input.Static.Selection}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Input.Border.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Simple.TextBox.Static.Background}"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource Simple.TextBox.Border.Thickness}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Simple.TextBox.Corner.Radius}"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Border x:Name="border" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                Background="{TemplateBinding Background}" 
+                                SnapsToDevicePixels="True"
+                                CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.MouseOver}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Simple.TextBox.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Focused}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Simple.TextBox.Focus.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Disabled}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Disabled}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TextBoxWithLabel" TargetType="{x:Type TextBox}">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="ContextMenu" Value="{StaticResource TextBoxContextMenu}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource TextBox.Selection.Brush}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Uid" Value="Label Text"/>
+        <Setter Property="Text" Value="TextBox Text"/>
+        <Setter Property="Foreground" Value="{DynamicResource Page.Foreground}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TextBox}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Column="0" VerticalAlignment="Center" Content="{TemplateBinding Uid}"  Foreground="{DynamicResource Page.Foreground}" Margin="5,0"/>
+                        <TextBox x:Name="TxtBox" VerticalContentAlignment="Center"  Foreground="{TemplateBinding Foreground}" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Text="{TemplateBinding Text}" Padding="5,0,5,0" BorderBrush="Transparent" AcceptsTab="False"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type PasswordBox}">
+        <Setter Property="PasswordChar" Value="●"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource Input.Static.Caret}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource Input.Static.Selection}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Input.Border.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Input.Background.Static}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource TextBox.Corner.Radius}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" 
+                            SnapsToDevicePixels="True" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.MouseOver}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.MouseOver}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Focused}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Focused}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Disabled}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Disabled}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="Simple.PasswordBox.Style" TargetType="{x:Type PasswordBox}">
+        <Setter Property="PasswordChar" Value="●"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource Input.Static.Caret}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource Input.Static.Selection}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource Input.Border.Static}"/>
+        <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Static}"/>
+        <Setter Property="Background" Value="{DynamicResource Simple.TextBox.Static.Background}"/>
+        <Setter Property="BorderThickness" Value="{DynamicResource Simple.TextBox.Border.Thickness}"/>
+        <Setter Property="Border.CornerRadius" Value="{DynamicResource Simple.TextBox.Corner.Radius}"/>
+        <Setter Property="KeyboardNavigation.TabNavigation" Value="None"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="AllowDrop" Value="true"/>
+        <Setter Property="Padding" Value="5"/>
+        <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst"/>
+        <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type PasswordBox}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+                            Background="{TemplateBinding Background}" SnapsToDevicePixels="True" CornerRadius="{TemplateBinding Border.CornerRadius}">
+                        <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.MouseOver}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.MouseOver}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Simple.TextBox.MouseOver.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsKeyboardFocused" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Focused}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Focused}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Simple.TextBox.Focus.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource Input.Border.Disabled}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource Input.Foreground.Disabled}"/>
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource Input.Background.Disabled}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="GeometryResources.xaml"/>
+        <ResourceDictionary Source="ScrollBarBase.xaml"/>
+        <ResourceDictionary Source="SeparatorBase.xaml"/>
+        <ResourceDictionary Source="LabelBase.xaml"/>
+        <ResourceDictionary Source="TextBoxBase.xaml"/>
+        <ResourceDictionary Source="GroupBoxBase.xaml"/>
+        <ResourceDictionary Source="ButtonBase.xaml"/>
+        <ResourceDictionary Source="ToggleButtonBase.xaml"/>
+        <ResourceDictionary Source="ProgressBarBase.xaml"/>
+        <ResourceDictionary Source="CalendarBase.xaml"/>
+        <ResourceDictionary Source="DatePickerBase.xaml"/>
+        <ResourceDictionary Source="CheckBoxBase.xaml"/>
+        <ResourceDictionary Source="RadioButtonBase.xaml"/>
+        <ResourceDictionary Source="ToolWindowBase.xaml"/>
+        <ResourceDictionary Source="MenuBase.xaml"/>
+        <ResourceDictionary Source="AutoHideToolbarBase.xaml"/>
+        <ResourceDictionary Source="TwitterBase.xaml"/>
+        <ResourceDictionary Source="TreeViewBase.xaml"/>
+        <ResourceDictionary Source="ListBoxBase.xaml"/>
+        <ResourceDictionary Source="TabControlBase.xaml"/>
+        <ResourceDictionary Source="ComboBoxBase.xaml"/>
+        <ResourceDictionary Source="ThemeSelectorCombo.xaml"/>
+        <ResourceDictionary Source="DataGridBase.xaml"/>
+        <ResourceDictionary Source="TollbarTrayBase.xaml"/>
+        <ResourceDictionary Source="FeatureToolResources.xaml"/>
+   </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>
