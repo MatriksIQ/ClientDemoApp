@@ -208,9 +208,9 @@ namespace ClientApiAppDemo
             orderApiModel.OrderId2 = OrderId2;
             orderApiModel.OrderQty = Volume;
             if (IsBuy)
-                orderApiModel.OrderSide = 0;
-            else
                 orderApiModel.OrderSide = 1;
+            else
+                orderApiModel.OrderSide = 2;
 
             orderApiModel.OrderType = '2';
 
