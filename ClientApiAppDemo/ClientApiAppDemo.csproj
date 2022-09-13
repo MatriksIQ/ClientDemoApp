@@ -221,7 +221,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Matriks.ApiClient\Matriks.ApiClient.csproj">
+    <ProjectReference Include="..\MatriksIQ.ApiClient\MatriksIQ.ApiClient.csproj">
       <Project>{a629b0ea-7a6d-4482-938b-6b73242723b7}</Project>
       <Name>Matriks.ApiClient</Name>
     </ProjectReference>

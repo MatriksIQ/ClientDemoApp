@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClientApiAppDemo", "ClientApiAppDemo.csproj", "{AF824B01-F347-4764-A2F9-72747B8F1609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matriks.ApiClient", "..\Matriks.ApiClient\Matriks.ApiClient.csproj", "{A629B0EA-7A6D-4482-938B-6B73242723B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MatriksIQ.ApiClient", "..\MatriksIQ.ApiClient\MatriksIQ.ApiClient.csproj", "{A629B0EA-7A6D-4482-938B-6B73242723B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

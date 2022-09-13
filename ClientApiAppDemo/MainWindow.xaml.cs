@@ -24,6 +24,7 @@ using Matriks.Api.RequestModels;
 using Matriks.Api.ResposeModels;
 using Matriks.API.Shared;
 using Matriks.ApiClient;
+using Matriks.ApiClient.Api.ResposeModels;
 using Matriks.ApiClient.TcpConnection;
 using Matriks.Utility;
 using Newtonsoft.Json;
@@ -182,6 +183,8 @@ namespace ClientApiAppDemo
             _tcpCallbackService.ListAccountsResponseEvent += TcpCallbackServiceOnListAccountsResponseEvent;
             _tcpCallbackService.ListPositionsResponseEvent += TcpCallbackServiceOnListPositionsResponseEvent;
             _tcpCallbackService.ListOrdersResponseEvent += TcpCallbackServiceOnListOrdersResponseEvent;
+            _tcpCallbackService.ListFilledOrdersResponseEvent += TcpCallbackServiceOnListFilledOrdersResponseEvent;
+            _tcpCallbackService.ListCanceledOrdersResponseEvent += TcpCallbackServiceOnListCanceledOrdersResponseEvent;
             _tcpCallbackService.OrderChangedEvent += TcpCallbackServiceOnOrderChangedEvent;
             _tcpCallbackService.PositionChangedEvent += TcpCallbackServiceOnPositionChangedEvent;
             _tcpCallbackService.TradeUserLoginEvent += TcpCallbackServiceOnTradeUserLoginEvent;
@@ -191,6 +194,16 @@ namespace ClientApiAppDemo
             _keepAliveTimer.Interval = 1000 * 30;
             _keepAliveTimer.Elapsed += KeepAliveTimerOnElapsed;
             _keepAliveTimer.Start();
+        }
+
+        private void TcpCallbackServiceOnListCanceledOrdersResponseEvent(object sender, ListCanceledOrdersApiResponseModel e)
+        {
+            
+        }
+
+        private void TcpCallbackServiceOnListFilledOrdersResponseEvent(object sender, ListFilledOrdersApiResponseModel e)
+        {
+            
         }
 
         private void TcpCallbackServiceOnKeepAliveResponseEvent(object sender, KeepAlive e)
@@ -272,7 +285,6 @@ namespace ClientApiAppDemo
             {
                 AllOrderApiModels.Add(eOrderApiModel);
             }
-
         }
 
         private void TcpCallbackServiceOnListPositionsResponseEvent(object sender, ListPositionResponseModel e)
@@ -302,6 +314,8 @@ namespace ClientApiAppDemo
                     {
                         _tcpClientService.RequestPositions(account.BrokageId, account.AccountId, account.ExchangeId);
                         _tcpClientService.RequestWaitingOrders(account.AccountId, account.BrokageId, account.ExchangeId);
+                        _tcpClientService.RequestFilledOrders(account.AccountId, account.BrokageId, account.ExchangeId);
+                        _tcpClientService.RequestCanceledOrders(account.AccountId, account.BrokageId, account.ExchangeId);
                     }
                 }
             }
