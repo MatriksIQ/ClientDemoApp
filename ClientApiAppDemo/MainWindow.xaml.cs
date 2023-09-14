@@ -35,7 +35,7 @@ namespace ClientApiAppDemo
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window,INotifyPropertyChanged
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         public ObservableCollection<Accounts> Accounts
         {
@@ -44,7 +44,7 @@ namespace ClientApiAppDemo
             {
                 _accounts = value;
                 OnPropertyChanged("Accounts");
-            } 
+            }
         }
 
         public Accounts SelectedAccount
@@ -58,12 +58,12 @@ namespace ClientApiAppDemo
                     FilterPositions();
                     FilterOrders();
                 }
-                    
+
                 OnPropertyChanged();
-            } 
+            }
         }
 
-        
+
 
         public ObservableCollection<PositionResponseModel> FilteredPositions
         {
@@ -73,7 +73,7 @@ namespace ClientApiAppDemo
                 _filteredPositions = value;
 
                 OnPropertyChanged();
-            } 
+            }
         }
 
         public ObservableCollection<OrderRequest> FileteredOrders
@@ -83,7 +83,7 @@ namespace ClientApiAppDemo
             {
                 _fileteredOrders = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
         public OrderRequest SelectedOrderApiModel
@@ -95,24 +95,24 @@ namespace ClientApiAppDemo
                 if (value != null)
                     this.Symbol = value.Symbol;
                 OnPropertyChanged();
-            } 
+            }
         }
 
         private void FilterPositions()
         {
             if (SelectedAccount == null)
                 return;
-            FilteredPositions =new ObservableCollection<PositionResponseModel>(AllPositionResponseModels
+            FilteredPositions = new ObservableCollection<PositionResponseModel>(AllPositionResponseModels
                     .Where(x => x.AccountId == SelectedAccount.AccountId && x.BrokageId == SelectedAccount.BrokageId && x.ExchangeId == SelectedAccount.ExchangeId));
-                
+
         }
 
         private void FilterOrders()
         {
             if (SelectedAccount == null)
                 return;
-            FileteredOrders = new ObservableCollection<OrderRequest>(AllOrderApiModels.Where(x => x.AccountId == SelectedAccount.AccountId ));
-                
+            FileteredOrders = new ObservableCollection<OrderRequest>(AllOrderApiModels.Where(x => x.AccountId == SelectedAccount.AccountId));
+
         }
         public List<PositionResponseModel> AllPositionResponseModels;
 
@@ -125,7 +125,7 @@ namespace ClientApiAppDemo
             {
                 _symbol = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
         public decimal Price
@@ -135,7 +135,7 @@ namespace ClientApiAppDemo
             {
                 _price = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
         public decimal Volume
@@ -145,7 +145,7 @@ namespace ClientApiAppDemo
             {
                 _volume = value;
                 OnPropertyChanged();
-            } 
+            }
         }
 
         private ICommand OnRefreshAccountInfoCommand { get; set; }
@@ -198,12 +198,12 @@ namespace ClientApiAppDemo
 
         private void TcpCallbackServiceOnListCanceledOrdersResponseEvent(object sender, ListCanceledOrdersApiResponseModel e)
         {
-            
+
         }
 
         private void TcpCallbackServiceOnListFilledOrdersResponseEvent(object sender, ListFilledOrdersApiResponseModel e)
         {
-            
+
         }
 
         private void TcpCallbackServiceOnKeepAliveResponseEvent(object sender, KeepAlive e)
@@ -251,7 +251,7 @@ namespace ClientApiAppDemo
         private void TcpCallbackServiceOnPositionChangedEvent(object sender, PositionResponseModel e)
         {
             if (!AllPositionResponseModels.Any(x =>
-                x.Symbol == e.Symbol && x.AccountId == e.AccountId && x.BrokageId == e.BrokageId && e.ExchangeId== x.ExchangeId))
+                x.Symbol == e.Symbol && x.AccountId == e.AccountId && x.BrokageId == e.BrokageId && e.ExchangeId == x.ExchangeId && x.PositionId == e.PositionId))
             {
                 AllPositionResponseModels.Add(e);
             }
@@ -261,12 +261,12 @@ namespace ClientApiAppDemo
                     x.Symbol == e.Symbol && x.AccountId == e.AccountId && x.BrokageId == e.BrokageId && x.ExchangeId == e.ExchangeId));
                 AllPositionResponseModels.Add(e);
             }
-            FilterPositions();  
+            FilterPositions();
         }
 
         private void TcpCallbackServiceOnOrderChangedEvent(object sender, OrderRequest e)
         {
-            if (!AllOrderApiModels.Any(x => x.OrderId == e.OrderId))
+            if (AllOrderApiModels.All(x => x.OrderId != e.OrderId))
             {
                 AllOrderApiModels.Add(e);
             }
@@ -281,15 +281,34 @@ namespace ClientApiAppDemo
 
         private void TcpCallbackServiceOnListOrdersResponseEvent(object sender, ListOrdersApiResponseModel e)
         {
-            foreach (var eOrderApiModel in e.OrderApiModels)
+            foreach (var orderApiModel in e.OrderApiModels)
             {
-                AllOrderApiModels.Add(eOrderApiModel);
+                if (AllOrderApiModels.All(x => x.OrderId != orderApiModel.OrderId))
+                {
+                    AllOrderApiModels.Add(orderApiModel);
+                }
             }
         }
 
         private void TcpCallbackServiceOnListPositionsResponseEvent(object sender, ListPositionResponseModel e)
         {
-            AllPositionResponseModels.AddRange(e.PositionResponseList);
+            foreach (var positionResponseModel in e.PositionResponseList)
+            {
+                if (!AllPositionResponseModels.Any(x =>
+                        x.Symbol == positionResponseModel.Symbol &&
+                        x.AccountId == positionResponseModel.AccountId &&
+                        x.BrokageId == positionResponseModel.BrokageId &&
+                        x.ExchangeId == positionResponseModel.ExchangeId &&
+                        x.PositionId == positionResponseModel.PositionId))
+                {
+                    AllPositionResponseModels.Add(positionResponseModel);
+                }
+                else
+                {
+                    AllPositionResponseModels.Remove(AllPositionResponseModels.FirstOrDefault(x => x.PositionId == positionResponseModel.PositionId));
+                    AllPositionResponseModels.Add(positionResponseModel);
+                }
+            }
         }
 
         private void TcpCallbackServiceOnListAccountsResponseEvent(object sender, List<BrokageAccounts> e)
@@ -302,10 +321,10 @@ namespace ClientApiAppDemo
                     account.BrokageId = brokerAccountse.BrokageId;
                     account.AccountId = accountId.AccountId;
                     account.ExchangeId = accountId.ExchangeId;
-                    account.DisplayName =  brokerAccountse.BrokageName + " " + accountId.AccountId + " " +account.ExchangeId;
+                    account.DisplayName = brokerAccountse.BrokageName + " " + accountId.AccountId + " " + account.ExchangeId;
                     Application.Current.Dispatcher.Invoke(() =>
                     {
-                        if(!Accounts.Any(x => x.AccountId == account.AccountId && x.BrokageId == account.BrokageId && x.ExchangeId == account.ExchangeId))
+                        if (!Accounts.Any(x => x.AccountId == account.AccountId && x.BrokageId == account.BrokageId && x.ExchangeId == account.ExchangeId))
                             this.Accounts.Add(account);
                     });
                     if (Accounts.Any(x =>
@@ -331,7 +350,7 @@ namespace ClientApiAppDemo
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            OrderRequest orderApiModel =  new OrderRequest();
+            OrderRequest orderApiModel = new OrderRequest();
             orderApiModel.Symbol = Symbol;
             orderApiModel.AccountId = SelectedAccount.AccountId;
             orderApiModel.BrokageId = SelectedAccount.BrokageId;
@@ -340,9 +359,9 @@ namespace ClientApiAppDemo
             orderApiModel.OrderSide = 0;
             orderApiModel.OrderType = '2';
             orderApiModel.TransactionType = '1';
-            orderApiModel.ApiCommands = (int) ApiCommands.NewOrder;
+            orderApiModel.ApiCommands = (int)ApiCommands.NewOrder;
             _tcpClientService.SendNewOrder(orderApiModel);
-            
+
 
 
         }
@@ -389,7 +408,7 @@ namespace ClientApiAppDemo
             orderApiModel.OrderSide = SelectedOrderApiModel.OrderSide;
             orderApiModel.OrderId = SelectedOrderApiModel.OrderId;
             orderApiModel.OrderId2 = SelectedOrderApiModel.OrderId2;
-            
+
 
             orderApiModel.OrderType = '2';
             orderApiModel.TimeInForce = SelectedOrderApiModel.TimeInForce;
