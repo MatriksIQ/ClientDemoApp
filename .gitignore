@@ -11,14 +11,8 @@
 [Dd]ebug/
 [Rr]elease/
 x64/
-x86/
-build/
 [Bb]in/
-obj/
-/[Pp]ackages/
-
-#SQLite files
-*.sqlite
+[Oo]bj/
 
 # MSTest test Results
 [Tt]est[Rr]esult*/
@@ -26,6 +20,7 @@ obj/
 
 *_i.c
 *_p.c
+*_i.h
 *.ilk
 *.meta
 *.obj
@@ -41,11 +36,13 @@ obj/
 *.tmp
 *.tmp_proj
 *.log
+*.vs
 *.vspscc
 *.vssscc
 .builds
 *.pidb
 *.log
+*.svclog
 *.scc
 
 # Visual C++ cache files
@@ -67,29 +64,7 @@ ipch/
 # ReSharper is a .NET coding add-in
 _ReSharper*/
 *.[Rr]e[Ss]harper
-
-# TeamCity is a build add-in
-_TeamCity*
-
-# DotCover is a Code Coverage Tool
-*.dotCover
-
-# NCrunch
-*.ncrunch*
-.*crunch*.local.xml
-
-# Installshield output folder
-[Ee]xpress/
-
-# DocProject is a documentation generator add-in
-DocProject/buildhelp/
-DocProject/Help/*.HxT
-DocProject/Help/*.HxC
-DocProject/Help/*.hhc
-DocProject/Help/*.hhk
-DocProject/Help/*.hhp
-DocProject/Help/Html2
-DocProject/Help/html
+*.DotSettings.user
 
 # Click-Once directory
 publish/
@@ -97,13 +72,16 @@ publish/
 # Publish Web Output
 *.Publish.xml
 *.pubxml
+*.azurePubxml
 
 # NuGet Packages Directory
 ## TODO: If you have NuGet Package Restore enabled, uncomment the next line
-#packages/
+packages/
+## TODO: If the tool you use requires repositories.config, also uncomment the next line
+!packages/repositories.config
 
 # Windows Azure Build Output
-csx
+csx/
 *.build.csdef
 
 # Windows Store app package directory
@@ -114,11 +92,12 @@ sql/
 *.Cache
 ClientBin/
 [Ss]tyle[Cc]op.*
+![Ss]tyle[Cc]op.targets
 ~$*
 *~
 *.dbmdl
 *.[Pp]ublish.xml
-*.pfx
+
 *.publishsettings
 
 # RIA/Silverlight projects
@@ -149,12 +128,7 @@ Desktop.ini
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
 
-# Mac crap
+# Mac desktop service store files
 .DS_Store
-*.rar
-*.suo
-*.suo
-.vs/MatriksIqWebService/v16/Server/sqlite3/db.lock
-.vs/MatriksIqWebService/v16/Server/sqlite3/storage.ide
-.vs/MatriksIqWebService/v16/Server/sqlite3/storage.ide-shm
-.vs/MatriksIqWebService/v16/Server/sqlite3/storage.ide-wal
+
+_NCrunch*
